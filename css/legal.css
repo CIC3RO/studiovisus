@@ -1,0 +1,107 @@
+/* ============================================
+   STUDIO VISUS — Rechtsseiten
+   Impressum, Datenschutz, Widerrufsbelehrung
+   ============================================ */
+
+.legal-head{
+  max-width:1440px;
+  margin:0 auto;
+  padding:60px 48px 40px;
+}
+.legal-head h1{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-size:clamp(36px, 4.5vw, 56px);
+  line-height:1.05;
+  letter-spacing:-.015em;
+  margin-bottom:16px;
+}
+.legal-head h1 em{font-style:italic; color:var(--accent); font-weight:400}
+.legal-head .legal-lead{
+  font-size:16px;
+  line-height:1.65;
+  color:var(--ink-soft);
+  max-width:64ch;
+}
+
+.legal-body{
+  max-width:1440px;
+  margin:0 auto;
+  padding:0 48px 120px;
+}
+.legal-content{
+  max-width:72ch;
+}
+.legal-content h2{
+  font-family:'Fraunces', serif;
+  font-weight:400;
+  font-size:24px;
+  line-height:1.2;
+  letter-spacing:-.01em;
+  margin:48px 0 16px;
+  color:var(--ink);
+  padding-bottom:12px;
+  border-bottom:1px solid var(--line);
+}
+.legal-content h2:first-child{margin-top:0}
+.legal-content h3{
+  font-family:'Fraunces', serif;
+  font-weight:400;
+  font-size:20px;
+  line-height:1.25;
+  margin:32px 0 12px;
+  color:var(--ink);
+}
+.legal-content h4{
+  font-family:'Fraunces', serif;
+  font-weight:400;
+  font-style:italic;
+  font-size:17px;
+  margin:24px 0 10px;
+  color:var(--ink);
+}
+.legal-content p{
+  font-size:16px;
+  line-height:1.8;
+  color:var(--ink-soft);
+  margin-bottom:16px;
+}
+.legal-content p:last-child{margin-bottom:0}
+.legal-content p strong{color:var(--ink); font-weight:500}
+.legal-content a{
+  color:var(--accent);
+  border-bottom:1px solid var(--accent);
+  transition:opacity .2s;
+}
+.legal-content a:hover{opacity:.7}
+.legal-content .legal-address{
+  font-style:normal;
+  margin-bottom:16px;
+  line-height:1.8;
+}
+.legal-content .caps-block{
+  font-size:14px;
+  line-height:1.7;
+  color:var(--ink);
+  font-weight:500;
+  margin:20px 0;
+  padding:20px 24px;
+  background:var(--paper-soft);
+  border-left:3px solid var(--accent);
+}
+.legal-content ul{
+  margin:12px 0 20px 20px;
+  padding:0;
+}
+.legal-content li{
+  font-size:16px;
+  line-height:1.8;
+  color:var(--ink-soft);
+  margin-bottom:10px;
+}
+
+@media (max-width: 700px){
+  .legal-head{padding:40px 24px 30px}
+  .legal-body{padding:0 24px 80px}
+  .legal-content h2{font-size:20px; margin-top:36px}
+}

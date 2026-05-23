@@ -1,0 +1,568 @@
+/* ============================================
+   STUDIO VISUS — Über / Künstlerporträt
+   Ergänzende Styles (gemeinsame Basis in style.css)
+   ============================================ */
+
+/* ===== HERO (Über) ===== */
+.about-hero{
+  max-width:1440px;
+  margin:0 auto;
+  padding:60px 48px 80px;
+  display:grid;
+  grid-template-columns:1fr 1.1fr;
+  gap:80px;
+  align-items:center;
+  position:relative;
+}
+.about-hero-portrait{
+  position:relative;
+}
+.about-hero-portrait .portrait-main{
+  width:100%;
+  aspect-ratio:4/5;
+  background:
+    radial-gradient(ellipse at 35% 25%, rgba(255,220,180,.5), transparent 50%),
+    radial-gradient(ellipse at 65% 75%, rgba(168,72,42,.4), transparent 50%),
+    linear-gradient(160deg,#3a2f24 0%, #6b5840 50%, #a8482a 100%);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  position:relative;
+}
+.about-hero-portrait .portrait-main img{
+  width:100%; height:100%;
+  object-fit:cover;
+}
+.about-hero-portrait .portrait-main::after{
+  display:none;
+}
+.about-hero-portrait .portrait-main img{
+  width:100%; height:100%;
+  object-fit:cover;
+  position:relative;
+}
+.about-hero-portrait .portrait-float{
+  position:absolute;
+  bottom:-30px; right:-40px;
+  width:45%;
+  aspect-ratio:1/1;
+  border:8px solid var(--paper);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.about-hero-portrait .portrait-float img{
+  width:100%; height:100%;
+  object-fit:cover;
+}
+.about-hero-portrait .portrait-float img{
+  width:100%; height:100%;
+  object-fit:cover;
+}
+
+.about-hero-text .about-eyebrow{
+  font-size:12px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:24px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.about-hero-text .about-eyebrow::before{
+  content:""; width:32px; height:1px; background:var(--accent);
+}
+.about-hero-text h1{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-size:clamp(44px, 5.5vw, 78px);
+  line-height:1.02;
+  letter-spacing:-.02em;
+  margin-bottom:28px;
+}
+.about-hero-text h1 em{
+  font-style:italic; color:var(--accent); font-weight:400;
+}
+.about-hero-text h1 .stroke{
+  -webkit-text-stroke:1px var(--ink);
+  color:transparent;
+  font-style:italic;
+}
+.about-hero-text .about-lead{
+  font-family:'Fraunces', serif;
+  font-style:italic;
+  font-size:21px;
+  line-height:1.55;
+  color:var(--ink-soft);
+  margin-bottom:28px;
+  max-width:48ch;
+}
+.about-hero-text p{
+  font-size:17px;
+  line-height:1.75;
+  color:var(--ink-soft);
+  max-width:50ch;
+  margin-bottom:18px;
+}
+.about-signature{
+  font-family:'Caveat', cursive;
+  font-size:36px;
+  color:var(--accent);
+  margin-top:24px;
+  display:inline-block;
+  transform:rotate(-3deg);
+}
+
+/* ===== PHILOSOPHIE ===== */
+.about-philosophy{
+  background:var(--ink);
+  color:var(--paper);
+  padding:140px 0;
+  position:relative;
+  overflow:hidden;
+}
+.about-philosophy::before{
+  content:"";
+  position:absolute;
+  top:-180px; left:-180px;
+  width:500px; height:500px;
+  background:radial-gradient(circle, rgba(168,72,42,.35), transparent 60%);
+  pointer-events:none;
+}
+.about-philosophy::after{
+  content:"";
+  position:absolute;
+  bottom:-150px; right:-150px;
+  width:400px; height:400px;
+  background:radial-gradient(circle, rgba(201,122,82,.2), transparent 60%);
+  pointer-events:none;
+}
+.about-philosophy-inner{
+  max-width:1440px;
+  margin:0 auto;
+  padding:0 48px;
+  position:relative;
+  z-index:2;
+}
+.about-philosophy-head{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:80px;
+  align-items:end;
+  margin-bottom:60px;
+}
+.about-philosophy h2{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-size:clamp(40px, 5vw, 72px);
+  line-height:1.05;
+  letter-spacing:-.02em;
+}
+.about-philosophy h2 em{font-style:italic; color:var(--accent-soft); font-weight:400}
+.about-philosophy .phil-lead{
+  font-family:'Fraunces', serif;
+  font-style:italic;
+  font-size:20px;
+  line-height:1.55;
+  color:rgba(243,237,226,.8);
+  max-width:44ch;
+}
+.about-philosophy .sec-eyebrow{color:rgba(243,237,226,.6)}
+.about-philosophy .sec-eyebrow::before{background:var(--accent-soft)}
+
+.phil-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:40px;
+  padding-top:48px;
+  border-top:1px solid rgba(243,237,226,.15);
+}
+.phil-card{
+  padding:36px 0;
+}
+.phil-card .phil-num{
+  font-family:'Fraunces', serif;
+  font-style:italic;
+  font-size:56px;
+  font-weight:300;
+  color:var(--accent-soft);
+  line-height:1;
+  margin-bottom:20px;
+}
+.phil-card h3{
+  font-family:'Fraunces', serif;
+  font-size:24px;
+  font-weight:400;
+  margin-bottom:14px;
+  line-height:1.2;
+}
+.phil-card h3 em{font-style:italic; color:var(--accent-soft)}
+.phil-card p{
+  font-size:15px;
+  line-height:1.7;
+  color:rgba(243,237,226,.75);
+  max-width:38ch;
+}
+
+/* ===== ZEITSTRAHL ===== */
+.about-timeline{
+  max-width:1440px;
+  margin:0 auto;
+  padding:120px 48px;
+}
+.about-timeline-head{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:end;
+  margin-bottom:60px;
+}
+.about-timeline h2{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-size:clamp(36px, 4.5vw, 56px);
+  line-height:1.05;
+  letter-spacing:-.015em;
+}
+.about-timeline h2 em{font-style:italic; color:var(--accent); font-weight:400}
+.about-timeline-head p{
+  font-size:17px;
+  line-height:1.7;
+  color:var(--ink-soft);
+  max-width:48ch;
+}
+
+.timeline{
+  position:relative;
+  padding-left:60px;
+}
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:20px; top:0; bottom:0;
+  width:1px;
+  background:var(--line);
+}
+.tl-item{
+  position:relative;
+  padding-bottom:48px;
+}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{
+  content:"";
+  position:absolute;
+  left:-48px; top:8px;
+  width:11px; height:11px;
+  border-radius:50%;
+  border:2px solid var(--accent);
+  background:var(--paper);
+  z-index:2;
+}
+.tl-item.tl-now::before{
+  background:var(--accent);
+  box-shadow:0 0 0 5px rgba(168,72,42,.2);
+}
+.tl-year{
+  font-family:'Fraunces', serif;
+  font-style:italic;
+  font-size:28px;
+  color:var(--accent);
+  line-height:1;
+  margin-bottom:10px;
+}
+.tl-title{
+  font-family:'Fraunces', serif;
+  font-size:22px;
+  font-weight:400;
+  margin-bottom:10px;
+  letter-spacing:-.01em;
+  max-width:36ch;
+}
+.tl-text{
+  font-size:15px;
+  line-height:1.7;
+  color:var(--ink-soft);
+  max-width:56ch;
+}
+
+/* ===== ATELIER-EINBLICK ===== */
+.about-atelier{
+  background:var(--paper-soft);
+  padding:120px 0;
+}
+.about-atelier-inner{
+  max-width:1440px;
+  margin:0 auto;
+  padding:0 48px;
+}
+.about-atelier-head{
+  max-width:680px;
+  margin-bottom:60px;
+}
+.about-atelier h2{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-size:clamp(36px, 4.5vw, 56px);
+  line-height:1.05;
+  margin-bottom:20px;
+  letter-spacing:-.015em;
+}
+.about-atelier h2 em{font-style:italic; color:var(--accent); font-weight:400}
+.about-atelier-head p{
+  font-size:17px;
+  line-height:1.7;
+  color:var(--ink-soft);
+}
+
+.atelier-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-template-rows:auto auto;
+  gap:24px;
+}
+.atelier-cell{
+  overflow:hidden;
+  position:relative;
+  box-shadow:var(--shadow);
+}
+.atelier-cell .bg{
+  position:absolute; inset:0;
+  transition:transform 1.2s cubic-bezier(.2,.8,.2,1);
+}
+.atelier-cell:hover .bg{transform:scale(1.05)}
+.atelier-cell img{
+  width:100%; height:100%;
+  object-fit:cover;
+  transition:transform 1.2s cubic-bezier(.2,.8,.2,1);
+}
+.atelier-cell:hover img{transform:scale(1.05)}
+.ac-1{ grid-column:span 2; aspect-ratio:16/9; }
+.ac-2{ grid-column:span 1; aspect-ratio:3/4; }
+.ac-3{ grid-column:span 1; aspect-ratio:1/1; }
+.ac-4{ grid-column:span 1; aspect-ratio:1/1; }
+.ac-5{ grid-column:span 1; aspect-ratio:1/1; }
+
+/* Placeholder-Hintergründe */
+.ac-1 .bg{ background:linear-gradient(135deg, #6b5840, #a8482a, #c69a4a) }
+.ac-2 .bg{ background:linear-gradient(180deg, #3a2f24, #6b5840) }
+.ac-3 .bg{ background:linear-gradient(135deg, #c9bfae, #ebe2d2) }
+.ac-4 .bg{ background:linear-gradient(135deg, #5a6d4a, #c69a4a) }
+.ac-5 .bg{ background:linear-gradient(135deg, #a8482a, #d8c9ad) }
+
+.atelier-cell .cell-label{
+  position:absolute;
+  bottom:16px; left:16px;
+  font-family:'Caveat', cursive;
+  font-size:20px;
+  color:var(--paper);
+  z-index:2;
+  text-shadow:0 2px 8px rgba(0,0,0,.5);
+}
+
+/* ===== PROZESS ===== */
+.about-process{
+  max-width:1440px;
+  margin:0 auto;
+  padding:120px 48px;
+}
+.about-process-head{
+  max-width:680px;
+  margin-bottom:60px;
+}
+.about-process h2{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-size:clamp(36px, 4.5vw, 56px);
+  line-height:1.05;
+  margin-bottom:20px;
+  letter-spacing:-.015em;
+}
+.about-process h2 em{font-style:italic; color:var(--accent); font-weight:400}
+.about-process-head p{
+  font-size:17px;
+  line-height:1.7;
+  color:var(--ink-soft);
+}
+
+.process-steps{
+  display:grid;
+  grid-template-columns:repeat(5, 1fr);
+  gap:8px;
+  position:relative;
+}
+.process-steps::before{
+  content:"";
+  position:absolute;
+  top:40px;
+  left:10%; right:10%;
+  height:1px;
+  background:var(--line);
+  z-index:0;
+}
+.step{
+  text-align:center;
+  position:relative;
+  z-index:1;
+}
+.step-circle{
+  width:80px; height:80px;
+  border-radius:50%;
+  background:var(--paper-soft);
+  border:2px solid var(--line);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 20px;
+  transition:all .3s;
+}
+.step:hover .step-circle{
+  border-color:var(--accent);
+  box-shadow:0 0 0 6px rgba(168,72,42,.12);
+}
+.step-circle .s-ico{
+  font-family:'Fraunces', serif;
+  font-style:italic;
+  font-size:28px;
+  color:var(--accent);
+}
+.step h4{
+  font-family:'Fraunces', serif;
+  font-size:18px;
+  font-weight:400;
+  margin-bottom:8px;
+  letter-spacing:-.01em;
+}
+.step p{
+  font-size:13px;
+  line-height:1.55;
+  color:var(--ink-soft);
+  max-width:20ch;
+  margin:0 auto;
+}
+
+/* ===== ZITAT ===== */
+.about-quote{
+  max-width:1440px;
+  margin:0 auto;
+  padding:0 48px 120px;
+}
+.about-quote-inner{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:60px 0;
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:48px;
+  align-items:center;
+}
+.about-quote-mark{
+  font-family:'Fraunces', serif;
+  font-style:italic;
+  font-size:120px;
+  color:var(--accent);
+  line-height:.7;
+  opacity:.4;
+}
+.about-quote-text{
+  font-family:'Fraunces', serif;
+  font-style:italic;
+  font-size:clamp(24px, 3vw, 36px);
+  line-height:1.35;
+  color:var(--ink);
+  max-width:38ch;
+}
+.about-quote-text .attr{
+  display:block;
+  font-family:'Inter Tight', sans-serif;
+  font-style:normal;
+  font-size:14px;
+  color:var(--muted);
+  margin-top:18px;
+  letter-spacing:.08em;
+}
+
+/* ===== CTA BANNER ===== */
+.about-cta{
+  max-width:1440px;
+  margin:0 auto;
+  padding:0 48px 120px;
+}
+.about-cta-inner{
+  background:var(--ink);
+  color:var(--paper);
+  padding:60px 64px;
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:60px;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+}
+.about-cta-inner::before{
+  content:"";
+  position:absolute;
+  top:-100px; right:-100px;
+  width:350px; height:350px;
+  background:radial-gradient(circle, rgba(168,72,42,.4), transparent 60%);
+  pointer-events:none;
+}
+.about-cta-inner h2{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-size:clamp(32px, 4vw, 48px);
+  line-height:1.1;
+  position:relative;
+  z-index:2;
+}
+.about-cta-inner h2 em{font-style:italic; color:var(--accent-soft)}
+.about-cta-right{
+  position:relative;
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+.about-cta-right p{
+  font-size:16px;
+  line-height:1.6;
+  color:rgba(243,237,226,.8);
+}
+.about-cta-right .btn-primary{
+  background:var(--accent);
+  border-color:var(--accent);
+  align-self:flex-start;
+}
+.about-cta-right .btn-primary:hover{
+  background:var(--paper); color:var(--ink); border-color:var(--paper);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px){
+  .about-hero{grid-template-columns:1fr; padding:40px 24px 60px; gap:40px}
+  .about-hero-portrait .portrait-float{display:none}
+  .about-philosophy{padding:80px 0}
+  .about-philosophy-inner{padding:0 24px}
+  .about-philosophy-head{grid-template-columns:1fr; gap:24px}
+  .phil-grid{grid-template-columns:1fr; gap:24px}
+  .about-timeline{padding:80px 24px}
+  .about-timeline-head{grid-template-columns:1fr; gap:24px}
+  .timeline{padding-left:48px}
+  .timeline::before{left:16px}
+  .tl-item::before{left:-40px}
+  .about-atelier{padding:80px 0}
+  .about-atelier-inner{padding:0 24px}
+  .atelier-grid{grid-template-columns:1fr 1fr; gap:16px}
+  .ac-1{grid-column:span 2}
+  .about-process{padding:80px 24px}
+  .process-steps{grid-template-columns:repeat(3, 1fr); gap:24px}
+  .process-steps::before{display:none}
+  .about-quote{padding:0 24px 80px}
+  .about-quote-inner{grid-template-columns:1fr; gap:24px}
+  .about-quote-mark{font-size:80px}
+  .about-cta{padding:0 24px 80px}
+  .about-cta-inner{grid-template-columns:1fr; padding:40px 32px; gap:24px}
+}
+@media (max-width: 600px){
+  .atelier-grid{grid-template-columns:1fr}
+  .ac-1{grid-column:span 1}
+  .process-steps{grid-template-columns:1fr 1fr; gap:24px}
+}

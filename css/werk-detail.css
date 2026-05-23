@@ -1,0 +1,447 @@
+/* ============================================
+   STUDIO VISUS — Werk-Detailseite
+   Ergänzende Styles (gemeinsame Basis in style.css)
+   ============================================ */
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb{
+  max-width:1440px;
+  margin:0 auto;
+  padding:20px 48px;
+  font-size:13px;
+  color:var(--muted);
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.breadcrumb a{color:var(--ink-soft); transition:color .2s}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb .sep{color:var(--line)}
+
+/* ===== WERK HERO (2-Spalter) ===== */
+.werk-hero{
+  max-width:1440px;
+  margin:0 auto;
+  padding:20px 48px 80px;
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:80px;
+  align-items:start;
+}
+
+/* Bildbereich */
+.werk-gallery{
+  position:sticky;
+  top:90px;
+}
+.werk-main-img{
+  width:100%;
+  aspect-ratio:var(--img-ratio, 3/4);
+  background:var(--paper-deep);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  position:relative;
+  cursor:zoom-in;
+}
+.werk-main-img img{
+  width:100%; height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .8s cubic-bezier(.2,.8,.2,1);
+}
+.werk-main-img:hover img{transform:scale(1.03)}
+.werk-main-img .badge{
+  position:absolute;
+  top:18px; left:18px;
+  padding:6px 14px;
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  z-index:2;
+}
+.werk-main-img .badge.new{background:var(--accent);color:var(--paper)}
+.werk-main-img .badge.sold{background:var(--ink);color:var(--paper)}
+
+/* Thumbnails */
+.werk-thumbs{
+  display:flex;
+  gap:12px;
+  margin-top:16px;
+}
+.werk-thumb{
+  width:80px; height:80px;
+  background:var(--paper-deep);
+  border:2px solid transparent;
+  cursor:pointer;
+  overflow:hidden;
+  transition:border-color .2s;
+  flex-shrink:0;
+}
+.werk-thumb:hover,
+.werk-thumb.active{border-color:var(--accent)}
+.werk-thumb img{
+  width:100%; height:100%;
+  object-fit:cover;
+}
+.werk-thumb.thumb-placeholder{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:11px;
+  color:var(--muted);
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  text-align:center;
+  padding:4px;
+  line-height:1.2;
+}
+
+/* ===== WERK INFO ===== */
+.werk-info{
+  padding-top:10px;
+}
+.werk-info .werk-eyebrow{
+  font-size:12px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:14px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.werk-info .werk-eyebrow::before{
+  content:""; width:28px; height:1px; background:var(--accent);
+}
+.werk-info h1{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-style:italic;
+  font-size:clamp(48px, 5.5vw, 80px);
+  line-height:1;
+  letter-spacing:-.02em;
+  color:var(--ink);
+  margin-bottom:24px;
+}
+.werk-info .werk-subtitle{
+  font-family:'Fraunces', serif;
+  font-style:italic;
+  font-size:19px;
+  color:var(--ink-soft);
+  line-height:1.5;
+  margin-bottom:32px;
+  max-width:46ch;
+}
+
+/* Preis-Block */
+.werk-price-block{
+  padding:28px 0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  margin-bottom:32px;
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:20px;
+}
+.werk-price{
+  font-family:'Fraunces', serif;
+  font-size:36px;
+  font-weight:400;
+  letter-spacing:-.01em;
+}
+.werk-price .currency{
+  font-size:22px;
+  color:var(--ink-soft);
+}
+.werk-price-note{
+  font-size:13px;
+  color:var(--muted);
+  font-style:italic;
+  text-align:right;
+  max-width:28ch;
+  line-height:1.4;
+}
+
+/* CTA Buttons */
+.werk-cta{
+  display:flex;
+  gap:14px;
+  margin-bottom:40px;
+  flex-wrap:wrap;
+}
+
+/* Werkdaten-Tabelle */
+.werk-data{
+  margin-bottom:40px;
+}
+.werk-data-title{
+  font-family:'Fraunces', serif;
+  font-size:20px;
+  font-weight:400;
+  margin-bottom:18px;
+  letter-spacing:-.01em;
+}
+.werk-data-table{
+  width:100%;
+}
+.werk-data-row{
+  display:grid;
+  grid-template-columns:140px 1fr;
+  gap:16px;
+  padding:12px 0;
+  border-bottom:1px solid var(--line);
+  align-items:baseline;
+}
+.werk-data-row:last-child{border-bottom:none}
+.werk-data-row .k{
+  font-size:11px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+.werk-data-row .v{
+  font-size:15px;
+  color:var(--ink-soft);
+  line-height:1.4;
+}
+
+/* Beschreibung */
+.werk-beschreibung{
+  margin-bottom:40px;
+}
+.werk-beschreibung h2{
+  font-family:'Fraunces', serif;
+  font-size:20px;
+  font-weight:400;
+  margin-bottom:16px;
+  letter-spacing:-.01em;
+}
+.werk-beschreibung p{
+  font-size:16px;
+  line-height:1.8;
+  color:var(--ink-soft);
+  margin-bottom:16px;
+  max-width:54ch;
+}
+
+/* Neuroästhetik-Notiz */
+.werk-neuro{
+  background:var(--paper-soft);
+  padding:28px 32px;
+  border-left:3px solid var(--accent);
+  margin-bottom:40px;
+}
+.werk-neuro .ico{
+  font-family:'Fraunces', serif;
+  font-style:italic;
+  font-size:36px;
+  color:var(--accent);
+  line-height:1;
+  margin-bottom:8px;
+}
+.werk-neuro h4{
+  font-family:'Fraunces', serif;
+  font-size:18px;
+  font-weight:400;
+  margin-bottom:10px;
+}
+.werk-neuro p{
+  font-size:14px;
+  line-height:1.65;
+  color:var(--ink-soft);
+}
+
+/* Versand & Garantie */
+.werk-trust{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin-bottom:40px;
+}
+.werk-trust-item{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  padding:14px 0;
+}
+.werk-trust-item .t-ico{
+  font-family:'Fraunces', serif;
+  font-style:italic;
+  font-size:24px;
+  color:var(--accent);
+  line-height:1;
+  flex-shrink:0;
+}
+.werk-trust-item .t-text{
+  font-size:13px;
+  color:var(--ink-soft);
+  line-height:1.4;
+}
+.werk-trust-item .t-text strong{
+  display:block;
+  color:var(--ink);
+  font-weight:500;
+  margin-bottom:2px;
+}
+
+/* ===== GRÖßENVERGLEICH ===== */
+.werk-scale{
+  max-width:1440px;
+  margin:0 auto;
+  padding:0 48px 100px;
+}
+.werk-scale-inner{
+  border-top:1px solid var(--line);
+  padding-top:60px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+.werk-scale-vis{
+  background:var(--paper-soft);
+  padding:40px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  gap:30px;
+  min-height:320px;
+}
+.scale-person{
+  width:60px;
+  height:170px;
+  border:1.5px solid var(--muted);
+  border-radius:30px 30px 4px 4px;
+  position:relative;
+  opacity:.5;
+}
+.scale-person::before{
+  content:"175 cm";
+  position:absolute;
+  top:-22px; left:50%;
+  transform:translateX(-50%);
+  font-size:11px;
+  color:var(--muted);
+  white-space:nowrap;
+}
+.scale-werk{
+  background:var(--accent);
+  opacity:.2;
+  position:relative;
+}
+.scale-werk::after{
+  content:attr(data-dims);
+  position:absolute;
+  bottom:-24px; left:50%;
+  transform:translateX(-50%);
+  font-size:11px;
+  color:var(--ink-soft);
+  white-space:nowrap;
+  letter-spacing:.06em;
+}
+.werk-scale-text h3{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-size:32px;
+  line-height:1.1;
+  margin-bottom:18px;
+  letter-spacing:-.01em;
+}
+.werk-scale-text h3 em{font-style:italic; color:var(--accent); font-weight:400}
+.werk-scale-text p{
+  font-size:15px;
+  line-height:1.7;
+  color:var(--ink-soft);
+  margin-bottom:14px;
+  max-width:46ch;
+}
+
+/* ===== ÄHNLICHE WERKE ===== */
+.werk-related{
+  max-width:1440px;
+  margin:0 auto;
+  padding:0 48px 120px;
+}
+.werk-related-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  padding-bottom:24px;
+  border-bottom:1px solid var(--line);
+  margin-bottom:40px;
+}
+.werk-related-head h2{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-size:32px;
+  letter-spacing:-.01em;
+}
+.werk-related-head h2 em{font-style:italic; color:var(--accent); font-weight:400}
+.werk-related-head a{
+  font-size:13px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--accent);
+  border-bottom:1px solid var(--accent);
+  padding-bottom:2px;
+}
+.werk-related-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:32px;
+}
+.related-card{
+  display:block;
+  cursor:pointer;
+}
+.related-card .frame{
+  aspect-ratio:4/5;
+  overflow:hidden;
+  background:var(--paper-deep);
+  box-shadow:var(--shadow);
+  margin-bottom:16px;
+  transition:transform .6s cubic-bezier(.2,.8,.2,1);
+}
+.related-card:hover .frame{transform:translateY(-4px)}
+.related-card .frame img{
+  width:100%; height:100%;
+  object-fit:cover;
+  transition:transform 1s cubic-bezier(.2,.8,.2,1);
+}
+.related-card:hover .frame img{transform:scale(1.04)}
+.related-card h4{
+  font-family:'Fraunces', serif;
+  font-weight:400;
+  font-style:italic;
+  font-size:20px;
+  margin-bottom:4px;
+}
+.related-card .specs{
+  font-size:13px;
+  color:var(--muted);
+}
+.related-card .r-price{
+  font-family:'Fraunces', serif;
+  font-size:16px;
+  margin-top:6px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1000px){
+  .werk-hero{grid-template-columns:1fr; gap:40px}
+  .werk-gallery{position:static}
+  .werk-scale-inner{grid-template-columns:1fr; gap:40px}
+  .werk-related-grid{grid-template-columns:repeat(2, 1fr)}
+}
+@media (max-width: 700px){
+  .breadcrumb{padding:16px 24px}
+  .werk-hero{padding:10px 24px 60px}
+  .werk-price-block{flex-direction:column; gap:8px}
+  .werk-trust{grid-template-columns:1fr}
+  .werk-scale{padding:0 24px 60px}
+  .werk-scale-vis{padding:24px; min-height:240px}
+  .werk-related{padding:0 24px 80px}
+  .werk-related-grid{grid-template-columns:1fr}
+  .werk-thumbs{overflow-x:auto; padding-bottom:8px}
+}

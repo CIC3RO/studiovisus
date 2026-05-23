@@ -1,0 +1,285 @@
+/* ============================================
+   STUDIO VISUS — FAQ-Seite
+   Ergänzende Styles (gemeinsame Basis in style.css)
+   ============================================ */
+
+/* ===== HERO ===== */
+.faq-hero{
+  max-width:1440px;
+  margin:0 auto;
+  padding:60px 48px 40px;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:80px;
+  align-items:end;
+  position:relative;
+}
+.faq-hero h1{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-size:clamp(44px, 5.5vw, 80px);
+  line-height:1.02;
+  letter-spacing:-.02em;
+  margin-bottom:24px;
+}
+.faq-hero h1 em{font-style:italic; color:var(--accent); font-weight:400}
+.faq-hero h1 .stroke{
+  -webkit-text-stroke:1px var(--ink);
+  color:transparent;
+  font-style:italic;
+}
+.faq-hero-lead{
+  font-family:'Fraunces', serif;
+  font-style:italic;
+  font-size:20px;
+  line-height:1.55;
+  color:var(--ink-soft);
+  max-width:50ch;
+}
+.faq-hero-meta{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  padding-bottom:10px;
+}
+.faq-hero-meta p{
+  font-size:16px;
+  line-height:1.65;
+  color:var(--ink-soft);
+  max-width:42ch;
+}
+.faq-stat-row{
+  display:flex; gap:32px; margin-top:12px;
+}
+.faq-stat{
+  display:flex; flex-direction:column; gap:4px;
+}
+.faq-stat .num{
+  font-family:'Fraunces', serif;
+  font-style:italic;
+  font-size:28px;
+  color:var(--accent);
+  line-height:1;
+}
+.faq-stat .label{
+  font-size:12px;
+  color:var(--muted);
+  letter-spacing:.06em;
+}
+
+/* ===== CATEGORY NAV ===== */
+.faq-cat-nav{
+  max-width:1440px;
+  margin:0 auto;
+  padding:0 48px 48px;
+}
+.faq-cat-nav-inner{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:20px 0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.cat-link{
+  padding:8px 18px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  font-size:13px;
+  letter-spacing:.04em;
+  color:var(--ink-soft);
+  transition:all .2s;
+  white-space:nowrap;
+}
+.cat-link:hover{border-color:var(--ink-soft); color:var(--ink)}
+.cat-link.active{background:var(--ink); color:var(--paper); border-color:var(--ink)}
+
+/* ===== FAQ SECTIONS ===== */
+.faq-sections{
+  max-width:1440px;
+  margin:0 auto;
+  padding:0 48px 120px;
+}
+.faq-section{
+  margin-bottom:64px;
+  scroll-margin-top:90px;
+}
+.faq-section:last-child{margin-bottom:0}
+.faq-section-head{
+  display:flex;
+  align-items:baseline;
+  gap:16px;
+  padding-bottom:20px;
+  border-bottom:1px solid var(--line);
+  margin-bottom:4px;
+}
+.faq-section-num{
+  font-family:'Fraunces', serif;
+  font-style:italic;
+  font-size:36px;
+  color:var(--accent);
+  line-height:1;
+}
+.faq-section-title{
+  font-family:'Fraunces', serif;
+  font-weight:400;
+  font-size:28px;
+  letter-spacing:-.01em;
+  line-height:1.15;
+}
+.faq-section-title em{font-style:italic; color:var(--accent)}
+.faq-section-count{
+  margin-left:auto;
+  font-size:12px;
+  color:var(--muted);
+  letter-spacing:.08em;
+}
+
+/* ===== AKKORDEON ===== */
+details.faq-item{
+  border-bottom:1px solid var(--line);
+}
+details.faq-item summary{
+  cursor:pointer;
+  padding:22px 0;
+  font-family:'Fraunces', serif;
+  font-size:20px;
+  font-weight:400;
+  list-style:none;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:24px;
+  letter-spacing:-.01em;
+  line-height:1.25;
+  transition:color .2s;
+}
+details.faq-item summary::-webkit-details-marker{display:none}
+details.faq-item summary:hover{color:var(--accent)}
+details.faq-item summary::after{
+  content:"+";
+  font-family:'Fraunces', serif;
+  font-style:italic;
+  font-size:28px;
+  color:var(--accent);
+  line-height:.8;
+  flex-shrink:0;
+  transition:transform .3s;
+}
+details.faq-item[open] summary::after{content:"−"}
+details.faq-item[open] summary{color:var(--accent)}
+.faq-answer{
+  padding:0 0 28px;
+  max-width:72ch;
+}
+.faq-answer p{
+  font-size:16px;
+  line-height:1.8;
+  color:var(--ink-soft);
+  margin-bottom:14px;
+}
+.faq-answer p:last-child{margin-bottom:0}
+.faq-answer p strong{color:var(--ink); font-weight:500}
+.faq-answer .cite{
+  font-size:13px;
+  font-style:italic;
+  color:var(--muted);
+  display:block;
+  margin-top:8px;
+  line-height:1.5;
+}
+
+/* ===== QUELLEN ===== */
+.faq-sources{
+  max-width:1440px;
+  margin:0 auto;
+  padding:0 48px 120px;
+}
+.faq-sources-inner{
+  background:var(--paper-soft);
+  padding:48px 56px;
+  border-left:3px solid var(--accent);
+}
+.faq-sources h2{
+  font-family:'Fraunces', serif;
+  font-weight:400;
+  font-size:24px;
+  margin-bottom:24px;
+  letter-spacing:-.01em;
+}
+.faq-sources h2 em{font-style:italic; color:var(--accent)}
+.source-list{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.source-list p{
+  font-size:14px;
+  line-height:1.6;
+  color:var(--ink-soft);
+}
+
+/* ===== CTA BANNER ===== */
+.faq-cta{
+  max-width:1440px;
+  margin:0 auto;
+  padding:0 48px 120px;
+}
+.faq-cta-inner{
+  background:var(--ink);
+  color:var(--paper);
+  padding:56px 60px;
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:60px;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+}
+.faq-cta-inner::before{
+  content:"";
+  position:absolute;
+  top:-100px; right:-100px;
+  width:350px; height:350px;
+  background:radial-gradient(circle, rgba(168,72,42,.4), transparent 60%);
+  pointer-events:none;
+}
+.faq-cta-inner h2{
+  font-family:'Fraunces', serif;
+  font-weight:300;
+  font-size:clamp(28px, 3.5vw, 44px);
+  line-height:1.1;
+  position:relative; z-index:2;
+}
+.faq-cta-inner h2 em{font-style:italic; color:var(--accent-soft)}
+.faq-cta-right{
+  position:relative; z-index:2;
+  display:flex; flex-direction:column; gap:16px;
+}
+.faq-cta-right p{
+  font-size:16px; line-height:1.6;
+  color:rgba(243,237,226,.8);
+}
+.faq-cta-right .btn-primary{
+  background:var(--accent); border-color:var(--accent);
+  align-self:flex-start;
+}
+.faq-cta-right .btn-primary:hover{
+  background:var(--paper); color:var(--ink); border-color:var(--paper);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px){
+  .faq-hero{grid-template-columns:1fr; gap:32px; padding:40px 24px 30px}
+  .faq-cat-nav{padding:0 24px 32px}
+  .faq-cat-nav-inner{gap:6px}
+  .cat-link{font-size:12px; padding:6px 14px}
+  .faq-sections{padding:0 24px 80px}
+  .faq-section-head{flex-wrap:wrap; gap:10px}
+  .faq-section-count{margin-left:0}
+  .faq-sources{padding:0 24px 80px}
+  .faq-sources-inner{padding:32px 28px}
+  .faq-cta{padding:0 24px 80px}
+  .faq-cta-inner{grid-template-columns:1fr; padding:40px 32px; gap:24px}
+  .faq-stat-row{gap:20px}
+}

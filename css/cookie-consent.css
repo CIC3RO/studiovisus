@@ -1,0 +1,235 @@
+/* ============================================
+   STUDIO VISUS — Cookie Consent Banner
+   DSGVO-konform: Annehmen/Ablehnen gleichwertig
+   ============================================ */
+
+/* Overlay */
+.cc-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(33,29,24,.5);
+  z-index:9998;
+  backdrop-filter:blur(3px);
+  opacity:0;
+  transition:opacity .4s;
+  pointer-events:none;
+}
+.cc-overlay.is-visible{
+  opacity:1;
+  pointer-events:auto;
+}
+
+/* Banner */
+.cc-banner{
+  position:fixed;
+  bottom:0; left:0; right:0;
+  z-index:9999;
+  transform:translateY(100%);
+  transition:transform .5s cubic-bezier(.2,.8,.2,1);
+}
+.cc-banner.is-visible{
+  transform:translateY(0);
+}
+.cc-inner{
+  max-width:1440px;
+  margin:0 auto;
+  padding:32px 48px;
+  background:var(--paper);
+  border-top:1px solid var(--line);
+  box-shadow:0 -20px 60px -20px rgba(33,29,24,.25);
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:40px;
+  align-items:start;
+}
+
+/* Text */
+.cc-text h3{
+  font-family:'Fraunces', serif;
+  font-size:22px;
+  font-weight:400;
+  margin-bottom:10px;
+  letter-spacing:-.01em;
+}
+.cc-text h3 em{font-style:italic; color:var(--accent)}
+.cc-text p{
+  font-size:14px;
+  line-height:1.65;
+  color:var(--ink-soft);
+  max-width:64ch;
+  margin-bottom:10px;
+}
+.cc-text a{
+  color:var(--accent);
+  border-bottom:1px solid var(--accent);
+  transition:opacity .2s;
+}
+.cc-text a:hover{opacity:.7}
+
+/* Toggle-Gruppen */
+.cc-categories{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin:16px 0 6px;
+}
+.cc-cat{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:13px;
+  color:var(--ink-soft);
+}
+.cc-cat .cc-badge{
+  display:inline-block;
+  padding:3px 10px;
+  border-radius:999px;
+  font-size:11px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.cc-badge-required{
+  background:var(--paper-deep);
+  color:var(--muted);
+}
+.cc-badge-optional{
+  background:rgba(168,72,42,.1);
+  color:var(--accent);
+}
+
+/* Toggle Switch */
+.cc-toggle{
+  position:relative;
+  width:40px; height:22px;
+  flex-shrink:0;
+}
+.cc-toggle input{
+  opacity:0;
+  width:0; height:0;
+  position:absolute;
+}
+.cc-toggle .slider{
+  position:absolute;
+  inset:0;
+  background:var(--line);
+  border-radius:22px;
+  cursor:pointer;
+  transition:background .2s;
+}
+.cc-toggle .slider::before{
+  content:"";
+  position:absolute;
+  left:2px; top:2px;
+  width:18px; height:18px;
+  background:var(--paper);
+  border-radius:50%;
+  transition:transform .2s;
+  box-shadow:0 1px 3px rgba(0,0,0,.2);
+}
+.cc-toggle input:checked + .slider{
+  background:var(--accent);
+}
+.cc-toggle input:checked + .slider::before{
+  transform:translateX(18px);
+}
+.cc-toggle input:disabled + .slider{
+  opacity:.5;
+  cursor:not-allowed;
+}
+
+/* Buttons — GLEICHWERTIG (DSGVO-konform) */
+.cc-actions{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  align-self:center;
+  flex-shrink:0;
+}
+.cc-btn{
+  padding:14px 28px;
+  border-radius:999px;
+  font-family:inherit;
+  font-size:13px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:all .25s;
+  text-align:center;
+  white-space:nowrap;
+  border:1px solid var(--ink);
+}
+/* Beide Buttons gleich gestyled — kein visueller Nudge */
+.cc-btn-accept{
+  background:var(--ink);
+  color:var(--paper);
+}
+.cc-btn-accept:hover{
+  background:var(--accent);
+  border-color:var(--accent);
+}
+.cc-btn-reject{
+  background:var(--paper);
+  color:var(--ink);
+}
+.cc-btn-reject:hover{
+  background:var(--paper-deep);
+}
+.cc-btn-details{
+  background:transparent;
+  border:none;
+  padding:8px;
+  font-size:12px;
+  color:var(--muted);
+  cursor:pointer;
+  text-decoration:underline;
+  letter-spacing:.06em;
+}
+.cc-btn-details:hover{color:var(--accent)}
+
+/* Detail-Sektion (aufklappbar) */
+.cc-details{
+  display:none;
+  margin-top:16px;
+  padding-top:16px;
+  border-top:1px solid var(--line);
+}
+.cc-details.is-open{display:block}
+.cc-detail-group{
+  margin-bottom:16px;
+}
+.cc-detail-group h4{
+  font-family:'Fraunces', serif;
+  font-size:16px;
+  font-weight:400;
+  margin-bottom:6px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.cc-detail-group p{
+  font-size:13px;
+  line-height:1.55;
+  color:var(--muted);
+  max-width:56ch;
+}
+.cc-detail-group .cookie-list{
+  font-size:12px;
+  color:var(--muted);
+  margin-top:6px;
+  line-height:1.6;
+}
+
+/* Responsive */
+@media (max-width: 700px){
+  .cc-inner{
+    grid-template-columns:1fr;
+    gap:20px;
+    padding:24px;
+  }
+  .cc-actions{
+    flex-direction:row;
+    width:100%;
+  }
+  .cc-btn{flex:1; padding:12px 16px}
+  .cc-categories{gap:8px}
+}
