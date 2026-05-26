@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160" role="img" aria-label="Studio Visus">
+  <title>Studio Visus</title>
+
+  <g transform="translate(70, 80)">
+    <path d="M -28,-2
+             C -32,-22 -14,-34   4,-28
+             C 26,-22 34,-6     30,12
+             C 26,28  10,34   -8,30
+             C -28,26 -24,18 -28,-2 Z"
+          fill="#a8482a"/>
+  </g>
+
+  <text x="120" y="102"
+        font-family="'Fraunces', 'Times New Roman', serif"
+        font-size="68"
+        font-weight="400"
+        fill="#ffffff"
+        letter-spacing="-1.5">Studio<tspan font-style="italic" font-weight="500" fill="#c97a52" dx="14">Visus</tspan></text>
+</svg>

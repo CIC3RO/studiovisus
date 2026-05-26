@@ -3,21 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Unikate Originalgemälde kaufen, Verfügbare Werke aus Hamburg | Studio Visus</title>
-<meta name="description" content="Handgemalte Unikate auf Leinwand. Acryl Pouring, Fluid Art und Strukturmalerei aus dem Atelier in Hamburg Lokstedt. Direkt vom Künstler, deutschlandweiter Versand.">
+<link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/logo/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#a8482a">
+<title>Verfügbare Originalgemälde aus Hamburg | Studio Visus</title>
+<meta name="description" content="Handgemalte Unikate auf Leinwand. Acryl-Pouring, Fluid Art und Strukturmalerei direkt vom Künstler. Versand deutschlandweit, Atelier Hamburg.">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Unikate Originalgemälde kaufen | Studio Visus Hamburg">
-<meta property="og:description" content="Handgemalte Unikate auf Leinwand. Acryl Pouring, Fluid Art und Strukturmalerei aus dem Atelier in Hamburg Lokstedt.">
+<meta property="og:title" content="Verfügbare Originalgemälde aus Hamburg | Studio Visus">
+<meta property="og:description" content="Handgemalte Unikate auf Leinwand. Acryl-Pouring, Fluid Art und Strukturmalerei direkt vom Künstler. Versand deutschlandweit, Atelier Hamburg.">
 <meta property="og:url" content="https://www.studiovisus.de/werke">
 <meta property="og:site_name" content="Studio Visus">
 <meta property="og:locale" content="de_DE">
 <meta property="og:image" content="https://www.studiovisus.de/images/werke-uebersichtsseite/atelier-studiovisus.webp">
+<meta property="og:image:width" content="4284">
+<meta property="og:image:height" content="5712">
+<meta property="og:image:type" content="image/webp">
 <meta property="og:image:alt" content="Atelier Studio Visus Hamburg mit Originalgemälden">
 
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Unikate Originalgemälde kaufen | Studio Visus Hamburg">
-<meta name="twitter:description" content="Handgemalte Unikate auf Leinwand. Direkt vom Künstler, deutschlandweiter Versand.">
+<meta name="twitter:title" content="Verfügbare Originalgemälde aus Hamburg | Studio Visus">
+<meta name="twitter:description" content="Handgemalte Unikate auf Leinwand. Acryl-Pouring, Fluid Art und Strukturmalerei direkt vom Künstler. Versand deutschlandweit, Atelier Hamburg.">
 <meta name="twitter:image" content="https://www.studiovisus.de/images/werke-uebersichtsseite/atelier-studiovisus.webp">
 
 <link rel="canonical" href="https://www.studiovisus.de/werke">
@@ -45,11 +54,7 @@
     { "@type": "ListItem", "position": 2, "name": "Werke", "item": "https://www.studiovisus.de/werke" }
   ]
 }
-</script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter+Tight:wght@300;400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+</script><link rel="stylesheet" href="css/fonts.css">
 
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/cookie-consent.css">
@@ -61,25 +66,51 @@
 <!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
-    <a class="brand" href="index.html"><span class="dot"></span> Studio <em>Visus</em></a>
+    <a class="brand" href="/" aria-label="Studio Visus"><img class="brand-logo" src="images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="180" height="48"></a>
     <div class="nav-links">
-      <a href="werke.html" class="active">Werke</a>
-      <a href="blog.html">Blog</a>
-      <a href="ueber.html">Über</a>
-      <a href="kontakt.html">Kontakt</a>
-      <a href="faq.html">FAQ</a>
+      <a href="/werke" class="active">Werke</a>
+      <a href="/blog">Blog</a>
+      <a href="/ueber">Über</a>
+      <a href="/kontakt">Kontakt</a>
+      <a href="/faq">FAQ</a>
     </div>
-    <a href="kontakt.html?art=sonstiges" class="nav-cart">Werk anfragen →</a>
+    <a href="/kontakt?art=sonstiges" class="nav-cart">Werk anfragen →</a>
+    <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
   </div>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu-backdrop" aria-hidden="true"></div>
+<aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-logo">
+    <img src="images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="200" height="50">
+  </div>
+  <nav class="mobile-menu-links" aria-label="Hauptnavigation mobil">
+    <a href="/werke" class="active">Werke</a>
+    <a href="/auftragsarbeit">Auftragsarbeit</a>
+    <a href="/blog">Blog</a>
+    <a href="/ueber">Über</a>
+    <a href="/kontakt">Kontakt</a>
+    <a href="/faq">FAQ</a>
+  </nav>
+  <a href="/kontakt?art=sonstiges" class="mobile-menu-cta">Werk anfragen →</a>
+  <div class="mobile-menu-foot">
+    <a href="mailto:info@studiovisus.de">info@studiovisus.de</a>
+    <a href="tel:017684737726">0176 84 73 77 26</a>
+  </div>
+</aside>
 
 <!-- HERO -->
 <section class="hero">
   <div>
     <div class="eyebrow">Hamburg · Lokstedt · Atelier</div>
     <h1 class="hero-title">
-      Hand&shy;gemalte <em>Unikate</em><br>
-      auf Leinwand, <span class="stroke">direkt</span><br>
+      Hand&shy;gemalte <em>Unikate,</em>
+      <span class="stroke">direkt</span><br>
       aus dem Atelier.
     </h1>
   </div>
@@ -88,6 +119,22 @@
     <p>Acryl, Fluid Art und Strukturmalerei. Entstanden auf Basis neuroästhetischer Prinzipien, gedacht für Räume, in denen Ruhe und Atmosphäre zählen.</p>
   </div>
   <div class="scribble" style="top:96px; right:120px;">frisch im Atelier ↓</div>
+</section>
+
+<!-- INTRO TEXT BLOCK -->
+<section class="werke-intro">
+
+  <!-- CTA zur digitalen Galerie -->
+  <div class="galerie-cta">
+    <div class="galerie-cta-inner">
+      <div class="galerie-cta-text">
+        <div class="eyebrow">Neu</div>
+        <h3>Lieber durch die Galerie gehen?</h3>
+        <p>Alle Werke an einer Wand, klickbar, in der Größe ihrer echten Maße. Wischen, scrollen, anklicken.</p>
+      </div>
+      <a href="/galerie" class="galerie-cta-btn">Zur digitalen Galerie →</a>
+    </div>
+  </div>
 </section>
 
 <!-- GALLERY -->
@@ -107,10 +154,10 @@
   <div class="grid">
 
     <!-- Werk 1: Fenster -->
-    <a class="work w-tall reveal" href="werk-fenster.html" data-format="hochformat" data-available="true" data-large="true">
+    <a class="work w-tall reveal" href="/werke/fenster" data-format="hochformat" data-available="true" data-large="true">
       <div class="frame">
         <span class="badge new">Diptychon</span>
-        <img decoding="async" loading="eager" fetchpriority="high" alt="Fenster. Originalgemälde, Acryl auf Leinwand mit Impasto-Struktur, Diptychon 2 mal 70 × 100 cm" src="images/werke/fenster/originalgemaelde-fesnter-studiovisus.jpg">
+        <img decoding="async" loading="eager" fetchpriority="high" alt="Fenster. Originalgemälde, Acryl auf Leinwand mit Impasto-Struktur, Diptychon 2 mal 70 × 100 cm"  src="images/werke/fenster/originalgemaelde-fesnter-studiovisus.jpg">
       </div>
       <div class="info">
         <div class="info-left">
@@ -124,9 +171,9 @@
     </a>
 
     <!-- Werk 2: Boot -->
-    <a class="work w-tall reveal" href="werk-boot.html" data-format="hochformat" data-available="true" data-large="false" style="position:relative">
+    <a class="work w-tall reveal" href="/werke/boot" data-format="hochformat" data-available="true" data-large="false" style="position:relative">
       <div class="frame">
-        <img decoding="async" loading="lazy" alt="Boot. Originalgemälde, Acryl auf Leinwand mit Schuppenstruktur und japanisch inspirierten Wellen, 70 × 100 cm" src="images/werke/boot/originalgemaelde-boot-studiovisus.webp">
+        <img decoding="async" loading="lazy" alt="Boot. Originalgemälde, Acryl auf Leinwand mit Schuppenstruktur und japanisch inspirierten Wellen, 70 × 100 cm"  src="images/werke/boot/originalgemaelde-boot-studiovisus.webp">
       </div>
       <div class="info">
         <div class="info-left">
@@ -141,9 +188,9 @@
     </a>
 
     <!-- Werk 3: Schwarz -->
-    <a class="work w-square reveal" href="werk-schwarz.html" data-format="quadrat" data-available="true" data-large="false">
+    <a class="work w-square reveal" href="/werke/schwarz" data-format="quadrat" data-available="true" data-large="false">
       <div class="frame">
-        <img decoding="async" loading="lazy" alt="Schwarz. Originalgemälde, Acryl mit Sandstruktur und verborgenem Zengarten-Motiv, 100 × 100 cm" src="images/werke/schwarz/originalgemaelde-schwarz-studiovisus.jpeg">
+        <img decoding="async" loading="lazy" alt="Schwarz. Originalgemälde, Acryl mit Sandstruktur und verborgenem Zengarten-Motiv, 100 × 100 cm"  src="images/werke/schwarz/originalgemaelde-schwarz-studiovisus.jpeg">
       </div>
       <div class="info">
         <div class="info-left">
@@ -157,9 +204,9 @@
     </a>
 
     <!-- Werk 4: Schneewiese -->
-    <a class="work w-square reveal" href="werk-schneewiese.html" data-format="quadrat" data-available="true" data-large="false">
+    <a class="work w-square reveal" href="/werke/schneewiese" data-format="quadrat" data-available="true" data-large="false">
       <div class="frame">
-        <img decoding="async" loading="lazy" alt="Schneewiese. Originalgemälde mit Fußabdrücken und gegossenem Farbkreis, 90 × 90 cm" src="images/werke/schneewiese/originalgemaelde-schneewiese-studiovisus.jpeg">
+        <img decoding="async" loading="lazy" alt="Schneewiese. Originalgemälde mit Fußabdrücken und gegossenem Farbkreis, 90 × 90 cm"  src="images/werke/schneewiese/originalgemaelde-schneewiese-studiovisus.jpeg">
       </div>
       <div class="info">
         <div class="info-left">
@@ -173,9 +220,9 @@
     </a>
 
     <!-- Werk 5: Schneesturm -->
-    <a class="work w-portrait reveal" href="werk-schneesturm.html" data-format="quadrat" data-available="true" data-large="false">
+    <a class="work w-portrait reveal" href="/werke/schneesturm" data-format="quadrat" data-available="true" data-large="false">
       <div class="frame">
-        <img decoding="async" loading="lazy" alt="Schneesturm. Originalgemälde in Weiß mit subtilen Schattierungen, 100 × 100 cm" src="images/werke/schneesturm/originalgemaelde-schneesturm-studiovisus.webp">
+        <img decoding="async" loading="lazy" alt="Schneesturm. Originalgemälde in Weiß mit subtilen Schattierungen, 100 × 100 cm"  src="images/werke/schneesturm/originalgemaelde-schneesturm-studiovisus.webp">
       </div>
       <div class="info">
         <div class="info-left">
@@ -199,7 +246,7 @@
       Sie suchen ein Werk für einen <em>bestimmten Raum</em>?<br>
       Ich male auf Wunsch ein Unikat, das auf Größe, Lichtsituation und Farbwelt Ihres Ortes abgestimmt ist.
     </div>
-    <a class="banner-cta" href="auftragsarbeit.html">Auftragswerk anfragen →</a>
+    <a class="banner-cta" href="/auftragsarbeit">Auftragswerk anfragen →</a>
   </div>
 </section>
 
@@ -208,9 +255,9 @@
   <div class="grid">
 
     <!-- Werk 6: Sturm -->
-    <a class="work w-wide reveal" href="werk-sturm.html" data-format="querformat" data-available="true" data-large="false" style="position:relative">
+    <a class="work w-wide reveal" href="/werke/sturm" data-format="querformat" data-available="true" data-large="false" style="position:relative">
       <div class="frame">
-        <img decoding="async" loading="lazy" alt="Sturm. Originalgemälde in leuchtendem Dunkelrot mit Goldspritzern, 100 × 70 cm" src="images/werke/sturm/originalgemaelde-sturm-studiovisus.webp">
+        <img decoding="async" loading="lazy" alt="Sturm. Originalgemälde in leuchtendem Dunkelrot mit Goldspritzern, 100 × 70 cm"  src="images/werke/sturm/originalgemaelde-sturm-studiovisus.webp">
       </div>
       <div class="info">
         <div class="info-left">
@@ -225,9 +272,9 @@
     </a>
 
     <!-- Werk 7: Flamingo -->
-    <a class="work w-square reveal" href="werk-flamingo.html" data-format="quadrat" data-available="true" data-large="false">
+    <a class="work w-square reveal" href="/werke/flamingo" data-format="quadrat" data-available="true" data-large="false">
       <div class="frame">
-        <img decoding="async" loading="lazy" alt="Flamingo. Originalgemälde mit abstraktem Flamingo und Schuppenstruktur, 100 × 100 cm" src="images/werke/flamingo/originalgemaelde-flamingo-studiovisus.webp">
+        <img decoding="async" loading="lazy" alt="Flamingo. Originalgemälde mit abstraktem Flamingo und Schuppenstruktur, 100 × 100 cm"  src="images/werke/flamingo/originalgemaelde-flamingo-studiovisus.webp">
       </div>
       <div class="info">
         <div class="info-left">
@@ -241,10 +288,10 @@
     </a>
 
     <!-- Werk 8: Olive (verkauft) -->
-    <a class="work w-wide reveal" href="werk-olive.html" data-format="querformat" data-available="false" data-large="false">
+    <a class="work w-wide reveal" href="/werke/olive" data-format="querformat" data-available="false" data-large="false">
       <div class="frame">
         <span class="badge sold">Verkauft</span>
-        <img decoding="async" loading="lazy" alt="Olive. Originalgemälde in Gold und Olivtönen, Fluid Art, 120 × 70 cm" src="images/werke/olive/originalgemaelde-olive-studiovisus.webp">
+        <img decoding="async" loading="lazy" alt="Olive. Originalgemälde in Gold und Olivtönen, Fluid Art, 120 × 70 cm"  src="images/werke/olive/originalgemaelde-olive-studiovisus.webp">
       </div>
       <div class="info">
         <div class="info-left">
@@ -258,9 +305,9 @@
     </a>
 
     <!-- Werk 9: Sommerkleid -->
-    <a class="work w-square reveal" href="werk-sommerkleid.html" data-format="querformat" data-available="true" data-large="false">
+    <a class="work w-square reveal" href="/werke/sommerkleid" data-format="querformat" data-available="true" data-large="false">
       <div class="frame">
-        <img decoding="async" loading="lazy" alt="Sommerkleid. Originalgemälde in Grün und Beige mit organischer Struktur, 120 × 70 cm" src="images/werke/sommerkleid/originalgemaelde-sommerkleid-studiovisus.webp">
+        <img decoding="async" loading="lazy" alt="Sommerkleid. Originalgemälde in Grün und Beige mit organischer Struktur, 120 × 70 cm"  src="images/werke/sommerkleid/originalgemaelde-sommerkleid-studiovisus.webp">
       </div>
       <div class="info">
         <div class="info-left">
@@ -274,9 +321,9 @@
     </a>
 
     <!-- Werk 10: Himmelsnetz -->
-    <a class="work w-feature reveal" href="werk-himmelsnetz.html" data-format="querformat" data-available="true" data-large="false">
+    <a class="work w-feature reveal" href="/werke/himmelsnetz" data-format="querformat" data-available="true" data-large="false">
       <div class="frame">
-        <img decoding="async" loading="lazy" alt="Himmelsnetz. Originalgemälde in Grau mit bunten Fischen in Acrly und Öl gemalt. 70 x 100 cm" src="images/werke/himmelsnetz/originalgemaelde-himmelsnetz-studiovisus.webp">
+        <img decoding="async" loading="lazy" alt="Himmelsnetz. Originalgemälde in Grau mit bunten Fischen in Acrly und Öl gemalt. 70 x 100 cm"  src="images/werke/himmelsnetz/originalgemaelde-himmelsnetz-studiovisus.webp">
       </div>
       <div class="info">
       <div class="info-left">
@@ -292,10 +339,19 @@
   </div>
 </section>
 
+<!-- Werke outro Text -->
+<section class="werke-intro">
+  <div class="werke-intro-inner">
+    <p>Was hier hängt, ist gemalt worden. Mit Pinsel, Spachtel, Gusstechnik, manchmal über Monate hinweg, in mehreren Schichten. Jedes Stück bleibt für sich. Es gibt keinen Druck davon, keine Edition, keinen zweiten Versuch.</p>
+    <p>Die Auswahl entsteht im Atelier in Hamburg-Lokstedt. Hintergrund ist die <a href="/blog/farbpsychologie-und-wohlbefinden">Neuroästhetik</a>, also die Frage, was bestimmte Farb- und Formreize im Gehirn auslösen. Die meisten Werke sind so angelegt, dass sie nicht dominieren. Sie sollen wirken, ohne dass Sie sie ständig anschauen müssen. Das macht sie für <a href="/bilder-arztpraxis">Praxen</a>, <a href="/kunst-hotel">Hotels</a> und <a href="/kunst-buero">Büros</a> brauchbar, ohne dass sie generisch werden.</p>
+    <p>Wenn Sie für einen konkreten Raum etwas Eigenes suchen, geht das auch als <a href="/auftragsarbeit">Auftragsarbeit</a>. Format, Farbpalette und Stimmung lassen sich auf Licht, Wand und Zweck abstimmen. Versand deutschlandweit, persönliche Lieferung in Norddeutschland nach Absprache.</p>
+  </div>
+</section>
+
 <!-- ATELIER -->
 <section class="atelier">
   <div class="atelier-img">
-    <img decoding="async" loading="lazy" src="images/werke-uebersichtsseite/atelier-studiovisus.webp" alt="Atelier von Studio visus mit halbfertig gemaltem Bild">
+    <img decoding="async" loading="lazy"  src="images/werke-uebersichtsseite/atelier-studiovisus.webp" alt="Atelier von Studio visus mit halbfertig gemaltem Bild">
     </div>
   </div>
   <div class="atelier-text">
@@ -311,7 +367,7 @@
 <footer>
   <div class="foot-inner">
     <div>
-      <div class="foot-brand">Studio <em>Visus</em></div>
+      <div class="foot-brand"><img class="foot-brand-logo" src="images/logo/studiovisus-logo-footer-thight.svg" alt="Studio Visus" width="200" height="50"></div>
       <div class="foot-tag">Handgemalte Unikate für Räume, in denen Atmosphäre zählt.</div>
     </div>
     <div class="foot-col">
@@ -322,14 +378,15 @@
       <h4>Kontakt</h4>
       <a href="mailto:info@studiovisus.de">info@studiovisus.de</a>
       <a href="tel:017684737726">0176 84 73 77 26</a>
-      <a href="kontakt.html">Kontaktformular →</a>
+      <a href="/kontakt">Kontaktformular →</a>
+      <a href="https://www.instagram.com/janniclas.art/" target="_blank" rel="noopener me">Instagram &rarr;</a>
     </div>
     <div class="foot-col">
       <h4>Info</h4>
-      <a href="impressum.html">Impressum</a>
-      <a href="widerrufsbelehrung.html">Widerrufsrecht</a>
-      <a href="datenschutz.html">Datenschutz</a>
-      <a href="faq.html">FAQ</a>
+      <a href="/impressum">Impressum</a>
+      <a href="/widerrufsbelehrung">Widerrufsrecht</a>
+      <a href="/datenschutz">Datenschutz</a>
+      <a href="/faq">FAQ</a>
       <a href="#" data-cc-open>Cookie-Einstellungen</a>
     </div>
   </div>

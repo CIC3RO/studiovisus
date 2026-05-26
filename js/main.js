@@ -4,6 +4,121 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ===== Mobile Burger Menu ===== */
+  const navToggle = document.querySelector('.nav-toggle');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const mobileBackdrop = document.querySelector('.mobile-menu-backdrop');
+
+  if (navToggle && mobileMenu) {
+    let savedScrollY = 0;
+
+    function openMenu() {
+      savedScrollY = window.scrollY;
+      mobileMenu.classList.add('is-open');
+      if (mobileBackdrop) {
+        mobileBackdrop.style.display = 'block';
+        // force reflow so transition runs
+        void mobileBackdrop.offsetWidth;
+        mobileBackdrop.classList.add('is-visible');
+      }
+      navToggle.setAttribute('aria-expanded', 'true');
+      document.body.style.top = `-${savedScrollY}px`;
+      document.body.classList.add('menu-open');
+    }
+    function closeMenu() {
+      mobileMenu.classList.remove('is-open');
+      if (mobileBackdrop) {
+        mobileBackdrop.classList.remove('is-visible');
+        setTimeout(() => { mobileBackdrop.style.display = 'none'; }, 300);
+      }
+      navToggle.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('menu-open');
+      document.body.style.top = '';
+      window.scrollTo(0, savedScrollY);
+    }
+    navToggle.addEventListener('click', () => {
+      if (mobileMenu.classList.contains('is-open')) closeMenu();
+      else openMenu();
+    });
+    if (mobileBackdrop) {
+      mobileBackdrop.addEventListener('click', closeMenu);
+    }
+    // Close on link click
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => closeMenu());
+    });
+    // Close on ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('is-open')) closeMenu();
+    });
+    // Close if window resized above mobile breakpoint
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900 && mobileMenu.classList.contains('is-open')) closeMenu();
+    });
+  }
+
+  /* ===== Werk-Detail Lightbox & Thumbnail Switching ===== */
+  const mainImgWrap = document.querySelector('.werk-main-img');
+  const thumbs = document.querySelectorAll('.werk-thumb');
+
+  if (mainImgWrap) {
+    const mainImg = mainImgWrap.querySelector('img');
+
+    // Thumbs: tausche das Hauptbild beim Klick
+    thumbs.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        const thumbImg = thumb.querySelector('img');
+        if (!thumbImg || !mainImg) return;
+        // Active-Klasse umsetzen
+        thumbs.forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+        // Tausch von src und alt
+        mainImg.src = thumbImg.src;
+        mainImg.alt = thumbImg.alt;
+      });
+    });
+
+    // Lightbox bauen (einmalig)
+    let lightbox = document.querySelector('.lightbox');
+    if (!lightbox && mainImg) {
+      lightbox = document.createElement('div');
+      lightbox.className = 'lightbox';
+      lightbox.setAttribute('role', 'dialog');
+      lightbox.setAttribute('aria-modal', 'true');
+      lightbox.setAttribute('aria-label', 'Bildvergrößerung');
+      lightbox.innerHTML = `
+        <button type="button" class="lightbox-close" aria-label="Schließen">×</button>
+        <img class="lightbox-img" alt="">
+      `;
+      document.body.appendChild(lightbox);
+    }
+
+    if (lightbox && mainImg) {
+      const lbImg = lightbox.querySelector('.lightbox-img');
+      const lbClose = lightbox.querySelector('.lightbox-close');
+
+      function openLightbox() {
+        lbImg.src = mainImg.src;
+        lbImg.alt = mainImg.alt;
+        lightbox.classList.add('is-open');
+        document.body.classList.add('lightbox-open');
+      }
+      function closeLightbox() {
+        lightbox.classList.remove('is-open');
+        document.body.classList.remove('lightbox-open');
+      }
+
+      mainImgWrap.addEventListener('click', openLightbox);
+      lbClose.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox || e.target === lbImg) closeLightbox();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+      });
+    }
+  }
+
   /* ===== Reveal-Animation beim Scrollen ===== */
   const reveals = document.querySelectorAll('.reveal');
   if (reveals.length) {
@@ -18,16 +133,65 @@ document.addEventListener('DOMContentLoaded', () => {
     reveals.forEach(el => io.observe(el));
   }
 
-  /* ===== Filter-Buttons & Tags (Werke-Seite) ===== */
-  document.querySelectorAll('.filters button, .tag').forEach(b => {
-    b.addEventListener('click', () => {
-      const group = b.parentElement;
-      group.querySelectorAll('button, .tag').forEach(x => {
-        x.classList.remove('active', 'is-active');
+  /* ===== Filter-Buttons (Werke-Seite) =====
+     Filtert die Werke anhand der data-Attribute (data-format, data-available,
+     data-large). Update der Anzahl im Heading. Soft fade beim Wechsel. */
+  const filterButtons = document.querySelectorAll('.filters button[data-filter]');
+  const works = document.querySelectorAll('.work[data-format]');
+
+  if (filterButtons.length && works.length) {
+    console.log('[Studio Visus] Filter aktiv:', filterButtons.length, 'Buttons,', works.length, 'Werke');
+    const countEl = document.querySelector('.gallery-count');
+
+    function pad2(n){ return n < 10 ? '0' + n : String(n); }
+
+    function matches(work, filter) {
+      switch (filter) {
+        case 'alle':         return true;
+        case 'verfuegbar':   return work.dataset.available === 'true';
+        case 'grossformat':  return work.dataset.large === 'true';
+        case 'quadrat':      return work.dataset.format === 'quadrat';
+        case 'hochformat':   return work.dataset.format === 'hochformat';
+        case 'querformat':   return work.dataset.format === 'querformat';
+        default:             return true;
+      }
+    }
+
+    function applyFilter(filter) {
+      let visible = 0;
+      works.forEach(w => {
+        const show = matches(w, filter);
+        w.classList.toggle('is-hidden', !show);
+        if (show) visible++;
       });
-      b.classList.add(b.tagName === 'BUTTON' ? 'active' : 'is-active');
+
+      // Leere Gallery-Sections ausblenden (z. B. die zweite Section, wenn dort alle gefiltert sind).
+      // Die erste Section bleibt immer sichtbar, weil sie den Filter-Header enthält.
+      document.querySelectorAll('.gallery-wrap').forEach(section => {
+        const hasHead = section.querySelector('.gallery-head');
+        if (hasHead) return;
+        const hasVisible = section.querySelector('.work:not(.is-hidden)');
+        section.classList.toggle('is-empty', !hasVisible);
+      });
+
+      if (countEl) {
+        countEl.textContent = visible === 1
+          ? '· 01 Unikat'
+          : `· ${pad2(visible)} Unikate`;
+      }
+    }
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        applyFilter(btn.dataset.filter);
+      });
     });
-  });
+  } else if (document.querySelector('.filters button')) {
+    console.warn('[Studio Visus] Filter-Buttons gefunden, aber keine Werke mit data-format. Bitte HTML prüfen.');
+  }
 
   /* ===== Anfrageformular — bedingte Felder (Kontakt-Seite) ===== */
   const radios = document.querySelectorAll('input[name="art"]');

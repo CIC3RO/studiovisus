@@ -1,0 +1,66 @@
+# Caddyfile fuer Studio Visus
+# Plazieren auf dem Server (z.B. /etc/caddy/Caddyfile oder per Caddy-Doku).
+# DNS und Cloudflare-Setup sind separat.
+
+www.studiovisus.de, studiovisus.de {
+	root * /var/www/studiovisus
+	encode zstd gzip
+
+	# 301: ohne www auf mit www
+	@noWww host studiovisus.de
+	redir @noWww https://www.studiovisus.de{uri} 301
+
+	# Trailing-Slash entfernen, ausser fuer /
+	@trailingSlash {
+		path_regexp trailing ^(.+)/$
+	}
+	redir @trailingSlash /{re.trailing.1} 301
+
+	# 1. /werke/<slug> -> /werk-<slug>.html
+	@werkDetail path_regexp werkDetail ^/werke/([a-z0-9-]+)$
+	rewrite @werkDetail /werk-{re.werkDetail.1}.html
+
+	# 2. /blog/<slug> -> /blog-<slug>.html
+	@blogPost path_regexp blogPost ^/blog/([a-z0-9-]+)$
+	rewrite @blogPost /blog-{re.blogPost.1}.html
+
+	# 3. /werke (Uebersicht) -> /werke.html
+	@werkeIndex path /werke
+	rewrite @werkeIndex /werke.html
+
+	# 4. /blog (Blog-Uebersicht) -> /blog.html
+	@blogIndex path /blog
+	rewrite @blogIndex /blog.html
+
+	# 5. Restliche saubere URLs (eine Ebene, keine Datei-Endung) -> .html
+	@cleanUrl {
+		path_regexp clean ^/([a-z0-9-]+)$
+		not path_regexp ^/(images|css|js|favicon|robots|sitemap|llms|site)
+	}
+	rewrite @cleanUrl /{re.clean.1}.html
+
+	# Caching: Assets lange, HTML kurz
+	@static path_regexp \.(svg|png|jpg|jpeg|webp|gif|ico|woff2?|ttf|otf|css|js)$
+	header @static Cache-Control "public, max-age=31536000, immutable"
+
+	header *.html Cache-Control "public, max-age=3600, must-revalidate"
+
+	# Security-Header
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "SAMEORIGIN"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "interest-cohort=()"
+		-Server
+	}
+
+	# Eigene 404-Seite, falls vorhanden (Fallback: Start)
+	handle_errors {
+		@404 expression {http.error.status_code} == 404
+		rewrite @404 /index.html
+		file_server
+	}
+
+	file_server
+}

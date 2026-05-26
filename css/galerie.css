@@ -1,0 +1,424 @@
+/* ============================================================
+   Digitale Galerie — Studio Visus
+   Eine horizontale Galeriewand, durch die der Nutzer scrollt.
+   ============================================================ */
+
+/* Intro über der Galerie */
+.galerie-intro {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 60px 48px 40px;
+  text-align: center;
+}
+.galerie-intro .eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 20px;
+}
+.galerie-intro h1 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(36px, 5.2vw, 64px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+.galerie-intro h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+.galerie-intro p {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  max-width: 620px;
+  margin: 0 auto 12px;
+}
+.galerie-intro p:last-child {
+  margin-bottom: 0;
+}
+
+/* Hinweis auf die Mechanik */
+.galerie-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 32px;
+  padding: 10px 20px;
+  background: rgba(168, 72, 42, 0.08);
+  border: 1px solid rgba(168, 72, 42, 0.2);
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+}
+.galerie-hint .arrow {
+  display: inline-block;
+  animation: hint-bounce 1.8s ease-in-out infinite;
+}
+@keyframes hint-bounce {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(6px); }
+}
+
+/* Die Galerie-Ansicht selbst */
+.galerie-stage {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  min-height: 480px;
+  max-height: 720px;
+  overflow: hidden;
+  background: #1a1714;
+  margin-bottom: 60px;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.galerie-stage.is-dragging {
+  cursor: grabbing;
+}
+.galerie-stage:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+/* Die scrollbare Innenseite */
+.galerie-scroll {
+  position: relative;
+  height: 100%;
+  width: max-content;
+  display: flex;
+  align-items: stretch;
+}
+
+/* Die Wand selbst — ein wiederholbarer Block */
+.galerie-wand {
+  position: relative;
+  height: 100%;
+  /* Die Wand-Grafik wird per inline-style mit aspect-ratio gesetzt
+     damit sie sich an die Höhe der Galerie anpasst. */
+  background-image: url('../images/galerie/galeriewand.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+/* Werke an der Wand */
+.galerie-werk {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+              filter 0.4s ease;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.35))
+          drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
+  will-change: transform;
+}
+.galerie-werk:hover,
+.galerie-werk:focus {
+  transform: translateY(-50%) scale(1.04);
+  filter: drop-shadow(0 20px 36px rgba(0, 0, 0, 0.45))
+          drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+  outline: none;
+  z-index: 5;
+}
+.galerie-werk img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Verkauft-Plakette */
+.galerie-werk-sold {
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(33, 29, 24, 0.92);
+  color: var(--paper);
+  padding: 6px 12px;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-radius: 2px;
+}
+
+/* Mobile-Indikator: pulsierender Punkt auf jedem Werk auf Touch-Geräten */
+.galerie-werk-dot {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 36px;
+  height: 36px;
+  margin: -18px 0 0 -18px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 3;
+}
+.galerie-werk-dot::before,
+.galerie-werk-dot::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  animation: dot-pulse 2s ease-out infinite;
+}
+.galerie-werk-dot::after {
+  animation-delay: 1s;
+}
+.galerie-werk-dot svg {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin: 10px 0 0 10px;
+  color: var(--ink);
+}
+@keyframes dot-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .galerie-werk-dot { display: block; }
+}
+
+/* Bedienleiste unten an der Galerie */
+.galerie-controls {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 10;
+  pointer-events: none;
+}
+.galerie-controls button {
+  pointer-events: auto;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: rgba(243, 237, 226, 0.92);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  transition: background 0.2s ease, transform 0.2s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  -webkit-tap-highlight-color: transparent;
+}
+.galerie-controls button:hover {
+  background: var(--accent);
+  color: var(--paper);
+  transform: scale(1.08);
+}
+.galerie-controls button:disabled {
+  opacity: 0.4;
+  cursor: default;
+  transform: none;
+}
+.galerie-controls button:disabled:hover {
+  background: rgba(243, 237, 226, 0.92);
+  color: var(--ink);
+  transform: none;
+}
+.galerie-controls .progress {
+  pointer-events: auto;
+  width: 140px;
+  height: 3px;
+  background: rgba(243, 237, 226, 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.galerie-controls .progress-bar {
+  height: 100%;
+  background: var(--paper);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+/* Modal mit Werk-Details */
+.werk-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1500;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(20, 17, 14, 0.86);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.werk-modal.is-open {
+  display: flex;
+  opacity: 1;
+}
+.werk-modal-card {
+  background: var(--paper);
+  max-width: min(880px, 100%);
+  max-height: 90vh;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.5);
+  transform: scale(0.96);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.werk-modal.is-open .werk-modal-card {
+  transform: scale(1);
+}
+.werk-modal-img {
+  position: relative;
+  background: var(--paper-deep);
+  min-height: 380px;
+  overflow: hidden;
+}
+.werk-modal-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.werk-modal-body {
+  padding: 40px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.werk-modal-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+.werk-modal-title {
+  font-family: 'Fraunces', serif;
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+.werk-modal-specs {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+.werk-modal-specs strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+.werk-modal-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  align-self: flex-start;
+  transition: background 0.25s ease, gap 0.25s ease;
+}
+.werk-modal-cta:hover {
+  background: var(--accent);
+  gap: 14px;
+}
+.werk-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  background: rgba(243, 237, 226, 0.95);
+  color: var(--ink);
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background 0.2s ease, transform 0.3s ease;
+}
+.werk-modal-close:hover {
+  background: var(--accent);
+  color: var(--paper);
+  transform: rotate(90deg);
+}
+
+/* Mobile-Anpassungen */
+@media (max-width: 760px) {
+  .galerie-intro {
+    padding: 40px 24px 30px;
+  }
+  .galerie-stage {
+    height: 60vh;
+    min-height: 380px;
+  }
+  .galerie-controls {
+    bottom: 16px;
+    gap: 10px;
+  }
+  .galerie-controls button {
+    width: 40px;
+    height: 40px;
+  }
+  .galerie-controls .progress {
+    width: 80px;
+  }
+  .werk-modal {
+    padding: 16px;
+  }
+  .werk-modal-card {
+    grid-template-columns: 1fr;
+    max-height: 92vh;
+    overflow-y: auto;
+  }
+  .werk-modal-img {
+    min-height: 280px;
+    max-height: 50vh;
+  }
+  .werk-modal-body {
+    padding: 28px 24px 32px;
+  }
+  .werk-modal-title {
+    font-size: 30px;
+  }
+}
+
+/* Body lock wenn Modal offen */
+body.modal-open {
+  overflow: hidden;
+}

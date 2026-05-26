@@ -3,13 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Datenschutzerklaerung | Schuetzen Sie Ihre Daten — Studio Visus</title>
-<meta name="description" content="Unsere Datenschutzerklaerung informiert ueber den Umgang mit personenbezogenen Daten, Datenerfassung und Ihre Rechte.">
+<link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/logo/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#a8482a">
+<title>Datenschutzerklärung | Studio Visus</title>
+<meta name="description" content="Hinweise zum Umgang mit personenbezogenen Daten, zur Datenerfassung auf studiovisus.de und zu Ihren Rechten als Betroffener.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Datenschutzerklaerung | Schuetzen Sie Ihre Daten — Studio Visus">
-<meta property="og:description" content="Unsere Datenschutzerklaerung informiert ueber den Umgang mit personenbezogenen Daten, Datenerfassung und Ihre Rechte.">
+<meta property="og:title" content="Datenschutzerklärung | Studio Visus">
+<meta property="og:description" content="Hinweise zum Umgang mit personenbezogenen Daten, zur Datenerfassung auf studiovisus.de und zu Ihren Rechten als Betroffener.">
+<meta property="og:locale" content="de_DE">
 <meta property="og:url" content="https://www.studiovisus.de/datenschutz">
 <meta property="og:image" content="https://www.studiovisus.de/images/index/originalgemaelde-fenster-acryl-struktur-studiovisus.jpg">
+<meta property="og:image:width" content="621">
+<meta property="og:image:height" content="915">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:alt" content="Studio Visus Hamburg">
 <meta property="og:site_name" content="Studio Visus">
 <meta name="twitter:card" content="summary">
@@ -23,10 +33,7 @@
     { "@type": "ListItem", "position": 2, "name": "Datenschutzerkl&#228;rung", "item": "https://www.studiovisus.de/datenschutz" }
   ]
 }
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter+Tight:wght@300;400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+</script><link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/legal.css">
 <link rel="stylesheet" href="css/cookie-consent.css">
@@ -34,18 +41,43 @@
 <body>
 <nav class="nav">
   <div class="nav-inner">
-    <a class="brand" href="index.html"><span class="dot"></span> Studio <em>Visus</em></a>
+    <a class="brand" href="/" aria-label="Studio Visus"><img class="brand-logo" src="images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="180" height="48"></a>
     <div class="nav-links">
-      <a href="werke.html">Werke</a>
-      <a href="blog.html">Blog</a>
-      <a href="ueber.html">&#220;ber</a>
-      <a href="kontakt.html">Kontakt</a>
-      <a href="faq.html">FAQ</a>
-      <a href="#" data-cc-open>Cookie-Einstellungen</a>
+      <a href="/werke">Werke</a>
+      <a href="/blog">Blog</a>
+      <a href="/ueber">&#220;ber</a>
+      <a href="/kontakt">Kontakt</a>
+      <a href="/faq">FAQ</a>
     </div>
-    <a href="kontakt.html?art=sonstiges" class="nav-cart">Werk anfragen →</a>
+    <a href="/kontakt?art=sonstiges" class="nav-cart">Werk anfragen →</a>
+    <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
   </div>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu-backdrop" aria-hidden="true"></div>
+<aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-logo">
+    <img src="images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="200" height="50">
+  </div>
+  <nav class="mobile-menu-links" aria-label="Hauptnavigation mobil">
+    <a href="/werke">Werke</a>
+    <a href="/auftragsarbeit">Auftragsarbeit</a>
+    <a href="/blog">Blog</a>
+    <a href="/ueber">Über</a>
+    <a href="/kontakt">Kontakt</a>
+    <a href="/faq">FAQ</a>
+  </nav>
+  <a href="/kontakt?art=sonstiges" class="mobile-menu-cta">Werk anfragen →</a>
+  <div class="mobile-menu-foot">
+    <a href="mailto:info@studiovisus.de">info@studiovisus.de</a>
+    <a href="tel:017684737726">0176 84 73 77 26</a>
+  </div>
+</aside>
 <section class="legal-head">
   <div class="eyebrow">Rechtliches</div>
   <h1>Datenschutzerkl&#228;rung</h1>
@@ -83,28 +115,8 @@
     <h3>Analyse-Tools und Tools von Drittanbietern</h3>
 
     <p>Beim Besuch dieser Website kann Ihr Surf-Verhalten statistisch ausgewertet werden. Das geschieht vor allem mit sogenannten Analyseprogrammen.</p>
-
-    <h2>2. Hosting</h2>
-
-    <p>Wir hosten die Inhalte unserer Website bei folgendem Anbieter:</p>
-
-    <h3>Squarespace</h3>
-
-    <p>Anbieter ist die Squarespace Ireland Ltd., Le Pole House, Ship Street Great, Dublin 8, Irland (nachfolgend Squarespace).</p>
-
-    <p>Squarespace ist ein Tool zum Erstellen und zum Hosten von Websites. Wenn Sie unsere Website besuchen, werden Ihre Daten auf den Servern von Squarespace verarbeitet. Hierbei können auch personenbezogene Daten an das Mutterunternehmen von Squarespace, die Squarespace Inc., 8 Clarkson St, New York, NY 10014, USA übermittelt werden. Squarespace speichert ferner Cookies, die für die Darstellung der Seite und zur Gewährleistung der Sicherheit erforderlich sind (notwendige Cookies).</p>
-
-    <p>Die Verwendung von Squarespace erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer Website. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im Sinne des TDDDG umfasst. Die Einwilligung ist jederzeit widerrufbar.</p>
-
-    <p>Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt. Details finden Sie hier: <a href="https://support.squarespace.com/hc/de/articles/360000851908-DSGVO-und-Squarespace" target="_blank" rel="noopener">https://support.squarespace.com/hc/de/articles/360000851908-DSGVO-und-Squarespace</a>.</p>
-
-    <p>Das Unternehmen verfügt über eine Zertifizierung nach dem „EU-US Data Privacy Framework" (DPF). Der DPF ist ein Übereinkommen zwischen der Europäischen Union und den USA, der die Einhaltung europäischer Datenschutzstandards bei Datenverarbeitungen in den USA gewährleisten soll. Jedes nach dem DPF zertifizierte Unternehmen verpflichtet sich, diese Datenschutzstandards einzuhalten. Weitere Informationen hierzu erhalten Sie vom Anbieter unter folgendem Link: <a href="https://www.dataprivacyframework.gov/participant/4774" target="_blank" rel="noopener">https://www.dataprivacyframework.gov/participant/4774</a>.</p>
-
-    <p><strong>Auftragsverarbeitung</strong></p>
-
-    <p>Wir haben einen Vertrag über Auftragsverarbeitung (AVV) zur Nutzung des oben genannten Dienstes geschlossen. Hierbei handelt es sich um einen datenschutzrechtlich vorgeschriebenen Vertrag, der gewährleistet, dass dieser die personenbezogenen Daten unserer Websitebesucher nur nach unseren Weisungen und unter Einhaltung der DSGVO verarbeitet.</p>
-
-    <h2>3. Allgemeine Hinweise und Pflichtinformationen</h2>
+  
+    <h2>2. Allgemeine Hinweise und Pflichtinformationen</h2>
 
     <h3>Datenschutz</h3>
 
@@ -179,7 +191,7 @@
 
     <p>Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-E-Mails, vor.</p>
 
-    <h2>4. Datenerfassung auf dieser Website</h2>
+    <h2>3. Datenerfassung auf dieser Website</h2>
 
     <h3>Cookies</h3>
 
@@ -211,7 +223,7 @@
 
     <p>Die von Ihnen an uns per Kontaktanfragen übersandten Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen – insbesondere gesetzliche Aufbewahrungsfristen – bleiben unberührt.</p>
 
-    <h2>5. Newsletter</h2>
+    <h2>4. Newsletter</h2>
 
     <h3>Newsletterdaten</h3>
 
@@ -223,7 +235,7 @@
 
     <p>Daten, die zu anderen Zwecken bei uns gespeichert wurden, bleiben hiervon unberührt. Nach Ihrer Austragung aus der Newsletterverteilerliste wird Ihre E-Mail-Adresse bei uns bzw. dem Newsletterdiensteanbieter ggf. in einer Blacklist gespeichert, sofern dies zur Verhinderung künftiger Mailings erforderlich ist. Die Daten aus der Blacklist werden nur für diesen Zweck verwendet und nicht mit anderen Daten zusammengeführt. Dies dient sowohl Ihrem Interesse als auch unserem Interesse an der Einhaltung der gesetzlichen Vorgaben beim Versand von Newslettern (berechtigtes Interesse im Sinne des Art. 6 Abs. 1 lit. f DSGVO). Die Speicherung in der Blacklist ist zeitlich nicht befristet. Sie können der Speicherung widersprechen, sofern Ihre Interessen unser berechtigtes Interesse überwiegen.</p>
 
-    <h2>6. Analyse-Tool</h2>
+    <h2>5. Analyse-Tool</h2>
 
     <h3>Google Analytics</h3>
 
@@ -248,38 +260,17 @@
     <h4>Widerspruchs- und Beseitigungsmöglichkeit</h4>
 
     <p>Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können. Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem Sie das Browser-Add-on (<a href="https://tools.google.com/dlpage/gaoptout?hl=de" target="_blank" rel="noopener">https://tools.google.com/dlpage/gaoptout?hl=de</a>) herunterladen und installieren. Opt-Out-Cookies verhindern die zukünftige Erfassung Ihrer Daten beim Besuch dieser Website. Um die Erfassung durch Universal Analytics über verschiedene Geräte hinweg zu verhindern, müssen Sie das Opt-Out auf allen genutzten Systemen durchführen.</p>
-
-    <h3>Squarespace Analytics</h3>
-
-    <p>Wir nutzen Squarespace Analytics auf dieser Website. Anbieter ist die Squarespace Ireland Ltd., Le Pole House, Shipstreet Great, Dublin 8, Irland (nachfolgend Squarespace Analytics).</p>
-
-    <p>Squarespace Analytics ermöglicht es uns, das Nutzerverhalten unserer Websitebesucher zu erfassen und auszuwerten. Im Rahmen der Nutzeranalyse können wir Klick- und Scrollverhalten, Suchvorgänge, Zeitpunkt des Zugriffs, geografische Lage und den Zugriff auf interne Links analysieren. Zu diesem Zweck erfasst Squarespace Analytics u. a. Informationen über den Browser, das Netzwerk, das Gerät und die IP-Adresse der Websitebesucher.</p>
-
-    <p>Squarespace Analytics verwendet Technologien, die die seitenübergreifende Wiedererkennung des Nutzers zur Analyse des Nutzerverhaltens ermöglichen (z. B. Cookies oder Device-Fingerprinting) und bildet auf dieser Grundlage pseudonymisierte Nutzerprofile.</p>
-
-    <p>Im Rahmen der Analyse können auch personenbezogene Daten an das Mutterunternehmen von Squarespace Analytics, die Squarespace Inc., 8 Clarkson St, New York, NY 10014, USA übermittelt werden.</p>
-
-    <p>Die Nutzung von Squarespace Analytics basiert auf der Einwilligung (Consent) unserer Websitebesucher, demnach erfolgt der Einsatz des Dienstes ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 TDDDG. Die Einwilligung ist jederzeit über den "Cookies verwalten" Link im Footer unserer Website widerrufbar.</p>
-
-    <p>Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt. Details finden Sie hier: <a href="https://support.squarespace.com/hc/de/articles/360000851908-DSGVO-und-Squarespace" target="_blank" rel="noopener">https://support.squarespace.com/hc/de/articles/360000851908-DSGVO-und-Squarespace</a>.</p>
-
-    <p>Das Unternehmen verfügt über eine Zertifizierung nach dem „EU-US Data Privacy Framework" (DPF). Der DPF ist ein Übereinkommen zwischen der Europäischen Union und den USA, der die Einhaltung europäischer Datenschutzstandards bei Datenverarbeitungen in den USA gewährleisten soll. Jedes nach dem DPF zertifizierte Unternehmen verpflichtet sich, diese Datenschutzstandards einzuhalten. Weitere Informationen hierzu erhalten Sie vom Anbieter unter folgendem Link: <a href="https://www.dataprivacyframework.gov/participant/4774" target="_blank" rel="noopener">https://www.dataprivacyframework.gov/participant/4774</a>.</p>
-
-    <p><strong>Auftragsverarbeitung</strong></p>
-
-    <p>Wir haben einen Vertrag über Auftragsverarbeitung (AVV) zur Nutzung des oben genannten Dienstes geschlossen. Hierbei handelt es sich um einen datenschutzrechtlich vorgeschriebenen Vertrag, der gewährleistet, dass dieser die personenbezogenen Daten unserer Websitebesucher nur nach unseren Weisungen und unter Einhaltung der DSGVO verarbeitet.</p>
-
   </div>
 </section>
 <footer>
   <div class="foot-inner">
     <div>
-      <div class="foot-brand">Studio <em>Visus</em></div>
+      <div class="foot-brand"><img class="foot-brand-logo" src="images/logo/studiovisus-logo-footer-thight.svg" alt="Studio Visus" width="200" height="50"></div>
       <div class="foot-tag">Handgemalte Unikate f&#252;r R&#228;ume, in denen Atmosph&#228;re z&#228;hlt.</div>
     </div>
     <div class="foot-col"><h4>Standort</h4><p>Lokstedter H&#246;he 11e<br>22529 Hamburg</p></div>
-    <div class="foot-col"><h4>Kontakt</h4><a href="mailto:info@studiovisus.de">info@studiovisus.de</a><a href="tel:017684737726">0176 84 73 77 26</a><a href="kontakt.html">Kontaktformular &#8594;</a></div>
-    <div class="foot-col"><h4>Info</h4><a href="impressum.html">Impressum</a><a href="widerrufsbelehrung.html">Widerrufsrecht</a><a href="datenschutz.html">Datenschutz</a><a href="faq.html">FAQ</a>
+    <div class="foot-col"><h4>Kontakt</h4><a href="mailto:info@studiovisus.de">info@studiovisus.de</a><a href="tel:017684737726">0176 84 73 77 26</a><a href="/kontakt">Kontaktformular &#8594;</a><a href="https://www.instagram.com/janniclas.art/" target="_blank" rel="noopener me">Instagram &#8594;</a></div>
+    <div class="foot-col"><h4>Info</h4><a href="/impressum">Impressum</a><a href="/widerrufsbelehrung">Widerrufsrecht</a><a href="/datenschutz">Datenschutz</a><a href="/faq">FAQ</a>
       <a href="#" data-cc-open>Cookie-Einstellungen</a></div>
   </div>
   <div class="foot-bottom">

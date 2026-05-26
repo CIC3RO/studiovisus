@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Studio Visus">
+  <title>Studio Visus</title>
+
+  <g transform="translate(60, 60)">
+    <path d="M -32,-2
+             C -36,-26 -16,-38   4,-32
+             C 30,-26 38,-6     32,14
+             C 28,32  10,38   -10,34
+             C -32,30 -28,20 -32,-2 Z"
+          fill="#a8482a"/>
+  </g>
+</svg>

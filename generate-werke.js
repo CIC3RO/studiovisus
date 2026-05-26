@@ -61,7 +61,7 @@ const werke = [
     gewicht: "Diptychon, zweiteilig",
     rahmen: "Keilrahmen",
     signatur: "Rückseite, datiert",
-    subtitle: "Diptychon aus zwei Leinwänden, je 70 × 100 cm. Acryl in mehreren Schichten, mit Impasto-Struktur gearbeitet.",
+    subtitle: "Diptychon, 140 × 200 cm Gesamtmaß, 2025. Acryl mit Impasto-Struktur, mehrere Schichten, plastische Tiefe. Originalgemälde, kein Druck. Hamburg.",
     beschreibung: [
       "Das Werk besteht aus zwei Leinwänden, jede 70 × 100 cm groß. Zusammengehängt ergibt sich eine Gesamtfläche von 140 × 200 cm.",
       "Acryl in mehreren Schichten, mit sichtbarer Impasto-Struktur. Die Oberfläche entwickelt eine haptische Tiefe, die sich je nach Lichteinfall verändert.",
@@ -70,6 +70,8 @@ const werke = [
     neuroTitel: "Mehrere Wirkprinzipien greifen ineinander",
     neuroText: "Fraktale Fluenz und Biophilie-Effekt, visuelle Sedierung, biomorphe Tessellation, Curvature mit emotionaler Sicherheit, haptische Verankerung. Mehrere neuroästhetische Prinzipien greifen in diesem Werk gleichzeitig.",
     img: "images/werke/fenster/originalgemaelde-fesnter-studiovisus.jpg",
+    imgDetail: "images/werke/fenster/originalgemaelde-nahaufnahme-schuppen-struktur-studiovisus.webp",
+    imgRaum: "images/index/originalgemaelde-fenster-acryl-struktur-arztpraxis-studiovisus.JPG",
     imgRatio: "3/4",
     related: ["schwarz", "schneesturm", "sturm"]
   },
@@ -89,7 +91,7 @@ const werke = [
     gewicht: null,
     rahmen: "Keilrahmen",
     signatur: "Rückseite, datiert",
-    subtitle: "Weißes Werk mit subtilen Schattierungen. Bei flüchtigem Blick fast leer, bei längerem Hinsehen voller leiser Bewegung.",
+    subtitle: "100 × 100 cm, 2024. Weiß auf Weiß mit feinen Schwarz- und Goldakzenten. Ruhige, tiefe Wirkung. Mehrere Acryl-Schichten auf Leinwand. Unikat.",
     beschreibung: [
       "Ein weißes Bild, das bei flüchtigem Betrachten leer erscheint. Bleibt der Blick aber länger, beginnen die leichten Schattierungen zu sprechen. Sie sind überall und nirgends gleichzeitig.",
       "Kein Muster, das sich eindeutig benennen lässt. Kein Motiv, das sich festhalten lässt. Jeder Betrachter sieht etwas anderes: manche Wolken, manche Schnee, manche Gesichter, manche nichts als ein Gefühl.",
@@ -98,6 +100,7 @@ const werke = [
     neuroTitel: "Visuelle Ambiguität als aktiver Ruhezustand",
     neuroText: "Ein Bild, das keine eindeutige Interpretation erzwingt, lässt das Gehirn in einem Zustand ruhiger Offenheit. Es sucht, ohne zu finden, und findet, ohne zu suchen. Dieser Zustand ist dem meditativen Erleben verwandt. Hinzu kommt die Lichtreflexion: Ein weißes, strukturreiches Werk reflektiert Licht so, dass der Raum heller und größer wirkt.",
     img: "images/werke/schneesturm/originalgemaelde-schneesturm-studiovisus.webp",
+    imgRaum: "images/werke/schneesturm/originalgemaelde-schneesturm-im-raum-stuiovisus.jpeg",
     imgRatio: "1/1",
     related: ["schwarz", "fenster", "flamingo"]
   },
@@ -117,7 +120,7 @@ const werke = [
     gewicht: null,
     rahmen: "Keilrahmen",
     signatur: "Rückseite, datiert",
-    subtitle: "Schuppenstruktur in Blautönen mit japanisch inspirierten Wellenlinien. Im Zentrum ein leuchtender Farbakzent in Orange und Neon.",
+    subtitle: "Acryl auf Leinwand, 70 × 100 cm, 2024. Schuppenstruktur in tiefen Blautönen, dazu Wellenlinien mit japanischem Anklang. Unikat aus dem Atelier in Hamburg.",
     beschreibung: [
       "Die Leinwand ist mit hunderten von handgearbeiteten Schuppen überzogen, die das Licht brechen und dem Werk eine dreidimensionale Oberfläche geben. Die Grundstimmung ist Wasser: verschiedene Blautöne, von hellem Aquamarin bis ins tiefe Nachtblau.",
       "Im Zentrum ein gegossenes Boot aus Orange, Neon und Grün. Leuchtend und direkt, ein Farbakzent, der den Blick zieht und im Bild hält. Um das Boot herum verlaufen Wellenlinien, die an die japanische Maltradition erinnern.",
@@ -126,6 +129,7 @@ const werke = [
     neuroTitel: "Fraktale Fluenz und Wasserassoziation",
     neuroText: "Die Schuppenstruktur erzeugt ein sich wiederholendes natürliches Muster, das das Gehirn ohne kognitive Anstrengung verarbeitet. Blautöne aktivieren evolutionär verankerte Assoziationen mit Wasser und Weite, zwei der stärksten Sicherheitssignale in der menschlichen Wahrnehmung. Das leuchtende Boot im Zentrum übernimmt die Funktion eines visuellen Ankers.",
     img: "images/werke/boot/originalgemaelde-boot-studiovisus.webp",
+    imgRaum: "images/werke/boot/originalgemaelde-boot-im-raum-studiovisus.jpeg",
     imgRatio: "5/7",
     related: ["schneewiese", "flamingo", "sommerkleid"]
   },
@@ -145,7 +149,7 @@ const werke = [
     gewicht: null,
     rahmen: "Keilrahmen",
     signatur: "Rückseite, datiert",
-    subtitle: "Dunkle Sandstruktur mit goldener Ecke und einem verborgenen, in die Oberfläche eingeritzten Halbkreis.",
+    subtitle: "100 × 100 cm, 2024. Dunkle Sandstruktur, goldene Linienführung. In der Bewegung erinnert das Werk an einen Zengarten. Acryl auf Leinwand, Unikat.",
     beschreibung: [
       "Auf den ersten Blick zeigt sich eine raue, dunkle Oberfläche aus grober Struktur und Sand. Eine goldene Ecke schneidet hinein, wie ein stiller Lichteinfall in einen dunklen Raum.",
       "Bei längerer Betrachtung taucht ein Halbkreis auf, eingeritzt in die Struktur wie eine Linie im Zengarten. Er ist da, aber er zeigt sich nicht sofort. Diese Spannung zwischen Sehen und Spüren ist das Herzstück des Werks.",
@@ -154,6 +158,7 @@ const werke = [
     neuroTitel: "Haptische Verankerung und visuelles Geheimnis",
     neuroText: "Die grobe Sandstruktur ist so präsent, dass sie fast physisch erfahren wird. Der verborgene Halbkreis spricht ein tiefes Bedürfnis des Gehirns an: das Entdecken von Muster und Bedeutung. Gold auf Schwarz ist einer der wirkungsvollsten Kontraste in der visuellen Wahrnehmung. Der eingeritzte Halbkreis greift das ästhetische Prinzip japanischer Zengärten auf: maximale Wirkung durch minimale Mittel.",
     img: "images/werke/schwarz/originalgemaelde-schwarz-studiovisus.jpeg",
+    imgRaum: "images/werke/schwarz/originalgemaelde-schwarz-mit-gold-in-einem-raum.jpeg",
     imgRatio: "1/1",
     related: ["fenster", "schneesturm", "sturm"]
   },
@@ -173,7 +178,7 @@ const werke = [
     gewicht: null,
     rahmen: "Keilrahmen",
     signatur: "Rückseite, datiert",
-    subtitle: "Strukturreiche Oberfläche mit handgemachten Fußabdrücken, in deren Zentrum ein gegossener Farbkreis in Grau und Neon-Orange liegt.",
+    subtitle: "90 × 90 cm, 2024. Strukturreiche, helle Oberfläche, in die Fußspuren und ein Hauch Farbkreis eingelassen sind. Acryl auf Leinwand, mehrere Schichten.",
     beschreibung: [
       "Die strukturreiche Oberfläche trägt Fußabdrücke, echte, handgemachte Abdrücke, die sich um den Kern des Bildes herum anordnen. Sie erzählen von Bewegung und Wegen, die im Bild eingefroren sind.",
       "Im Zentrum liegt ein gegossener Farbkreis aus Grau und Neon-Orange. Eine Intensität, die mit der strukturierten, zurückhaltenden Oberfläche um sie herum in spannungsvoller Beziehung steht. Surreal und faszinierend zugleich.",
@@ -182,6 +187,7 @@ const werke = [
     neuroTitel: "Narrative Struktur und visuelle Führung",
     neuroText: "Die Fußabdrücke suggerieren eine Geschichte, ohne sie zu erzählen. Das Gehirn ergänzt aktiv und erlebt dieses Ergänzen als befriedigend. Gleichzeitig übernehmen die Abdrücke die Funktion einer natürlichen Blickführung: Das Auge folgt ihnen und landet im Zentrum. Die Kombination aus Bekanntem (Fußabdrücke) und Unerwartetem (leuchtender Farbkreis) erzeugt eine anziehende kognitive Spannung.",
     img: "images/werke/schneewiese/originalgemaelde-schneewiese-studiovisus.jpeg",
+    imgRaum: "images/werke/schneewiese/originalgemaelde-schneewiese-im-raum-studiovisus.jpeg",
     imgRatio: "1/1",
     related: ["boot", "sommerkleid", "flamingo"]
   },
@@ -201,7 +207,7 @@ const werke = [
     gewicht: null,
     rahmen: "Keilrahmen",
     signatur: "Rückseite, datiert",
-    subtitle: "Leuchtendes Dunkelrot mit goldenen Spritzern und weißen Linien. Tiefe entsteht durch mehrere übereinandergelegte Schichten.",
+    subtitle: "100 × 70 cm, 2024. Leuchtendes Dunkelrot, durchsetzt mit goldenen Spritzern. Dichte Bewegung, viel Bildraum. Acryl auf Leinwand, Unikat.",
     beschreibung: [
       "Das gesamte Format ist in einem tiefen, satten Dunkelrot gehalten, das nicht schwer wirkt, sondern leuchtet. Als würde Licht von innen durch das Rot hindurchscheinen. Das Ergebnis mehrerer übereinandergelegter Schichten.",
       "Durch das Bild ziehen goldene Spritzer, zufällig und dennoch präzise, wie Funken, die ein Sturm durch die Luft treibt. Die weißen Linien deuten Bewegung an und versetzen die Komposition in eine ruhige, aber spürbare Dynamik.",
@@ -210,6 +216,7 @@ const werke = [
     neuroTitel: "Emotionale Aktivierung durch Farbe",
     neuroText: "Dunkles, leuchtendes Rot aktiviert das autonome Nervensystem stärker als beruhigende Blau- oder Grüntöne. Für Räume, in denen Energie, Entscheidungskraft und Fokus gefragt sind, ist diese Aktivierung eine bewusst eingesetzte Qualität. Die goldenen Spritzer und weißen Linien erzeugen eine Richtungswahrnehmung im Bild und führen das Auge durch eine kontrollierte Bewegung.",
     img: "images/werke/sturm/originalgemaelde-sturm-studiovisus.webp",
+    imgRaum: "images/werke/sturm/originalgemaelde-sturm-im-raum-studiovisus.jpeg",
     imgRatio: "10/7",
     related: ["fenster", "schwarz", "schneesturm"]
   },
@@ -229,7 +236,7 @@ const werke = [
     gewicht: null,
     rahmen: "Keilrahmen",
     signatur: "Rückseite, datiert",
-    subtitle: "Abstrakter, gegossener Flamingo auf olive-weißem Hintergrund. Die gesamte Leinwand ist mit handgearbeiteten Schuppen überzogen.",
+    subtitle: "100 × 100 cm, 2024. Aus der Gusstechnik entstandener Flamingo, abstrakt gehalten, mit fein gemalter Schuppenstruktur. Acryl auf Leinwand, Unikat.",
     beschreibung: [
       "Auf einem Hintergrund aus Olive und Weiß entfaltet sich ein abstrakter Flamingo, der nicht gemalt, sondern gegossen wurde. Aus verschiedenen Farben zusammengeflossen, erkennbar in seiner Form und doch abstrakt in seiner Ausführung.",
       "Die gesamte Leinwand ist mit hunderten von handgearbeiteten Schuppen überzogen. Das Licht bricht sich in jeder einzelnen davon und verleiht dem Werk eine plastische Oberfläche, die je nach Lichtsituation anders aussieht.",
@@ -238,6 +245,7 @@ const werke = [
     neuroTitel: "Biophile Farbwelt und fraktale Fluenz",
     neuroText: "Der olive-weiße Hintergrund greift eine naturnahe Farbwelt auf, die das Gehirn mit Vegetation und organischen Umgebungen assoziiert. Die Schuppenstruktur erzeugt ein sich wiederholendes natürliches Muster, das das Gehirn leicht und entspannt verarbeitet. Der abstrakte Charakter des Flamingos lässt Raum für individuelle Wahrnehmung, ohne das Gehirn zu fordern.",
     img: "images/werke/flamingo/originalgemaelde-flamingo-studiovisus.webp",
+    imgRaum: "images/werke/flamingo/originalgemaelde-flamingo-im-raum-studiovisus.jpeg",
     imgRatio: "1/1",
     related: ["boot", "schneewiese", "sommerkleid"]
   },
@@ -257,7 +265,7 @@ const werke = [
     gewicht: null,
     rahmen: "Keilrahmen",
     signatur: "Rückseite, datiert",
-    subtitle: "Satte Goldtöne und tiefes, warmes Olivgrün, sanft ineinanderfließend. Dieses Werk ist verkauft, ähnliche Auftragsarbeiten sind möglich.",
+    subtitle: "120 × 70 cm, 2024. Warmes Grün auf ruhigen Beige-Tönen. Strukturreiche Oberfläche mit haptischer Tiefe, gemalt in Schichten. Acryl auf Leinwand.",
     beschreibung: [
       "Die Farbwelt ist eine eigene: Eine Mischung aus satten Goldtönen und tiefem, warmem Olivgrün. Die goldenen Bereiche wirken wie Inseln in einem ruhigen Olivenmeer. Leuchtend, aber nicht aufdringlich.",
       "Es gibt keine harte Grenze zwischen den Farben, nur ein sanftes Ineinanderfließen, das das Auge durch das Bild führt. Was auf den ersten Blick wie ein ruhiges Farbfeld wirkt, offenbart bei längerem Hinsehen eine Komplexität, die sich kaum festhalten lässt.",
@@ -266,6 +274,7 @@ const werke = [
     neuroTitel: "Wärmewahrnehmung und biophile Farbwelt",
     neuroText: "Warme Gold- und Ockerfarben aktivieren Assoziationen mit Licht, Wärme und Fülle. Das Gehirn verarbeitet diese Farbtöne als einladend und sicher. Olivgrün gehört zu den naturnahsten Farbtönen überhaupt und assoziiert das Gehirn mit Vegetation, Stabilität und Lebendigkeit. Die fließenden Übergänge erlauben eine leichte Verarbeitung, die als ästhetisches Wohlbefinden erlebt wird.",
     img: "images/werke/olive/originalgemaelde-olive-studiovisus.webp",
+    imgRaum: "images/werke/olive/originalgemaelde-olive-im-raum-studiovisus.jpeg",
     imgRatio: "12/7",
     related: ["schwarz", "sommerkleid", "boot"]
   },
@@ -285,7 +294,7 @@ const werke = [
     gewicht: null,
     rahmen: "Keilrahmen",
     signatur: "Rückseite, datiert",
-    subtitle: "Eines der frühen Werke aus dem Atelier. Grün und Beige, sanft ineinanderfließend, mit ersten Ansätzen der späteren Schuppenstruktur.",
+    subtitle: "120 × 70 cm, 2024. Eines der frühen Werke aus der Pouring-Reihe von Studio Visus. Acryl auf Leinwand, mehrere Schichten, lichte Farbgebung.",
     beschreibung: [
       "Eines der ersten Werke von Studio Visus. Die Schuppenstruktur, die in späteren Arbeiten zur markanten Signatur wurde, zeigt sich hier in ihren ersten Ansätzen. Noch nicht so dicht, noch nicht so plastisch, aber bereits voller Energie.",
       "Die Farbwelt ist warm. Grün und Beige, sanft ineinandergeflossen, mit einer Leichtigkeit, die an frisches Laub und Sommermorgen erinnert. Kein Grün, das schwer wird, kein Beige, das matt bleibt.",
@@ -294,6 +303,7 @@ const werke = [
     neuroTitel: "Biophile Farbwelt und Wärme",
     neuroText: "Grün und Beige gehören zu den naturnahsten Farbtönen überhaupt. Sie aktivieren das Gehirn mit Assoziationen von Vegetation, Boden und Stabilität, drei Grundelemente von Sicherheitsgefühl in der menschlichen Wahrnehmung. Warme Farbtöne aktivieren zusätzlich Assoziationen mit Wärme, Schutz und sozialer Verbundenheit.",
     img: "images/werke/sommerkleid/originalgemaelde-sommerkleid-studiovisus.webp",
+    imgRaum: "images/werke/sommerkleid/originalgemaelde-sommerkleid-im-raum.jpeg",
     imgRatio: "12/7",
     related: ["flamingo", "schneewiese", "boot"]
   }
@@ -313,7 +323,7 @@ const werke = [
     gewicht: null,
     rahmen: "Keilrahmen",
     signatur: "Rückseite, datiert",
-    subtitle: "Die Kombination aus Acryl und Öl erlaubt eine Tiefe und Leuchtkraft, die mit einer einzigen Technik nicht erreichbar wäre. Jede Schicht hat ihre eigene Zeit gebraucht, ihre eigene Entscheidung verlangt. Das Ergebnis ist ein Werk, das nicht aus einem Guss wirkt, sondern wie etwas, das über die Zeit gewachsen ist.",
+    subtitle: "100 × 70 cm, 2025. Kombination aus Acryl und Öl, mehrere Schichten. Acrylstruktur als Grund, feine Ölzeichnungen darüber. Aus dem Atelier Hamburg.",
     beschreibung: [
       "Die unterste Ebene ist ein grauer Wirbel, weich und beweglich, wie Wolken, die sich langsam formieren. Darüber verlaufen feine Netzlinien in einem warmen Kaminrot, dünn wie gesponnen und doch präzise gesetzt. Sie überziehen das Bild wie ein zartes Geflecht, das Himmel und Tiefe verbindet.",
       "Und dann, auf der obersten Schicht, in Öl gemalt mit einer eigenen, einzigartigen Technik: Koi-Fische. Anmutig. Schwebend. Als hätten sie gerade die Grenze zwischen Wasser und Luft überschritten.",
@@ -322,6 +332,7 @@ const werke = [
     neuroTitel: "Biophile Farbwelt und Wärme",
     neuroText: "Mehrschichtigkeit und kognitive Tiefe: Das Werk bietet dem Auge verschiedene Verarbeitungsebenen. Das Gehirn kann zwischen naher und ferner Betrachtung wechseln und dabei jedes Mal Neues entdecken, ein Zustand, der als angenehm und bereichernd empfunden wird. Biophile Elemente: Koi-Fische, Wolken und Netzstrukturen greifen natürliche Bildwelten auf, die evolutionär mit Sicherheit und Lebendigkeit verknüpft sind. Bewegung in Stille: Die angedeutete Bewegung der Fische und des Wolkenwirbels erzeugt eine lebendige Dynamik, die gleichzeitig ruhig und fließend bleibt. Kein Schock, keine Anspannung, nur sanfte Bewegung.",
     img: "images/werke/himmelsnetz/originalgemaelde-himmelsnetz-studiovisus.webp",
+    imgRaum: "images/index/originalgemaelde-himmelsnetz-acryl-oel-therapiepraxis-studiovisus.jpeg",
     imgRatio: "10/7",             
     related: ["flamingo", "schwarz", "fenster"] 
   }
@@ -359,7 +370,7 @@ function generatePage(werk) {
     "@type": "Product",
     "name": `${werk.title} — Originalgemälde`,
     "description": werk.subtitle,
-    "image": werk.img,
+    "image": `https://www.studiovisus.de/${werk.img}`,
     "url": url,
     "brand": {
       "@type": "Brand",
@@ -435,7 +446,7 @@ function generatePage(werk) {
     "@type": "VisualArtwork",
     "name": werk.title,
     "description": werk.subtitle,
-    "image": werk.img,
+    "image": `https://www.studiovisus.de/${werk.img}`,
     "url": url,
     "artMedium": werk.technik,
     "artform": werk.kategorie,
@@ -444,7 +455,7 @@ function generatePage(werk) {
     "dateCreated": `${werk.jahr}`,
     "creator": {
       "@type": "Person",
-      "name": "Studio Visus",
+      "name": "Jan-Niclas Bardenhagen",
       "url": "https://www.studiovisus.de",
       "workLocation": {
         "@type": "Place",
@@ -460,7 +471,7 @@ function generatePage(werk) {
     }
   };
 
-  const metaDesc = `${werk.title} — ${werk.technik}, ${dimString}, ${werk.jahr}. Handgemaltes Originalgemälde von Studio Visus Hamburg. ${werk.subtitle}`;
+  const metaDesc = werk.subtitle;
 
   const werkScaleW = scaleToPixels(werk.breite);
   const werkScaleH = scaleToPixels(werk.hoehe);
@@ -474,17 +485,17 @@ function generatePage(werk) {
   let ctaHtml = '';
   if (isSold) {
     ctaHtml = `
-      <a href="kontakt.html?art=auftrag" class="btn btn-primary">Ähnliches Werk beauftragen →</a>
-      <a href="werke.html" class="btn btn-ghost">Alle Werke ansehen</a>`;
+      <a href="/kontakt?art=auftrag" class="btn btn-primary">Ähnliches Werk beauftragen →</a>
+      <a href="/werke" class="btn btn-ghost">Alle Werke ansehen</a>`;
   } else {
     ctaHtml = `
       <a href="kontakt.html?werk=${encodeURIComponent(werk.title + ' · ' + dimString)}" class="btn btn-primary">Dieses Werk anfragen →</a>
-      <a href="kontakt.html?art=auftrag" class="btn btn-ghost">Auftragswerk besprechen</a>`;
+      <a href="/kontakt?art=auftrag" class="btn btn-ghost">Auftragswerk besprechen</a>`;
   }
 
   // Related
   let relatedHtml = relatedWerke.map(r => `
-          <a class="related-card reveal" href="werk-${r.slug}.html">
+          <a class="related-card reveal" href="/werke/${r.slug}">
             <div class="frame">
               <img src="${r.img}" alt="${r.title}">
             </div>
@@ -501,14 +512,21 @@ function generatePage(werk) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>${werk.title} — Originalgemälde ${dimString} · Studio Visus Hamburg</title>
-<meta name="description" content="${metaDesc.substring(0, 155)}">
+<link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/logo/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#a8482a">
+<title>${werk.title}, Originalgemälde ${dimString} | Studio Visus</title>
+<meta name="description" content="${metaDesc}">
 
 <!-- Open Graph -->
 <meta property="og:type" content="product">
-<meta property="og:title" content="${werk.title} — Originalgemälde von Studio Visus">
-<meta property="og:description" content="${werk.subtitle}">
+<meta property="og:title" content="${werk.title}, Originalgemälde ${dimString} | Studio Visus">
+<meta property="og:description" content="${metaDesc}">
 <meta property="og:image" content="https://www.studiovisus.de/${werk.img}">
+<meta property="og:image:alt" content="${werk.title}, ${werk.technik}, ${dimString}, ${werk.jahr}. Originalgemälde von Studio Visus.">
 <meta property="og:url" content="${url}">
 <meta property="og:site_name" content="Studio Visus">
 <meta property="og:locale" content="de_DE">
@@ -518,8 +536,8 @@ ${werk.preis !== null ? `<meta property="product:price:amount" content="${werk.p
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="${werk.title} — Originalgemälde · Studio Visus">
-<meta name="twitter:description" content="${werk.subtitle}">
+<meta name="twitter:title" content="${werk.title}, Originalgemälde ${dimString} | Studio Visus">
+<meta name="twitter:description" content="${metaDesc}">
 <meta name="twitter:image" content="https://www.studiovisus.de/${werk.img}">
 
 <!-- Canonical -->
@@ -534,11 +552,7 @@ ${JSON.stringify(breadcrumbSchema, null, 2)}
 </script>
 <script type="application/ld+json">
 ${JSON.stringify(artworkSchema, null, 2)}
-</script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter+Tight:wght@300;400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+</script><link rel="stylesheet" href="css/fonts.css">
 
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/cookie-consent.css">
@@ -549,23 +563,49 @@ ${JSON.stringify(artworkSchema, null, 2)}
 <!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
-    <a class="brand" href="index.html"><span class="dot"></span> Studio <em>Visus</em></a>
+    <a class="brand" href="/" aria-label="Studio Visus"><img class="brand-logo" src="images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="180" height="48"></a>
     <div class="nav-links">
-      <a href="werke.html" class="active">Werke</a>
-      <a href="blog.html">Blog</a>
-      <a href="ueber.html">Über</a>
-      <a href="kontakt.html">Kontakt</a>
-      <a href="faq.html">FAQ</a>
+      <a href="/werke" class="active">Werke</a>
+      <a href="/blog">Blog</a>
+      <a href="/ueber">Über</a>
+      <a href="/kontakt">Kontakt</a>
+      <a href="/faq">FAQ</a>
     </div>
-    <a href="kontakt.html?art=sonstiges" class="nav-cart">Werk anfragen →</a>
+    <a href="/kontakt?art=sonstiges" class="nav-cart">Werk anfragen →</a>
+    <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
   </div>
 </nav>
 
+<!-- MOBILE MENU -->
+<div class="mobile-menu-backdrop" aria-hidden="true"></div>
+<aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-logo">
+    <img src="images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="200" height="50">
+  </div>
+  <nav class="mobile-menu-links" aria-label="Hauptnavigation mobil">
+    <a href="/werke" class="active">Werke</a>
+    <a href="/auftragsarbeit">Auftragsarbeit</a>
+    <a href="/blog">Blog</a>
+    <a href="/ueber">Über</a>
+    <a href="/kontakt">Kontakt</a>
+    <a href="/faq">FAQ</a>
+  </nav>
+  <a href="/kontakt?art=sonstiges" class="mobile-menu-cta">Werk anfragen →</a>
+  <div class="mobile-menu-foot">
+    <a href="mailto:info@studiovisus.de">info@studiovisus.de</a>
+    <a href="tel:017684737726">0176 84 73 77 26</a>
+  </div>
+</aside>
+
 <!-- BREADCRUMB -->
 <div class="breadcrumb" aria-label="Breadcrumb">
-  <a href="index.html">Start</a>
+  <a href="/">Start</a>
   <span class="sep">›</span>
-  <a href="werke.html">Werke</a>
+  <a href="/werke">Werke</a>
   <span class="sep">›</span>
   <span>${werk.title}</span>
 </div>
@@ -577,15 +617,21 @@ ${JSON.stringify(artworkSchema, null, 2)}
   <div class="werk-gallery">
     <div class="werk-main-img" style="--img-ratio:${werk.imgRatio}">
       ${badgeHtml}
-      <img src="${werk.img}" alt="${werk.title} — ${werk.technik}, ${dimString}, ${werk.jahr}. Originalgemälde von Studio Visus Hamburg.">
+      <img src="${werk.img}" alt="${werk.title}, ${werk.technik}, ${dimString}, ${werk.jahr}. Originalgemälde von Studio Visus.">
     </div>
     <div class="werk-thumbs">
       <div class="werk-thumb active">
-        <img src="${werk.img}" alt="${werk.title} — Gesamtansicht">
+        <img src="${werk.img}" alt="${werk.title}, Gesamtansicht">
       </div>
-      <div class="werk-thumb thumb-placeholder">Detail</div>
-      <div class="werk-thumb thumb-placeholder">Im Raum</div>
-      <div class="werk-thumb thumb-placeholder">Rückseite</div>
+      ${werk.imgDetail
+        ? `<div class="werk-thumb"><img src="${werk.imgDetail}" alt="${werk.title}, Detailaufnahme"></div>`
+        : `<div class="werk-thumb thumb-placeholder">Detail</div>`}
+      ${werk.imgRaum
+        ? `<div class="werk-thumb"><img src="${werk.imgRaum}" alt="${werk.title}, im Raum"></div>`
+        : `<div class="werk-thumb thumb-placeholder">Im Raum</div>`}
+      ${werk.imgRueckseite
+        ? `<div class="werk-thumb"><img src="${werk.imgRueckseite}" alt="${werk.title}, Rückseite"></div>`
+        : ``}
     </div>
   </div>
 
@@ -680,7 +726,7 @@ ${beschreibungHtml}
       <h3>${dimString} — <em>im Raumkontext</em></h3>
       <p>Silhouette zeigt das Verhältnis zu einer Person (175 cm). So können Sie abschätzen, wie das Werk an Ihrer Wand wirken wird.</p>
       <p>Auf Wunsch erstelle ich eine fotorealistische Visualisierung Ihres Raums mit dem Werk in Originalmaßen.</p>
-      <a href="kontakt.html" class="btn btn-ghost">Raumvisualisierung anfragen →</a>
+      <a href="/kontakt" class="btn btn-ghost">Raumvisualisierung anfragen →</a>
     </div>
   </div>
 </section>
@@ -689,7 +735,7 @@ ${beschreibungHtml}
 <section class="werk-related">
   <div class="werk-related-head">
     <h2>Weitere <em>Werke</em></h2>
-    <a href="werke.html">Alle ansehen →</a>
+    <a href="/werke">Alle ansehen →</a>
   </div>
   <div class="werk-related-grid">
 ${relatedHtml}
@@ -700,7 +746,7 @@ ${relatedHtml}
 <footer>
   <div class="foot-inner">
     <div>
-      <div class="foot-brand">Studio <em>Visus</em></div>
+      <div class="foot-brand"><img class="foot-brand-logo" src="images/logo/studiovisus-logo-footer-thight.svg" alt="Studio Visus" width="200" height="50"></div>
       <div class="foot-tag">Handgemalte Unikate für Räume, in denen Atmosphäre zählt.</div>
     </div>
     <div class="foot-col">
@@ -711,14 +757,14 @@ ${relatedHtml}
       <h4>Kontakt</h4>
       <a href="mailto:info@studiovisus.de">info@studiovisus.de</a>
       <a href="tel:017684737726">0176 84 73 77 26</a>
-      <a href="kontakt.html">Kontaktformular →</a>
+      <a href="/kontakt">Kontaktformular →</a>
     </div>
     <div class="foot-col">
       <h4>Info</h4>
-      <a href="impressum.html">Impressum</a>
-      <a href="widerrufsbelehrung.html">Widerrufsrecht</a>
-      <a href="datenschutz.html">Datenschutz</a>
-      <a href="faq.html">FAQ</a>
+      <a href="/impressum">Impressum</a>
+      <a href="/widerrufsbelehrung">Widerrufsrecht</a>
+      <a href="/datenschutz">Datenschutz</a>
+      <a href="/faq">FAQ</a>
       <a href="#" data-cc-open>Cookie-Einstellungen</a>
     </div>
   </div>

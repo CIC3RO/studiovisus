@@ -22,12 +22,16 @@
   // =============================
   // Cookie-Hilfsfunktionen
   // =============================
+  // Secure-Flag nur auf HTTPS — sonst funktioniert das Cookie lokal nicht (file://, http://localhost).
+  // Bei live HTTPS wird das Flag automatisch gesetzt.
+  const SECURE_FLAG = (location.protocol === 'https:') ? ';Secure' : '';
+
   function setCookie(name, value, days) {
     const d = new Date();
     d.setTime(d.getTime() + days * 86400000);
     document.cookie = name + '=' + encodeURIComponent(value) +
       ';expires=' + d.toUTCString() +
-      ';path=/;SameSite=Lax;Secure';
+      ';path=/;SameSite=Lax' + SECURE_FLAG;
   }
 
   function getCookie(name) {
@@ -36,7 +40,7 @@
   }
 
   function deleteCookie(name) {
-    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;SameSite=Lax;Secure';
+    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;SameSite=Lax' + SECURE_FLAG;
   }
 
   // =============================
@@ -240,10 +244,15 @@
       const isOpen = details.classList.toggle('is-open');
       this.textContent = isOpen ? 'Details ausblenden' : 'Details anzeigen';
     });
+  }
 
-    // Footer-Link: Cookie-Einstellungen erneut öffnen
+  // Footer-Link "Cookie-Einstellungen" — IMMER aktiv, unabhängig davon, ob das Banner schon
+  // gezeigt wurde. Wichtig: dieser Handler muss vor dem Banner-Init registriert sein, weil
+  // der User sonst auf den Link klickt, bevor bindEvents() jemals lief.
+  function bindFooterTrigger() {
     document.addEventListener('click', function(e) {
-      if (e.target.matches('[data-cc-open], [data-cc-open] *')) {
+      const trigger = e.target.closest('[data-cc-open]');
+      if (trigger) {
         e.preventDefault();
         showBanner();
       }
@@ -254,6 +263,7 @@
   // Initialisierung
   // =============================
   function init() {
+    bindFooterTrigger();
     const consent = getConsent();
 
     if (consent === null) {

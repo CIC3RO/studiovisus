@@ -554,3 +554,76 @@
   .blog-related h2{font-size:32px; margin-bottom:24px}
   .blog-related-grid{grid-template-columns:1fr; gap:32px}
 }
+
+/* ============================================
+   Im Artikel erwähnte Werke (am Ende des Body)
+   ============================================ */
+.mentioned-werke{
+  margin:64px 0 48px;
+  padding:32px 0 8px;
+  border-top:1px solid var(--line);
+}
+.mentioned-werke h3{
+  font-family:'Fraunces', serif;
+  font-weight:400;
+  font-size:24px;
+  line-height:1.2;
+  margin-bottom:24px;
+  color:var(--ink);
+}
+.mentioned-werke h3 em{
+  font-style:italic;
+  color:var(--accent);
+  font-weight:500;
+}
+.mentioned-werke-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
+  gap:24px;
+}
+.mentioned-werk-card{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  text-decoration:none;
+  color:inherit;
+  transition:transform .3s ease;
+}
+.mentioned-werk-card:hover{
+  transform:translateY(-4px);
+}
+.mentioned-werk-card .frame{
+  aspect-ratio:1;
+  overflow:hidden;
+  background:var(--paper-deep);
+  border-radius:2px;
+}
+.mentioned-werk-card .frame img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .6s ease;
+}
+.mentioned-werk-card:hover .frame img{
+  transform:scale(1.04);
+}
+.mentioned-werk-card h4{
+  font-family:'Fraunces', serif;
+  font-weight:400;
+  font-size:18px;
+  margin:0;
+  color:var(--ink);
+}
+.mentioned-werk-card p{
+  font-size:13px;
+  color:var(--ink-soft);
+  margin:0;
+  line-height:1.4;
+}
+@media (max-width:680px){
+  .mentioned-werke{margin:48px 0 32px; padding-top:24px}
+  .mentioned-werke h3{font-size:20px; margin-bottom:18px}
+  .mentioned-werke-grid{grid-template-columns:repeat(2, 1fr); gap:16px}
+  .mentioned-werk-card h4{font-size:16px}
+  .mentioned-werk-card p{font-size:12px}
+}

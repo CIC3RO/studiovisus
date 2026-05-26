@@ -3,24 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Evidenzbasierte Kunst und Neuroästhetik — Studio Visus</title>
-<meta name="description" content="Wie Forschung zu Neuroästhetik, Healing Architecture und Wahrnehmungspsychologie in Originalgemälde übersetzt wird. Die Arbeit hinter Studio Visus.">
+<link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/logo/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#a8482a">
+<title>Über Studio Visus, Atelier in Hamburg</title>
+<meta name="description" content="Studio Visus arbeitet auf neuroästhetischer Grundlage. Über den Künstler Jan-Niclas Bardenhagen, das Atelier in Lokstedt und unsere Arbeitsweise.">
 
 <meta property="og:type" content="profile">
-<meta property="og:title" content="Evidenzbasierte Kunst und Neuroästhetik — Studio Visus">
-<meta property="og:description" content="Wie Forschung zu Neuroästhetik, Healing Architecture und Wahrnehmungspsychologie in Originalgemälde übersetzt wird.">
-<meta property="og:url" content="https://www.studiovisus.de/about">
+<meta property="og:title" content="Über Studio Visus, Atelier in Hamburg">
+<meta property="og:description" content="Studio Visus arbeitet auf neuroästhetischer Grundlage. Über den Künstler Jan-Niclas Bardenhagen, das Atelier in Lokstedt und unsere Arbeitsweise.">
+<meta property="og:url" content="https://www.studiovisus.de/ueber">
 <meta property="og:site_name" content="Studio Visus">
 <meta property="og:locale" content="de_DE">
 <meta property="og:image" content="https://www.studiovisus.de/images/about/author.webp">
+<meta property="og:image:width" content="2613">
+<meta property="og:image:height" content="3124">
+<meta property="og:image:type" content="image/webp">
 <meta property="og:image:alt" content="Jan-Niclas Bardenhagen, Studio Visus Hamburg">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Evidenzbasierte Kunst und Neuroästhetik — Studio Visus">
-<meta name="twitter:description" content="Wie Forschung zu Neuroästhetik, Healing Architecture und Wahrnehmungspsychologie in Originalgemälde übersetzt wird.">
+<meta name="twitter:title" content="Über Studio Visus, Atelier in Hamburg">
+<meta name="twitter:description" content="Studio Visus arbeitet auf neuroästhetischer Grundlage. Über den Künstler Jan-Niclas Bardenhagen, das Atelier in Lokstedt und unsere Arbeitsweise.">
 <meta name="twitter:image" content="https://www.studiovisus.de/images/about/author.webp">
 
-<link rel="canonical" href="https://www.studiovisus.de/about">
+<link rel="canonical" href="https://www.studiovisus.de/ueber">
 
 <script type="application/ld+json">
 {
@@ -49,7 +58,10 @@
     "@type": "Person",
     "name": "Jan-Niclas Bardenhagen",
     "jobTitle": "Künstler und Gründer",
-    "url": "https://www.studiovisus.de/about"
+    "url": "https://www.studiovisus.de/ueber",
+    "sameAs": [
+      "https://www.instagram.com/janniclas.art/"
+    ]
   },
   "areaServed": { "@type": "Country", "name": "Deutschland" },
   "priceRange": "€€€"
@@ -61,14 +73,10 @@
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://www.studiovisus.de" },
-    { "@type": "ListItem", "position": 2, "name": "Über", "item": "https://www.studiovisus.de/about" }
+    { "@type": "ListItem", "position": 2, "name": "Über", "item": "https://www.studiovisus.de/ueber" }
   ]
 }
-</script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter+Tight:wght@300;400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+</script><link rel="stylesheet" href="css/fonts.css">
 
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/about.css">
@@ -79,26 +87,52 @@
 <!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
-    <a class="brand" href="index.html"><span class="dot"></span> Studio <em>Visus</em></a>
+    <a class="brand" href="/" aria-label="Studio Visus"><img class="brand-logo" src="images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="180" height="48"></a>
     <div class="nav-links">
-      <a href="werke.html">Werke</a>
-      <a href="blog.html">Blog</a>
-      <a href="ueber.html" class="active">Über</a>
-      <a href="kontakt.html">Kontakt</a>
-      <a href="faq.html">FAQ</a>
+      <a href="/werke">Werke</a>
+      <a href="/blog">Blog</a>
+      <a href="/ueber" class="active">Über</a>
+      <a href="/kontakt">Kontakt</a>
+      <a href="/faq">FAQ</a>
     </div>
-    <a href="kontakt.html?art=sonstiges" class="nav-cart">Werk anfragen →</a>
+    <a href="/kontakt?art=sonstiges" class="nav-cart">Werk anfragen →</a>
+    <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
   </div>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu-backdrop" aria-hidden="true"></div>
+<aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-logo">
+    <img src="images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="200" height="50">
+  </div>
+  <nav class="mobile-menu-links" aria-label="Hauptnavigation mobil">
+    <a href="/werke">Werke</a>
+    <a href="/auftragsarbeit">Auftragsarbeit</a>
+    <a href="/blog">Blog</a>
+    <a href="/ueber" class="active">Über</a>
+    <a href="/kontakt">Kontakt</a>
+    <a href="/faq">FAQ</a>
+  </nav>
+  <a href="/kontakt?art=sonstiges" class="mobile-menu-cta">Werk anfragen →</a>
+  <div class="mobile-menu-foot">
+    <a href="mailto:info@studiovisus.de">info@studiovisus.de</a>
+    <a href="tel:017684737726">0176 84 73 77 26</a>
+  </div>
+</aside>
 
 <!-- HERO -->
 <section class="about-hero">
   <div class="about-hero-portrait reveal">
     <div class="portrait-main">
-      <img decoding="async" loading="eager" fetchpriority="high" src="images/about/author.webp" alt="Jan-Niclas Bardenhagen. Künstler und Gründer von Studio Visus, Hamburg Lokstedt">
+      <img decoding="async" loading="eager" fetchpriority="high"  src="images/about/author.webp" alt="Jan-Niclas Bardenhagen. Künstler und Gründer von Studio Visus, Hamburg Lokstedt">
     </div>
     <div class="portrait-float">
-      <img decoding="async" loading="lazy" src="images/about/originalgemaelde-staffelei-himmelsnetz-studiovisus.webp" alt="Originalgemälde Himmelsnetz auf der Staffelei im Atelier Studio Visus">
+      <img decoding="async" loading="lazy"  src="images/about/originalgemaelde-staffelei-himmelsnetz-studiovisus.webp" alt="Originalgemälde Himmelsnetz auf der Staffelei im Atelier Studio Visus">
     </div>
     <div class="scribble" style="bottom:40px; left:-30px; transform:rotate(-8deg);">Atelier<br>Lokstedt ✦</div>
   </div>
@@ -142,17 +176,17 @@
       <div class="phil-card reveal">
         <div class="phil-num">01.</div>
         <h3>Neuroästhetik statt <em>Intuition</em></h3>
-        <p>Ich arbeite nicht nach bloßer Intuition, sondern folge Erkenntnissen darüber, wie das menschliche Auge Reize verarbeitet und wie das Gehirn auf visuelle Stimuli reagiert. In einem Medium aus Acryl-Strukturen, Fluid-Art-Techniken und klassischer Ölmalerei entstehen Unikate, die gezielt als visuelle Ruheanker fungieren.</p>
+        <p>Ich arbeite nicht nach bloßer Intuition, sondern folge Erkenntnissen darüber, wie das menschliche Auge Reize verarbeitet und wie das Gehirn auf visuelle Stimuli reagiert. In einem Medium aus <a href="/blog/fluid-art-acryl-pouring-fraktale-muster">Acryl-Strukturen und Fluid-Art-Techniken</a> sowie klassischer Ölmalerei entstehen Unikate, die gezielt als visuelle Ruheanker fungieren.</p>
       </div>
       <div class="phil-card reveal">
         <div class="phil-num">02.</div>
         <h3>Funktionale <em>Ästhetik</em></h3>
-        <p>Ein Raum ist mehr als seine Maße. Für Architekten, Hoteliers und medizinische Einrichtungen ist die psychologische Wirkung eines Raumes ein kritischer Erfolgsfaktor. Meine Arbeiten sind speziell konzipiert für Umgebungen, in denen Menschen ankommen, warten oder zur Ruhe kommen müssen.</p>
+        <p>Ein Raum ist mehr als seine Maße. Für Architekten, Hoteliers und medizinische Einrichtungen ist die psychologische Wirkung eines Raumes ein kritischer Erfolgsfaktor. Meine Arbeiten sind speziell konzipiert für Umgebungen, in denen Menschen ankommen, warten oder zur Ruhe kommen müssen. Mehr dazu in den Themenseiten zu <a href="/bilder-arztpraxis">Bildern für die Arztpraxis</a>, <a href="/kunst-hotel">Kunst für Hotels</a> und <a href="/kunst-therapiepraxis">Therapiepraxen</a>.</p>
       </div>
       <div class="phil-card reveal">
         <div class="phil-num">03.</div>
         <h3>Regulation der <em>Raumatmosphäre</em></h3>
-        <p>Ob in der Abstraktion oder in der figurativen Andeutung: Jedes Werk ist ein Instrument zur Regulation der Raumatmosphäre. Es ist der Versuch, den Lärm der Außenwelt durch kuratierte Frequenzen von Farbe und Form zu neutralisieren.</p>
+        <p>Ob in der Abstraktion oder in der figurativen Andeutung: Jedes Werk ist ein Instrument zur Regulation der Raumatmosphäre. Es ist der Versuch, den Lärm der Außenwelt durch kuratierte Frequenzen von Farbe und Form zu neutralisieren. <a href="/werke">Verfügbare Werke</a> oder <a href="/auftragsarbeit">Auftragsarbeit nach Maß</a> stehen zur Wahl.</p>
       </div>
     </div>
   </div>
@@ -215,13 +249,13 @@
     <div class="atelier-grid">
       <div class="atelier-cell ac-1 reveal">
         <div class="bg">
-          <img decoding="async" loading="lazy" src="images/about/originalgemaelde-sommerkleid-studiovisus.webp" alt="Sommerkleid, das erste gemalte Bild von Jan-Niclas, dem Künster hinter Studio Visus">
+          <img decoding="async" loading="lazy"  src="images/about/originalgemaelde-sommerkleid-studiovisus.webp" alt="Sommerkleid, das erste gemalte Bild von Jan-Niclas, dem Künster hinter Studio Visus">
         </div>
         <span class="cell-label">2024 — Die erste Leinwand</span>
       </div>
       <div class="atelier-cell ac-2 reveal">
         <div class="bg">
-                    <img decoding="async" loading="lazy" src="images/about/originalgemaelde-boot-in-entstehung-studiovisus.webp" alt="Entstehungsprozess eines Bildes. Hier im Beispiel des Bildes Boot">
+                    <img decoding="async" loading="lazy"  src="images/about/originalgemaelde-boot-in-entstehung-studiovisus.webp" alt="Entstehungsprozess eines Bildes. Hier im Beispiel des Bildes Boot">
         </div>
         <span class="cell-label">Farben & Pigmente</span>
       </div>
@@ -283,7 +317,7 @@
     <h2>Direkt ein Werk anfragen?</h2>
     <div class="about-cta-right">
       <p>Ich freue mich auf Ihre Nachricht. Antwort meist am gleichen Tag.</p>
-      <a href="kontakt.html" class="btn btn-primary">Kontakt aufnehmen →</a>
+      <a href="/kontakt" class="btn btn-primary">Kontakt aufnehmen →</a>
     </div>
   </div>
 </section>
@@ -292,7 +326,7 @@
 <footer>
   <div class="foot-inner">
     <div>
-      <div class="foot-brand">Studio <em>Visus</em></div>
+      <div class="foot-brand"><img class="foot-brand-logo" src="images/logo/studiovisus-logo-footer-thight.svg" alt="Studio Visus" width="200" height="50"></div>
       <div class="foot-tag">Handgemalte Unikate für Räume, in denen Atmosphäre zählt.</div>
     </div>
     <div class="foot-col">
@@ -303,14 +337,14 @@
       <h4>Kontakt</h4>
       <a href="mailto:info@studiovisus.de">info@studiovisus.de</a>
       <a href="tel:017684737726">0176 84 73 77 26</a>
-      <a href="kontakt.html">Kontaktformular →</a>
+      <a href="/kontakt">Kontaktformular →</a>
     </div>
     <div class="foot-col">
       <h4>Info</h4>
-      <a href="impressum.html">Impressum</a>
-      <a href="widerrufsbelehrung.html">Widerrufsrecht</a>
-      <a href="datenschutz.html">Datenschutz</a>
-      <a href="faq.html">FAQ</a>
+      <a href="/impressum">Impressum</a>
+      <a href="/widerrufsbelehrung">Widerrufsrecht</a>
+      <a href="/datenschutz">Datenschutz</a>
+      <a href="/faq">FAQ</a>
       <a href="#" data-cc-open>Cookie-Einstellungen</a>
     </div>
   </div>

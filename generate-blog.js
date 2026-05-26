@@ -121,7 +121,7 @@ const posts = [
 
       <div class="article-cta">
         <p>Studio Visus entwickelt evidenzbasierte Originalkunst in Fluid Art und Acryl-Pouring fuer Privatkunden, Arztpraxen, Kliniken, Hotels und Bueros. Handgemalt, wissenschaftlich fundiert, individuell gefertigt.</p>
-        <a href="werke.html" class="btn btn-primary">Werke entdecken &rarr;</a>
+        <a href="/werke" class="btn btn-primary">Werke entdecken &rarr;</a>
       </div>
 
       <h2 id="fazit">Fazit: Fluid Art ist keine Zufallsmalerei</h2>
@@ -202,6 +202,12 @@ function generateOverview() {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/logo/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#a8482a">
 <title>Blog &mdash; Evidenzbasierte Kunst & Raumgestaltung &mdash; Studio Visus</title>
 <meta name="description" content="Wie Wandbilder in Arztpraxen, Kliniken und Hotels wirken. Warum Fluid Art fraktale Muster erzeugt. Was Healing Architecture mit Wohlbefinden zu tun hat.">
 
@@ -219,11 +225,7 @@ ${JSON.stringify(blogSchema, null, 2)}
 </script>
 <script type="application/ld+json">
 ${JSON.stringify(breadcrumbSchema, null, 2)}
-</script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter+Tight:wght@300;400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+</script><link rel="stylesheet" href="css/fonts.css">
 
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/blog.css">
@@ -232,17 +234,43 @@ ${JSON.stringify(breadcrumbSchema, null, 2)}
 
 <nav class="nav">
   <div class="nav-inner">
-    <a class="brand" href="index.html"><span class="dot"></span> Studio <em>Visus</em></a>
+    <a class="brand" href="/" aria-label="Studio Visus"><img class="brand-logo" src="images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="180" height="48"></a>
     <div class="nav-links">
-      <a href="werke.html">Werke</a>
-      <a href="blog.html" class="active">Blog</a>
-      <a href="ueber.html">&Uuml;ber</a>
-      <a href="kontakt.html">Kontakt</a>
-      <a href="faq.html">FAQ</a>
+      <a href="/werke">Werke</a>
+      <a href="/blog" class="active">Blog</a>
+      <a href="/ueber">&Uuml;ber</a>
+      <a href="/kontakt">Kontakt</a>
+      <a href="/faq">FAQ</a>
     </div>
-    <a href="kontakt.html?art=sonstiges" class="nav-cart">Werk anfragen →</a>
+    <a href="/kontakt?art=sonstiges" class="nav-cart">Werk anfragen →</a>
+    <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
   </div>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu-backdrop" aria-hidden="true"></div>
+<aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-logo">
+    <img src="images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="200" height="50">
+  </div>
+  <nav class="mobile-menu-links" aria-label="Hauptnavigation mobil">
+    <a href="/werke">Werke</a>
+    <a href="/auftragsarbeit">Auftragsarbeit</a>
+    <a href="/blog" class="active">Blog</a>
+    <a href="/ueber">Über</a>
+    <a href="/kontakt">Kontakt</a>
+    <a href="/faq">FAQ</a>
+  </nav>
+  <a href="/kontakt?art=sonstiges" class="mobile-menu-cta">Werk anfragen →</a>
+  <div class="mobile-menu-foot">
+    <a href="mailto:info@studiovisus.de">info@studiovisus.de</a>
+    <a href="tel:017684737726">0176 84 73 77 26</a>
+  </div>
+</aside>
 
 <section class="blog-hero">
   <div>
@@ -258,13 +286,13 @@ ${JSON.stringify(breadcrumbSchema, null, 2)}
 
 <section class="blog-featured">
   <div class="blog-featured-inner reveal">
-    <a class="blog-featured-img" href="blog-${post.slug}.html">
+    <a class="blog-featured-img" href="/blog/${post.slug}">
       <span class="feat-badge">Neuester Artikel</span>
       <div class="bg" style="background:${post.imgGrad}"></div>
     </a>
     <div class="blog-featured-text">
       <div class="feat-cat">${post.category}</div>
-      <h2><a href="blog-${post.slug}.html">${post.title}</a></h2>
+      <h2><a href="/blog/${post.slug}">${post.title}</a></h2>
       <p class="feat-excerpt">${post.excerpt}</p>
       <div class="feat-meta">
         <span class="author">${author.name}</span>
@@ -273,7 +301,7 @@ ${JSON.stringify(breadcrumbSchema, null, 2)}
         <span class="dot"></span>
         <span>${post.readTime}</span>
       </div>
-      <a class="read-more" href="blog-${post.slug}.html">Artikel lesen &rarr;</a>
+      <a class="read-more" href="/blog/${post.slug}">Artikel lesen &rarr;</a>
     </div>
   </div>
 </section>
@@ -291,7 +319,7 @@ ${upcomingHtml}
 <footer>
   <div class="foot-inner">
     <div>
-      <div class="foot-brand">Studio <em>Visus</em></div>
+      <div class="foot-brand"><img class="foot-brand-logo" src="images/logo/studiovisus-logo-footer-thight.svg" alt="Studio Visus" width="200" height="50"></div>
       <div class="foot-tag">Handgemalte Unikate f&uuml;r R&auml;ume, in denen Atmosph&auml;re z&auml;hlt.</div>
     </div>
     <div class="foot-col">
@@ -302,14 +330,14 @@ ${upcomingHtml}
       <h4>Kontakt</h4>
       <a href="mailto:info@studiovisus.de">info@studiovisus.de</a>
       <a href="tel:017684737726">0176 84 73 77 26</a>
-      <a href="kontakt.html">Kontaktformular &rarr;</a>
+      <a href="/kontakt">Kontaktformular &rarr;</a>
     </div>
     <div class="foot-col">
       <h4>Info</h4>
       <a href="#">Impressum</a>
       <a href="#">Widerrufsrecht</a>
       <a href="#">Datenschutz</a>
-      <a href="faq.html">FAQ</a>
+      <a href="/faq">FAQ</a>
     </div>
   </div>
   <div class="foot-bottom">
@@ -394,11 +422,7 @@ ${JSON.stringify(articleSchema, null, 2)}
 </script>
 <script type="application/ld+json">
 ${JSON.stringify(breadcrumbSchema, null, 2)}
-</script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter+Tight:wght@300;400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+</script><link rel="stylesheet" href="css/fonts.css">
 
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/blog.css">
@@ -407,23 +431,49 @@ ${JSON.stringify(breadcrumbSchema, null, 2)}
 
 <nav class="nav">
   <div class="nav-inner">
-    <a class="brand" href="index.html"><span class="dot"></span> Studio <em>Visus</em></a>
+    <a class="brand" href="/" aria-label="Studio Visus"><img class="brand-logo" src="images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="180" height="48"></a>
     <div class="nav-links">
-      <a href="werke.html">Werke</a>
-      <a href="blog.html" class="active">Blog</a>
-      <a href="ueber.html">&Uuml;ber</a>
-      <a href="kontakt.html">Kontakt</a>
-      <a href="faq.html">FAQ</a>
+      <a href="/werke">Werke</a>
+      <a href="/blog" class="active">Blog</a>
+      <a href="/ueber">&Uuml;ber</a>
+      <a href="/kontakt">Kontakt</a>
+      <a href="/faq">FAQ</a>
     </div>
-    <a href="kontakt.html?art=sonstiges" class="nav-cart">Werk anfragen →</a>
+    <a href="/kontakt?art=sonstiges" class="nav-cart">Werk anfragen →</a>
+    <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
   </div>
 </nav>
 
+<!-- MOBILE MENU -->
+<div class="mobile-menu-backdrop" aria-hidden="true"></div>
+<aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-logo">
+    <img src="images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="200" height="50">
+  </div>
+  <nav class="mobile-menu-links" aria-label="Hauptnavigation mobil">
+    <a href="/werke">Werke</a>
+    <a href="/auftragsarbeit">Auftragsarbeit</a>
+    <a href="/blog" class="active">Blog</a>
+    <a href="/ueber">Über</a>
+    <a href="/kontakt">Kontakt</a>
+    <a href="/faq">FAQ</a>
+  </nav>
+  <a href="/kontakt?art=sonstiges" class="mobile-menu-cta">Werk anfragen →</a>
+  <div class="mobile-menu-foot">
+    <a href="mailto:info@studiovisus.de">info@studiovisus.de</a>
+    <a href="tel:017684737726">0176 84 73 77 26</a>
+  </div>
+</aside>
+
 <section class="article-head">
   <div class="article-breadcrumb" aria-label="Breadcrumb">
-    <a href="index.html">Start</a>
+    <a href="/">Start</a>
     <span class="sep">&rsaquo;</span>
-    <a href="blog.html">Blog</a>
+    <a href="/blog">Blog</a>
     <span class="sep">&rsaquo;</span>
     <span>${post.title.substring(0, 50)}&hellip;</span>
   </div>
@@ -468,7 +518,7 @@ ${tocHtml}
     <div class="sidebar-cta">
       <h4>Werk f&uuml;r Ihren Raum?</h4>
       <p>Handgemalte Originalgemaeide auf Basis von Neurooesthetik. Direkt aus dem Atelier in Hamburg.</p>
-      <a href="werke.html" class="btn btn-primary">Werke ansehen &rarr;</a>
+      <a href="/werke" class="btn btn-primary">Werke ansehen &rarr;</a>
     </div>
   </aside>
 </section>
@@ -476,7 +526,7 @@ ${tocHtml}
 <footer>
   <div class="foot-inner">
     <div>
-      <div class="foot-brand">Studio <em>Visus</em></div>
+      <div class="foot-brand"><img class="foot-brand-logo" src="images/logo/studiovisus-logo-footer-thight.svg" alt="Studio Visus" width="200" height="50"></div>
       <div class="foot-tag">Handgemalte Unikate f&uuml;r R&auml;ume, in denen Atmosph&auml;re z&auml;hlt.</div>
     </div>
     <div class="foot-col">
@@ -487,14 +537,14 @@ ${tocHtml}
       <h4>Kontakt</h4>
       <a href="mailto:info@studiovisus.de">info@studiovisus.de</a>
       <a href="tel:017684737726">0176 84 73 77 26</a>
-      <a href="kontakt.html">Kontaktformular &rarr;</a>
+      <a href="/kontakt">Kontaktformular &rarr;</a>
     </div>
     <div class="foot-col">
       <h4>Info</h4>
       <a href="#">Impressum</a>
       <a href="#">Widerrufsrecht</a>
       <a href="#">Datenschutz</a>
-      <a href="faq.html">FAQ</a>
+      <a href="/faq">FAQ</a>
     </div>
   </div>
   <div class="foot-bottom">
