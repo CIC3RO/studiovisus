@@ -489,7 +489,7 @@ function generatePage(werk) {
       <a href="/werke" class="btn btn-ghost">Alle Werke ansehen</a>`;
   } else {
     ctaHtml = `
-      <a href="kontakt.html?werk=${encodeURIComponent(werk.title + ' · ' + dimString)}" class="btn btn-primary">Dieses Werk anfragen →</a>
+      <a href="/kontakt?werk=${encodeURIComponent(werk.title + ' · ' + dimString)}" class="btn btn-primary">Dieses Werk anfragen →</a>
       <a href="/kontakt?art=auftrag" class="btn btn-ghost">Auftragswerk besprechen</a>`;
   }
 
@@ -625,7 +625,7 @@ ${JSON.stringify(artworkSchema, null, 2)}
       </div>
       ${werk.imgDetail
         ? `<div class="werk-thumb"><img src="${werk.imgDetail}" alt="${werk.title}, Detailaufnahme"></div>`
-        : `<div class="werk-thumb thumb-placeholder">Detail</div>`}
+        : ``}
       ${werk.imgRaum
         ? `<div class="werk-thumb"><img src="${werk.imgRaum}" alt="${werk.title}, im Raum"></div>`
         : `<div class="werk-thumb thumb-placeholder">Im Raum</div>`}
