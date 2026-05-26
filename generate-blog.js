@@ -202,11 +202,11 @@ function generateOverview() {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon-16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="images/logo/apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
+<link rel="icon" type="image/svg+xml" href="/images/logo/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/logo/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/logo/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/logo/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#a8482a">
 <title>Blog &mdash; Evidenzbasierte Kunst & Raumgestaltung &mdash; Studio Visus</title>
 <meta name="description" content="Wie Wandbilder in Arztpraxen, Kliniken und Hotels wirken. Warum Fluid Art fraktale Muster erzeugt. Was Healing Architecture mit Wohlbefinden zu tun hat.">
@@ -225,16 +225,16 @@ ${JSON.stringify(blogSchema, null, 2)}
 </script>
 <script type="application/ld+json">
 ${JSON.stringify(breadcrumbSchema, null, 2)}
-</script><link rel="stylesheet" href="css/fonts.css">
+</script><link rel="stylesheet" href="/css/fonts.css">
 
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/blog.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/blog.css">
 </head>
 <body>
 
 <nav class="nav">
   <div class="nav-inner">
-    <a class="brand" href="/" aria-label="Studio Visus"><img class="brand-logo" src="images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="180" height="48"></a>
+    <a class="brand" href="/" aria-label="Studio Visus"><img class="brand-logo" src="/images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="180" height="48"></a>
     <div class="nav-links">
       <a href="/werke">Werke</a>
       <a href="/blog" class="active">Blog</a>
@@ -255,7 +255,7 @@ ${JSON.stringify(breadcrumbSchema, null, 2)}
 <div class="mobile-menu-backdrop" aria-hidden="true"></div>
 <aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
   <div class="mobile-menu-logo">
-    <img src="images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="200" height="50">
+    <img src="/images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="200" height="50">
   </div>
   <nav class="mobile-menu-links" aria-label="Hauptnavigation mobil">
     <a href="/werke">Werke</a>
@@ -319,7 +319,7 @@ ${upcomingHtml}
 <footer>
   <div class="foot-inner">
     <div>
-      <div class="foot-brand"><img class="foot-brand-logo" src="images/logo/studiovisus-logo-footer-thight.svg" alt="Studio Visus" width="200" height="50"></div>
+      <div class="foot-brand"><img class="foot-brand-logo" src="/images/logo/studiovisus-logo-footer-thight.svg" alt="Studio Visus" width="200" height="50"></div>
       <div class="foot-tag">Handgemalte Unikate f&uuml;r R&auml;ume, in denen Atmosph&auml;re z&auml;hlt.</div>
     </div>
     <div class="foot-col">
@@ -346,7 +346,7 @@ ${upcomingHtml}
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>`;
 }
@@ -422,16 +422,16 @@ ${JSON.stringify(articleSchema, null, 2)}
 </script>
 <script type="application/ld+json">
 ${JSON.stringify(breadcrumbSchema, null, 2)}
-</script><link rel="stylesheet" href="css/fonts.css">
+</script><link rel="stylesheet" href="/css/fonts.css">
 
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/blog.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/blog.css">
 </head>
 <body>
 
 <nav class="nav">
   <div class="nav-inner">
-    <a class="brand" href="/" aria-label="Studio Visus"><img class="brand-logo" src="images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="180" height="48"></a>
+    <a class="brand" href="/" aria-label="Studio Visus"><img class="brand-logo" src="/images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="180" height="48"></a>
     <div class="nav-links">
       <a href="/werke">Werke</a>
       <a href="/blog" class="active">Blog</a>
@@ -452,7 +452,7 @@ ${JSON.stringify(breadcrumbSchema, null, 2)}
 <div class="mobile-menu-backdrop" aria-hidden="true"></div>
 <aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
   <div class="mobile-menu-logo">
-    <img src="images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="200" height="50">
+    <img src="/images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="200" height="50">
   </div>
   <nav class="mobile-menu-links" aria-label="Hauptnavigation mobil">
     <a href="/werke">Werke</a>
@@ -526,7 +526,7 @@ ${tocHtml}
 <footer>
   <div class="foot-inner">
     <div>
-      <div class="foot-brand"><img class="foot-brand-logo" src="images/logo/studiovisus-logo-footer-thight.svg" alt="Studio Visus" width="200" height="50"></div>
+      <div class="foot-brand"><img class="foot-brand-logo" src="/images/logo/studiovisus-logo-footer-thight.svg" alt="Studio Visus" width="200" height="50"></div>
       <div class="foot-tag">Handgemalte Unikate f&uuml;r R&auml;ume, in denen Atmosph&auml;re z&auml;hlt.</div>
     </div>
     <div class="foot-col">
@@ -553,7 +553,7 @@ ${tocHtml}
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>`;
 }

@@ -8,11 +8,11 @@ function wrap(slug, title, metaTitle, metaDesc, canonical, bodyHtml) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon-16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="images/logo/apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
+<link rel="icon" type="image/svg+xml" href="/images/logo/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/logo/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/logo/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/logo/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#a8482a">
 <title>${metaTitle}</title>
 <meta name="description" content="${metaDesc}">
@@ -32,14 +32,14 @@ function wrap(slug, title, metaTitle, metaDesc, canonical, bodyHtml) {
     { "@type": "ListItem", "position": 2, "name": "${title}", "item": "${canonical}" }
   ]
 }
-</script><link rel="stylesheet" href="css/fonts.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/legal.css">
+</script><link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/legal.css">
 </head>
 <body>
 <nav class="nav">
   <div class="nav-inner">
-    <a class="brand" href="/" aria-label="Studio Visus"><img class="brand-logo" src="images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="180" height="48"></a>
+    <a class="brand" href="/" aria-label="Studio Visus"><img class="brand-logo" src="/images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="180" height="48"></a>
     <div class="nav-links">
       <a href="/werke">Werke</a>
       <a href="/blog">Blog</a>
@@ -60,7 +60,7 @@ function wrap(slug, title, metaTitle, metaDesc, canonical, bodyHtml) {
 <div class="mobile-menu-backdrop" aria-hidden="true"></div>
 <aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
   <div class="mobile-menu-logo">
-    <img src="images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="200" height="50">
+    <img src="/images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="200" height="50">
   </div>
   <nav class="mobile-menu-links" aria-label="Hauptnavigation mobil">
     <a href="/werke">Werke</a>
@@ -88,7 +88,7 @@ ${bodyHtml}
 <footer>
   <div class="foot-inner">
     <div>
-      <div class="foot-brand"><img class="foot-brand-logo" src="images/logo/studiovisus-logo-footer-thight.svg" alt="Studio Visus" width="200" height="50"></div>
+      <div class="foot-brand"><img class="foot-brand-logo" src="/images/logo/studiovisus-logo-footer-thight.svg" alt="Studio Visus" width="200" height="50"></div>
       <div class="foot-tag">Handgemalte Unikate f&#252;r R&#228;ume, in denen Atmosph&#228;re z&#228;hlt.</div>
     </div>
     <div class="foot-col"><h4>Standort</h4><p>Lokstedter H&#246;he 11e<br>22529 Hamburg</p></div>
@@ -100,7 +100,7 @@ ${bodyHtml}
     <span>Design-Entwurf &#183; Warm &#38; atelierhaft</span>
   </div>
 </footer>
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>`;
 }

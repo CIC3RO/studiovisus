@@ -512,11 +512,11 @@ function generatePage(werk) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon-16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="images/logo/apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
+<link rel="icon" type="image/svg+xml" href="/images/logo/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/logo/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/logo/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/logo/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#a8482a">
 <title>${werk.title}, Originalgemälde ${dimString} | Studio Visus</title>
 <meta name="description" content="${metaDesc}">
@@ -552,18 +552,18 @@ ${JSON.stringify(breadcrumbSchema, null, 2)}
 </script>
 <script type="application/ld+json">
 ${JSON.stringify(artworkSchema, null, 2)}
-</script><link rel="stylesheet" href="css/fonts.css">
+</script><link rel="stylesheet" href="/css/fonts.css">
 
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/cookie-consent.css">
-<link rel="stylesheet" href="css/werk-detail.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/cookie-consent.css">
+<link rel="stylesheet" href="/css/werk-detail.css">
 </head>
 <body>
 
 <!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
-    <a class="brand" href="/" aria-label="Studio Visus"><img class="brand-logo" src="images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="180" height="48"></a>
+    <a class="brand" href="/" aria-label="Studio Visus"><img class="brand-logo" src="/images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="180" height="48"></a>
     <div class="nav-links">
       <a href="/werke" class="active">Werke</a>
       <a href="/blog">Blog</a>
@@ -584,7 +584,7 @@ ${JSON.stringify(artworkSchema, null, 2)}
 <div class="mobile-menu-backdrop" aria-hidden="true"></div>
 <aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
   <div class="mobile-menu-logo">
-    <img src="images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="200" height="50">
+    <img src="/images/logo/studiovisus-logo-horizontal-thight.svg" alt="Studio Visus" width="200" height="50">
   </div>
   <nav class="mobile-menu-links" aria-label="Hauptnavigation mobil">
     <a href="/werke" class="active">Werke</a>
@@ -746,7 +746,7 @@ ${relatedHtml}
 <footer>
   <div class="foot-inner">
     <div>
-      <div class="foot-brand"><img class="foot-brand-logo" src="images/logo/studiovisus-logo-footer-thight.svg" alt="Studio Visus" width="200" height="50"></div>
+      <div class="foot-brand"><img class="foot-brand-logo" src="/images/logo/studiovisus-logo-footer-thight.svg" alt="Studio Visus" width="200" height="50"></div>
       <div class="foot-tag">Handgemalte Unikate für Räume, in denen Atmosphäre zählt.</div>
     </div>
     <div class="foot-col">
@@ -773,8 +773,8 @@ ${relatedHtml}
   </div>
 </footer>
 
-<script src="js/main.js"></script>
-<script src="js/cookie-consent.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/cookie-consent.js"></script>
 </body>
 </html>`;
 }
