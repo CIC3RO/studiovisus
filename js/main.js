@@ -286,43 +286,66 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  /* ===== Formular-Absenden mit Erfolgs-Feedback ===== */
+  /* ===== Formular-Absenden via Web3Forms ===== */
   const form = document.getElementById('anfrageform');
   const success = document.getElementById('form-success');
   if (form) {
     form.addEventListener('submit', e => {
       e.preventDefault();
 
-      // Native HTML5-Validierung respektieren (required, type=email …)
+      // Native HTML5-Validierung respektieren
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
       }
 
-      // TODO: Hier später echten Versand einbauen (fetch zu Backend / Form-Service).
-      // Beispiel:
-      //   const data = new FormData(form);
-      //   fetch('/api/anfrage', { method:'POST', body:data })
-      //     .then(r => r.ok ? showSuccess() : showError())
-      //     .catch(showError);
-      // Aktuell: Demo — direkt Erfolgsmeldung anzeigen.
+      // Submit-Button deaktivieren, damit nicht doppelt gesendet wird
+      const btn = form.querySelector('.btn-submit');
+      const btnText = btn ? btn.textContent : '';
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = 'Wird gesendet …';
+      }
 
-      showSuccess();
+      const data = new FormData(form);
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      })
+      .then(function (res) { return res.json(); })
+      .then(function (json) {
+        if (json.success) {
+          showSuccess();
+        } else {
+          showError();
+        }
+      })
+      .catch(function () {
+        showError();
+      });
     });
 
     function showSuccess(){
       if (!success) return;
-      // Formular ausblenden, Erfolgsmeldung einblenden
       form.hidden = true;
       success.hidden = false;
 
-      // Sanft zur Erfolgsmeldung scrollen (mit Versatz für die sticky Nav)
       const navEl = document.querySelector('.nav');
       const navHeight = navEl ? navEl.getBoundingClientRect().height : 0;
       setTimeout(() => {
         const top = success.getBoundingClientRect().top + window.pageYOffset - navHeight - 12;
         window.scrollTo({ top, behavior: 'smooth' });
       }, 60);
+    }
+
+    function showError(){
+      var btn = form.querySelector('.btn-submit');
+      if (btn) {
+        btn.disabled = false;
+        btn.textContent = 'Anfrage absenden →';
+      }
+      alert('Die Nachricht konnte leider nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie direkt an info@studiovisus.de.');
     }
   }
 
