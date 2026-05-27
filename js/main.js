@@ -278,10 +278,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (didPrefill) {
       const navEl = document.querySelector('.nav');
       const navHeight = navEl ? navEl.getBoundingClientRect().height : 0;
+      // Wenn Anfrageart und Werk schon vorausgewählt sind, scrollen wir direkt
+      // bis zu Schritt 02 ("Ihre Nachricht"), damit der Nutzer dort weitermacht.
+      const stepNachricht = document.getElementById('step-nachricht');
+      const target = stepNachricht || formSection;
       // kleines Timeout, damit der Browser nicht mit eigenem Anker-Scroll kollidiert
       setTimeout(() => {
-        const top = formSection.getBoundingClientRect().top + window.pageYOffset - navHeight - 12;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 12;
         window.scrollTo({ top, behavior: 'smooth' });
+        // Optional: Fokus aufs Textarea, damit der Nutzer sofort tippen kann
+        if (stepNachricht) {
+          const textarea = stepNachricht.querySelector('textarea');
+          if (textarea) setTimeout(() => textarea.focus({ preventScroll: true }), 600);
+        }
       }, 80);
     }
   }

@@ -17,7 +17,7 @@
 
   // === Google Analytics Config ===
   // HIER IHRE GA-ID EINTRAGEN:
-  const GA_ID = 'G-XXXXXXXXXX';
+  const GA_ID = 'G-54DPTBTETS';
 
   // =============================
   // Cookie-Hilfsfunktionen
@@ -141,7 +141,7 @@
           <div class="cc-categories">
             <div class="cc-cat">
               <label class="cc-toggle">
-                <input type="checkbox" checked disabled>
+                <input type="checkbox" checked disabled aria-label="Technisch notwendige Cookies (immer aktiv, kann nicht deaktiviert werden)">
                 <span class="slider"></span>
               </label>
               <span>Technisch notwendig</span>
@@ -149,7 +149,7 @@
             </div>
             <div class="cc-cat">
               <label class="cc-toggle">
-                <input type="checkbox" id="cc-analytics-toggle">
+                <input type="checkbox" id="cc-analytics-toggle" aria-label="Analyse- und Statistik-Cookies aktivieren">
                 <span class="slider"></span>
               </label>
               <span>Analyse & Statistik</span>
@@ -162,12 +162,12 @@
           <div class="cc-details" id="cc-details">
             <div class="cc-detail-group">
               <h4>Technisch notwendig</h4>
-              <p>Diese Cookies sind für die Grundfunktionen der Website erforderlich — Seitennavigation, Sicherheit, Speicherung Ihrer Cookie-Einstellung. Sie können nicht deaktiviert werden.</p>
-              <div class="cookie-list">Cookies: sv_consent (Ihre Cookie-Entscheidung, 1 Jahr) · Squarespace-Systemcookies (Session)</div>
+              <p>Diese Cookies sind für die Grundfunktionen der Website erforderlich, also Seitennavigation, Sicherheit und Speicherung Ihrer Cookie-Einstellung. Sie können nicht deaktiviert werden.</p>
+              <div class="cookie-list">Cookies: sv_consent (Ihre Cookie-Entscheidung, 1 Jahr)</div>
             </div>
             <div class="cc-detail-group">
               <h4>Analyse & Statistik</h4>
-              <p>Google Analytics und Squarespace Analytics erfassen anonymisierte Nutzungsdaten — welche Seiten besucht werden, wie lange, von wo. Die IP-Adresse wird anonymisiert. Diese Daten helfen uns, die Website zu verbessern.</p>
+              <p>Google Analytics erfasst anonymisierte Nutzungsdaten, also welche Seiten besucht werden, wie lange, von wo. Die IP-Adresse wird anonymisiert. Diese Daten helfen uns, die Website zu verbessern.</p>
               <div class="cookie-list">Cookies: _ga, _gid, _gat (Google Analytics, bis 14 Monate) · Squarespace Analytics Cookies · Datenübertragung in die USA auf Basis von EU-Standardvertragsklauseln und EU-US Data Privacy Framework</div>
             </div>
             <p style="margin-top:12px"><a href="datenschutz.html">Vollst&auml;ndige Datenschutzerkl&auml;rung lesen &rarr;</a></p>

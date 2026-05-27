@@ -64,7 +64,8 @@
 </script><link rel="stylesheet" href="/css/fonts.css">
 
 <link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/cookie-consent.css">
+<link rel="preload" href="/css/cookie-consent.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/cookie-consent.css"></noscript>
 </head>
 <body>
 
@@ -343,7 +344,7 @@
       </div>
 
       <!-- STEP 02 -->
-      <div class="form-step">
+      <div class="form-step" id="step-nachricht">
         <div class="step-head">
           <span class="step-num">02.</span>
           <span class="step-title">Ihre Nachricht</span>
@@ -401,11 +402,11 @@
       <div class="success-glyph" aria-hidden="true">✓</div>
       <div class="form-eyebrow">Anfrage versendet</div>
       <h2>Vielen Dank, <em>Ihre Anfrage</em><br>ist auf dem Weg.</h2>
-      <p class="form-lead">Ich habe Ihre Nachricht erhalten und melde mich persönlich zurück — meist innerhalb von 24&nbsp;Stunden, werktags oft deutlich schneller.</p>
+      <p class="form-lead">Ich habe Ihre Nachricht erhalten und melde mich persönlich zurück, meist innerhalb von 24&nbsp;Stunden, werktags oft deutlich schneller.</p>
       <p class="form-lead">Eine Bestätigung sende ich Ihnen zusätzlich per E-Mail. Sollte diese nicht ankommen, schauen Sie bitte kurz im Spam-Ordner nach oder schreiben mir direkt an <a href="mailto:info@studiovisus.de">info@studiovisus.de</a>.</p>
       <div class="submit-row">
         <a href="/werke" class="btn-submit">Weitere Werke ansehen →</a>
-        <span class="submit-note">— der Künstler</span>
+        <span class="submit-note">Jan-Niclas</span>
       </div>
     </div>
   </div>
@@ -416,7 +417,7 @@
       <div class="artist-portrait">
 
       </div>
-      <div class="signature">— der Künstler</div>
+      <div class="signature">Jan-Niclas</div>
       <h3>„Jede Anfrage beantworte ich persönlich."</h3>
       <p>Es gibt kein Sekretariat, kein Callcenter und keine automatischen Antworten. Wenn Sie schreiben, lese das ich meistens noch am selben Tag, manchmal nachts zwischen zwei Schichten Acryl.</p>
       <p>Auch wenn aus Ihrer Anfrage am Ende kein Auftrag wird: Eine ehrliche Empfehlung gebe ich gern.</p>
@@ -497,17 +498,17 @@
       <div class="foot-tag">Handgemalte Unikate für Räume, in denen Atmosphäre zählt.</div>
     </div>
     <div class="foot-col">
-      <h4>Standort</h4>
+      <h3>Standort</h3>
       <p>Lokstedter Höhe 11e<br>22529 Hamburg</p>
     </div>
     <div class="foot-col">
-      <h4>Kontakt</h4>
+      <h3>Kontakt</h3>
       <a href="mailto:info@studiovisus.de">info@studiovisus.de</a>
       <a href="tel:017684737726">0176 84 73 77 26</a>
       <a href="https://www.instagram.com/janniclas.art/" target="_blank" rel="noopener me">Instagram &rarr;</a>
     </div>
     <div class="foot-col">
-      <h4>Info</h4>
+      <h3>Info</h3>
       <a href="/impressum">Impressum</a>
       <a href="/widerrufsbelehrung">Widerrufsrecht</a>
       <a href="/datenschutz">Datenschutz</a>

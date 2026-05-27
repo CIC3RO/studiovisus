@@ -63,7 +63,8 @@
 
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/blog.css">
-<link rel="stylesheet" href="/css/cookie-consent.css">
+<link rel="preload" href="/css/cookie-consent.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/cookie-consent.css"></noscript>
 </head>
 <body>
 
@@ -160,7 +161,9 @@
 
         <a class="blog-card reveal" href="/blog/healing-architecture-raumgestaltung-heilung">
           <div class="blog-card-img">
-            <div class="bg" style="background:linear-gradient(135deg, #2a3d50 0%, #5c7d8a 30%, #89a897 60%, #d4cbb8 100%)"></div>
+            <div class="bg">
+              <img decoding="async" loading="lazy"style="object-position: center -7px;"  src="/images/blog/teaserpicture-blog-healing-architecture-raumgestaltung-heilung-studiovisus.jpeg" alt="Grünes und belbes Bild mit Schuppenmustern. 70 x 120 cm">
+            </div>
           </div>
           <div class="card-cat">Evidenzbasierte Kunst</div>
           <h3>Healing Architecture: Wie Raumgestaltung den Heilungsverlauf beeinflusst</h3>
@@ -170,7 +173,9 @@
 
         <a class="blog-card reveal" href="/blog/original-vs-kunstdruck-textur-gehirn">
           <div class="blog-card-img">
-            <div class="bg" style="background:linear-gradient(135deg, #1a1a1a 0%, #3a3a3a 30%, #5a5040 60%, #8a7d6a 100%)"></div>
+            <div class="bg">
+              <img decoding="async" loading="lazy" style="object-position: center -24px;"  src="/images/werke/fenster/originalgemaelde-nahaufnahme-schuppen-struktur-studiovisus.webp" alt="Das Bild Fenster. Nahaufnahme der Schuppenmustern mit Gold und Grün. 140 x 200 cm.">
+            </div>
           </div>
           <div class="card-cat">Maltechniken &amp; Evidenz</div>
           <h3>Original vs. Kunstdruck: Was die Textur eines Gem&auml;ldes im Gehirn ausl&ouml;st</h3>
@@ -212,18 +217,18 @@
       <div class="foot-tag">Handgemalte Unikate f&uuml;r R&auml;ume, in denen Atmosph&auml;re z&auml;hlt.</div>
     </div>
     <div class="foot-col">
-      <h4>Standort</h4>
+      <h3>Standort</h3>
       <p>Lokstedter H&ouml;he 11e<br>22529 Hamburg</p>
     </div>
     <div class="foot-col">
-      <h4>Kontakt</h4>
+      <h3>Kontakt</h3>
       <a href="mailto:info@studiovisus.de">info@studiovisus.de</a>
       <a href="tel:017684737726">0176 84 73 77 26</a>
       <a href="/kontakt">Kontaktformular &rarr;</a>
       <a href="https://www.instagram.com/janniclas.art/" target="_blank" rel="noopener me">Instagram &rarr;</a>
     </div>
     <div class="foot-col">
-      <h4>Info</h4>
+      <h3>Info</h3>
       <a href="/impressum">Impressum</a>
       <a href="/widerrufsbelehrung">Widerrufsrecht</a>
       <a href="/datenschutz">Datenschutz</a>

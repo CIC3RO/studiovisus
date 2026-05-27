@@ -187,7 +187,7 @@
   border-left:3px solid var(--accent);
   align-self:start;
 }
-.pt-detail h4{
+.pt-detail h3, .pt-detail h4{
   font-family:'Fraunces', serif;
   font-size:16px;
   font-weight:400;
@@ -384,7 +384,7 @@
   color:var(--accent);
   margin-bottom:6px;
 }
-.example-card h4{
+.example-card h3, .example-card h4{
   font-family:'Fraunces', serif;
   font-weight:400;
   font-style:italic;

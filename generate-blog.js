@@ -323,17 +323,17 @@ ${upcomingHtml}
       <div class="foot-tag">Handgemalte Unikate f&uuml;r R&auml;ume, in denen Atmosph&auml;re z&auml;hlt.</div>
     </div>
     <div class="foot-col">
-      <h4>Standort</h4>
+      <h3>Standort</h3>
       <p>Lokstedter H&ouml;he 11e<br>22529 Hamburg</p>
     </div>
     <div class="foot-col">
-      <h4>Kontakt</h4>
+      <h3>Kontakt</h3>
       <a href="mailto:info@studiovisus.de">info@studiovisus.de</a>
       <a href="tel:017684737726">0176 84 73 77 26</a>
       <a href="/kontakt">Kontaktformular &rarr;</a>
     </div>
     <div class="foot-col">
-      <h4>Info</h4>
+      <h3>Info</h3>
       <a href="#">Impressum</a>
       <a href="#">Widerrufsrecht</a>
       <a href="#">Datenschutz</a>
@@ -511,12 +511,12 @@ ${tagsHtml}
 
   <aside class="article-sidebar">
     <div class="sidebar-toc">
-      <h4>Inhalt</h4>
+      <h3>Inhalt</h3>
 ${tocHtml}
     </div>
 
     <div class="sidebar-cta">
-      <h4>Werk f&uuml;r Ihren Raum?</h4>
+      <h3>Werk f&uuml;r Ihren Raum?</h3>
       <p>Handgemalte Originalgemaeide auf Basis von Neurooesthetik. Direkt aus dem Atelier in Hamburg.</p>
       <a href="/werke" class="btn btn-primary">Werke ansehen &rarr;</a>
     </div>
@@ -530,17 +530,17 @@ ${tocHtml}
       <div class="foot-tag">Handgemalte Unikate f&uuml;r R&auml;ume, in denen Atmosph&auml;re z&auml;hlt.</div>
     </div>
     <div class="foot-col">
-      <h4>Standort</h4>
+      <h3>Standort</h3>
       <p>Lokstedter H&ouml;he 11e<br>22529 Hamburg</p>
     </div>
     <div class="foot-col">
-      <h4>Kontakt</h4>
+      <h3>Kontakt</h3>
       <a href="mailto:info@studiovisus.de">info@studiovisus.de</a>
       <a href="tel:017684737726">0176 84 73 77 26</a>
       <a href="/kontakt">Kontaktformular &rarr;</a>
     </div>
     <div class="foot-col">
-      <h4>Info</h4>
+      <h3>Info</h3>
       <a href="#">Impressum</a>
       <a href="#">Widerrufsrecht</a>
       <a href="#">Datenschutz</a>

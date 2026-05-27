@@ -499,7 +499,7 @@ function generatePage(werk) {
             <div class="frame">
               <img src="${r.img}" alt="${r.title}">
             </div>
-            <h4>${r.title}</h4>
+            <h3>${r.title}</h3>
             <div class="specs">${r.technik} · ${r.breite} × ${r.hoehe} cm</div>
             <div class="r-price">${formatPreis(r)}</div>
           </a>`).join('\n');
@@ -555,7 +555,7 @@ ${JSON.stringify(artworkSchema, null, 2)}
 </script><link rel="stylesheet" href="/css/fonts.css">
 
 <link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/cookie-consent.css">
+<link rel="preload" href="/css/cookie-consent.css" as="style" onload="this.onload=null;this.rel='stylesheet'">\n<noscript><link rel="stylesheet" href="/css/cookie-consent.css"></noscript>
 <link rel="stylesheet" href="/css/werk-detail.css">
 </head>
 <body>
@@ -676,7 +676,7 @@ ${beschreibungHtml}
     <!-- Neuroästhetik -->
     <div class="werk-neuro">
       <div class="ico">α</div>
-      <h4>${werk.neuroTitel}</h4>
+      <h3>${werk.neuroTitel}</h3>
       <p>${werk.neuroText}</p>
     </div>
 
@@ -750,17 +750,17 @@ ${relatedHtml}
       <div class="foot-tag">Handgemalte Unikate für Räume, in denen Atmosphäre zählt.</div>
     </div>
     <div class="foot-col">
-      <h4>Standort</h4>
+      <h3>Standort</h3>
       <p>Lokstedter Höhe 11e<br>22529 Hamburg</p>
     </div>
     <div class="foot-col">
-      <h4>Kontakt</h4>
+      <h3>Kontakt</h3>
       <a href="mailto:info@studiovisus.de">info@studiovisus.de</a>
       <a href="tel:017684737726">0176 84 73 77 26</a>
       <a href="/kontakt">Kontaktformular →</a>
     </div>
     <div class="foot-col">
-      <h4>Info</h4>
+      <h3>Info</h3>
       <a href="/impressum">Impressum</a>
       <a href="/widerrufsbelehrung">Widerrufsrecht</a>
       <a href="/datenschutz">Datenschutz</a>

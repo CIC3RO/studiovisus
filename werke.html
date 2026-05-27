@@ -57,7 +57,8 @@
 </script><link rel="stylesheet" href="/css/fonts.css">
 
 <link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/cookie-consent.css">
+<link rel="preload" href="/css/cookie-consent.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/cookie-consent.css"></noscript>
 </head>
 <body>
   <!--Die CSS-Klassen für die Karten-Größe sind w-square (quadratisch), w-tall (hochformat), w-wide (querformat), w-feature (groß, volle Breite), w-small (klein), w-mid (mittel), w-portrait (schmal hochkant), w-offset (versetzt).-->
@@ -123,13 +124,18 @@
 
 <!-- INTRO TEXT BLOCK -->
 <section class="werke-intro">
+  <div class="werke-intro-inner">
+    <p>Was hier hängt, ist gemalt worden. Mit Pinsel, Spachtel, Gusstechnik, manchmal über Monate hinweg, in mehreren Schichten. Jedes Stück bleibt für sich. Es gibt keinen Druck davon, keine Edition, keinen zweiten Versuch.</p>
+    <p>Die Auswahl entsteht im Atelier in Hamburg-Lokstedt. Hintergrund ist die <a href="/blog/farbpsychologie-und-wohlbefinden">Neuroästhetik</a>, also die Frage, was bestimmte Farb- und Formreize im Gehirn auslösen. Die meisten Werke sind so angelegt, dass sie nicht dominieren. Sie sollen wirken, ohne dass Sie sie ständig anschauen müssen. Das macht sie für <a href="/bilder-arztpraxis">Praxen</a>, <a href="/kunst-hotel">Hotels</a> und <a href="/kunst-buero">Büros</a> brauchbar, ohne dass sie generisch werden.</p>
+    <p>Wenn Sie für einen konkreten Raum etwas Eigenes suchen, geht das auch als <a href="/auftragsarbeit">Auftragsarbeit</a>. Format, Farbpalette und Stimmung lassen sich auf Licht, Wand und Zweck abstimmen. Versand deutschlandweit, persönliche Lieferung in Norddeutschland nach Absprache.</p>
+  </div>
 
   <!-- CTA zur digitalen Galerie -->
   <div class="galerie-cta">
     <div class="galerie-cta-inner">
       <div class="galerie-cta-text">
         <div class="eyebrow">Neu</div>
-        <h3>Lieber durch die Galerie gehen?</h3>
+        <h2>Lieber durch die Galerie gehen?</h2>
         <p>Alle Werke an einer Wand, klickbar, in der Größe ihrer echten Maße. Wischen, scrollen, anklicken.</p>
       </div>
       <a href="/galerie" class="galerie-cta-btn">Zur digitalen Galerie →</a>
@@ -339,15 +345,6 @@
   </div>
 </section>
 
-<!-- INTRO TEXT BLOCK -->
-<section class="werke-intro">
-  <div class="werke-intro-inner">
-    <p>Was hier hängt, ist gemalt worden. Mit Pinsel, Spachtel, Gusstechnik, manchmal über Monate hinweg, in mehreren Schichten. Jedes Stück bleibt für sich. Es gibt keinen Druck davon, keine Edition, keinen zweiten Versuch.</p>
-    <p>Die Auswahl entsteht im Atelier in Hamburg-Lokstedt. Hintergrund ist die <a href="/blog/farbpsychologie-und-wohlbefinden">Neuroästhetik</a>, also die Frage, was bestimmte Farb- und Formreize im Gehirn auslösen. Die meisten Werke sind so angelegt, dass sie nicht dominieren. Sie sollen wirken, ohne dass Sie sie ständig anschauen müssen. Das macht sie für <a href="/bilder-arztpraxis">Praxen</a>, <a href="/kunst-hotel">Hotels</a> und <a href="/kunst-buero">Büros</a> brauchbar, ohne dass sie generisch werden.</p>
-    <p>Wenn Sie für einen konkreten Raum etwas Eigenes suchen, geht das auch als <a href="/auftragsarbeit">Auftragsarbeit</a>. Format, Farbpalette und Stimmung lassen sich auf Licht, Wand und Zweck abstimmen. Versand deutschlandweit, persönliche Lieferung in Norddeutschland nach Absprache.</p>
-  </div>
-</section>
-
 <!-- ATELIER -->
 <section class="atelier">
   <div class="atelier-img">
@@ -371,18 +368,18 @@
       <div class="foot-tag">Handgemalte Unikate für Räume, in denen Atmosphäre zählt.</div>
     </div>
     <div class="foot-col">
-      <h4>Standort</h4>
+      <h3>Standort</h3>
       <p>Lokstedter Höhe 11e<br>22529 Hamburg</p>
     </div>
     <div class="foot-col">
-      <h4>Kontakt</h4>
+      <h3>Kontakt</h3>
       <a href="mailto:info@studiovisus.de">info@studiovisus.de</a>
       <a href="tel:017684737726">0176 84 73 77 26</a>
       <a href="/kontakt">Kontaktformular →</a>
       <a href="https://www.instagram.com/janniclas.art/" target="_blank" rel="noopener me">Instagram &rarr;</a>
     </div>
     <div class="foot-col">
-      <h4>Info</h4>
+      <h3>Info</h3>
       <a href="/impressum">Impressum</a>
       <a href="/widerrufsbelehrung">Widerrufsrecht</a>
       <a href="/datenschutz">Datenschutz</a>

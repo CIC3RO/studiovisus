@@ -91,9 +91,9 @@ ${bodyHtml}
       <div class="foot-brand"><img class="foot-brand-logo" src="/images/logo/studiovisus-logo-footer-thight.svg" alt="Studio Visus" width="200" height="50"></div>
       <div class="foot-tag">Handgemalte Unikate f&#252;r R&#228;ume, in denen Atmosph&#228;re z&#228;hlt.</div>
     </div>
-    <div class="foot-col"><h4>Standort</h4><p>Lokstedter H&#246;he 11e<br>22529 Hamburg</p></div>
-    <div class="foot-col"><h4>Kontakt</h4><a href="mailto:info@studiovisus.de">info@studiovisus.de</a><a href="tel:017684737726">0176 84 73 77 26</a><a href="/kontakt">Kontaktformular &#8594;</a></div>
-    <div class="foot-col"><h4>Info</h4><a href="/impressum">Impressum</a><a href="/widerrufsbelehrung">Widerrufsrecht</a><a href="/datenschutz">Datenschutz</a><a href="/faq">FAQ</a></div>
+    <div class="foot-col"><h3>Standort</h3><p>Lokstedter H&#246;he 11e<br>22529 Hamburg</p></div>
+    <div class="foot-col"><h3>Kontakt</h3><a href="mailto:info@studiovisus.de">info@studiovisus.de</a><a href="tel:017684737726">0176 84 73 77 26</a><a href="/kontakt">Kontaktformular &#8594;</a></div>
+    <div class="foot-col"><h3>Info</h3><a href="/impressum">Impressum</a><a href="/widerrufsbelehrung">Widerrufsrecht</a><a href="/datenschutz">Datenschutz</a><a href="/faq">FAQ</a></div>
   </div>
   <div class="foot-bottom">
     <span>&#169; 2026 Studio Visus &#183; Hamburg Lokstedt</span>

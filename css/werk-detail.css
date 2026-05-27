@@ -240,7 +240,7 @@
   line-height:1;
   margin-bottom:8px;
 }
-.werk-neuro h4{
+.werk-neuro h3, .werk-neuro h4{
   font-family:'Fraunces', serif;
   font-size:18px;
   font-weight:400;
@@ -410,7 +410,7 @@
   transition:transform 1s cubic-bezier(.2,.8,.2,1);
 }
 .related-card:hover .frame img{transform:scale(1.04)}
-.related-card h4{
+.related-card h3, .related-card h4{
   font-family:'Fraunces', serif;
   font-weight:400;
   font-style:italic;

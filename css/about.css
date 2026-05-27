@@ -424,7 +424,7 @@
   font-size:28px;
   color:var(--accent);
 }
-.step h4{
+.step h3, .step h4{
   font-family:'Fraunces', serif;
   font-size:18px;
   font-weight:400;

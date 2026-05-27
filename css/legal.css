@@ -52,7 +52,7 @@
   margin:32px 0 12px;
   color:var(--ink);
 }
-.legal-content h4{
+.legal-content h3, .legal-content h4{
   font-family:'Fraunces', serif;
   font-weight:400;
   font-style:italic;

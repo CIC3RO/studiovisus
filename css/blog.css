@@ -441,7 +441,7 @@
   padding:28px 28px;
   border:1px solid var(--line);
 }
-.sidebar-toc h4{
+.sidebar-toc h3, .sidebar-toc h4{
   font-family:'Fraunces', serif;
   font-size:18px;
   font-weight:400;
@@ -475,7 +475,7 @@
   background:radial-gradient(circle, rgba(168,72,42,.5), transparent 65%);
   pointer-events:none;
 }
-.sidebar-cta h4{
+.sidebar-cta h3, .sidebar-cta h4{
   font-family:'Fraunces', serif;
   font-style:italic;
   font-size:20px;
@@ -607,7 +607,7 @@
 .mentioned-werk-card:hover .frame img{
   transform:scale(1.04);
 }
-.mentioned-werk-card h4{
+.mentioned-werk-card h3, .mentioned-werk-card h4{
   font-family:'Fraunces', serif;
   font-weight:400;
   font-size:18px;
@@ -624,6 +624,6 @@
   .mentioned-werke{margin:48px 0 32px; padding-top:24px}
   .mentioned-werke h3{font-size:20px; margin-bottom:18px}
   .mentioned-werke-grid{grid-template-columns:repeat(2, 1fr); gap:16px}
-  .mentioned-werk-card h4{font-size:16px}
+  .mentioned-werk-card h3, .mentioned-werk-card h4{font-size:16px}
   .mentioned-werk-card p{font-size:12px}
 }

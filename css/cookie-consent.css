@@ -197,7 +197,7 @@
 .cc-detail-group{
   margin-bottom:16px;
 }
-.cc-detail-group h4{
+.cc-detail-group h3, .cc-detail-group h4{
   font-family:'Fraunces', serif;
   font-size:16px;
   font-weight:400;

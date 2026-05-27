@@ -143,7 +143,7 @@
   line-height:1;
   margin-bottom:8px;
 }
-.lp-point h4{
+.lp-point h3, .lp-point h4{
   font-family:'Fraunces', serif;
   font-size:20px;
   font-weight:400;
@@ -198,7 +198,7 @@
   color:var(--accent);
   margin-bottom:12px;
 }
-.study-card h4{
+.study-card h3, .study-card h4{
   font-family:'Fraunces', serif;
   font-size:20px;
   font-weight:400;
@@ -287,7 +287,7 @@
   transition:transform 1s cubic-bezier(.2,.8,.2,1);
 }
 .lp-werk-card:hover .frame img{transform:scale(1.04)}
-.lp-werk-card h4{
+.lp-werk-card h3, .lp-werk-card h4{
   font-family:'Fraunces', serif;
   font-weight:400;
   font-style:italic;

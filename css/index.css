@@ -214,7 +214,7 @@
   line-height:1;
   margin-bottom:12px;
 }
-.idx-callout h4{
+.idx-callout h3, .idx-callout h4{
   font-family:'Fraunces', serif;
   font-size:22px;
   font-weight:400;
@@ -285,7 +285,7 @@
   color:var(--ink);
   z-index:2;
 }
-.idx-group-card h4{
+.idx-group-card h3, .idx-group-card h4{
   font-family:'Fraunces', serif;
   font-weight:400;
   font-size:28px;

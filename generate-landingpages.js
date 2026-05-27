@@ -340,14 +340,14 @@ function generatePage(page) {
   const pointsHtml = page.points.map(p => `
       <div class="lp-point reveal">
         <div class="ico">${p.ico}</div>
-        <h4>${p.title}</h4>
+        <h3>${p.title}</h3>
         <p>${p.text}</p>
       </div>`).join('');
 
   const studiesHtml = page.studies.map(s => `
         <div class="study-card reveal">
           <div class="s-year">${s.year}</div>
-          <h4>${s.title}</h4>
+          <h3>${s.title}</h3>
           <p>${s.text}</p>
           <span class="source">${s.source}</span>
         </div>`).join('');
@@ -359,7 +359,7 @@ function generatePage(page) {
             <div class="frame">
               <img decoding="async" ${loading} src="${w.img}" alt="${w.title} — ${w.technik}, ${w.breite} × ${w.hoehe} cm">
             </div>
-            <h4>${w.title}</h4>
+            <h3>${w.title}</h3>
             <div class="specs">${w.technik} · ${w.breite} × ${w.hoehe} cm</div>
             <div class="r-price">Auf Anfrage</div>
           </a>`;
@@ -414,7 +414,7 @@ ${JSON.stringify(faqSchema, null, 2)}
 <link rel="stylesheet" href="/css/fonts.css">
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/landingpage.css">
-<link rel="stylesheet" href="/css/cookie-consent.css">
+<link rel="preload" href="/css/cookie-consent.css" as="style" onload="this.onload=null;this.rel='stylesheet'">\n<noscript><link rel="stylesheet" href="/css/cookie-consent.css"></noscript>
 </head>
 <body>
 
@@ -569,18 +569,18 @@ ${relatedHtml}
       <div class="foot-tag">Handgemalte Unikate für Räume, in denen Atmosphäre zählt.</div>
     </div>
     <div class="foot-col">
-      <h4>Standort</h4>
+      <h3>Standort</h3>
       <p>Lokstedter Höhe 11e<br>22529 Hamburg</p>
     </div>
     <div class="foot-col">
-      <h4>Kontakt</h4>
+      <h3>Kontakt</h3>
       <a href="mailto:info@studiovisus.de">info@studiovisus.de</a>
       <a href="tel:017684737726">0176 84 73 77 26</a>
       <a href="/kontakt">Kontaktformular →</a>
       <a href="https://www.instagram.com/janniclas.art/" target="_blank" rel="noopener me">Instagram &rarr;</a>
     </div>
     <div class="foot-col">
-      <h4>Info</h4>
+      <h3>Info</h3>
       <a href="/impressum">Impressum</a>
       <a href="/widerrufsbelehrung">Widerrufsrecht</a>
       <a href="/datenschutz">Datenschutz</a>
