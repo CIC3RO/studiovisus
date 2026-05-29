@@ -68,9 +68,9 @@ const werke = [
     ],
     neuroTitel: "Mehrere Wirkprinzipien greifen ineinander",
     neuroText: "Fraktale Fluenz und Biophilie-Effekt, visuelle Sedierung, biomorphe Tessellation, Curvature mit emotionaler Sicherheit, haptische Verankerung. Mehrere neuroästhetische Prinzipien greifen in diesem Werk gleichzeitig.",
-    img: "images/werke/fenster/originalgemaelde-fesnter-studiovisus.jpg",
+    img: "images/werke/fenster/originalgemaelde-fesnter-studiovisus.webp",
     imgDetail: "images/werke/fenster/originalgemaelde-nahaufnahme-schuppen-struktur-studiovisus.webp",
-    imgRaum: "images/index/originalgemaelde-fenster-acryl-struktur-arztpraxis-studiovisus.JPG",
+    imgRaum: "images/index/originalgemaelde-fenster-acryl-struktur-arztpraxis-studiovisus.webp",
     imgRatio: "3/4",
     related: ["schwarz", "schneesturm", "sturm"]
   },
@@ -98,7 +98,7 @@ const werke = [
     neuroTitel: "Visuelle Ambiguität als aktiver Ruhezustand",
     neuroText: "Ein Bild, das keine eindeutige Interpretation erzwingt, lässt das Gehirn in einem Zustand ruhiger Offenheit. Es sucht, ohne zu finden, und findet, ohne zu suchen. Dieser Zustand ist dem meditativen Erleben verwandt. Hinzu kommt die Lichtreflexion: Ein weißes, strukturreiches Werk reflektiert Licht so, dass der Raum heller und größer wirkt.",
     img: "images/werke/schneesturm/originalgemaelde-schneesturm-studiovisus.webp",
-    imgRaum: "images/werke/schneesturm/originalgemaelde-schneesturm-im-raum-stuiovisus.jpeg",
+    imgRaum: "images/werke/schneesturm/originalgemaelde-schneesturm-im-raum-stuiovisus.webp",
     imgRatio: "1/1",
     related: ["schwarz", "fenster", "flamingo"]
   },
@@ -126,7 +126,7 @@ const werke = [
     neuroTitel: "Fraktale Fluenz und Wasserassoziation",
     neuroText: "Die Schuppenstruktur erzeugt ein sich wiederholendes natürliches Muster, das das Gehirn ohne kognitive Anstrengung verarbeitet. Blautöne aktivieren evolutionär verankerte Assoziationen mit Wasser und Weite, zwei der stärksten Sicherheitssignale in der menschlichen Wahrnehmung. Das leuchtende Boot im Zentrum übernimmt die Funktion eines visuellen Ankers.",
     img: "images/werke/boot/originalgemaelde-boot-studiovisus.webp",
-    imgRaum: "images/werke/boot/originalgemaelde-boot-im-raum-studiovisus.jpeg",
+    imgRaum: "images/werke/boot/originalgemaelde-boot-im-raum-studiovisus.webp",
     imgRatio: "5/7",
     related: ["schneewiese", "flamingo", "sommerkleid"]
   },
@@ -153,8 +153,8 @@ const werke = [
     ],
     neuroTitel: "Haptische Verankerung und visuelles Geheimnis",
     neuroText: "Die grobe Sandstruktur ist so präsent, dass sie fast physisch erfahren wird. Der verborgene Halbkreis spricht ein tiefes Bedürfnis des Gehirns an: das Entdecken von Muster und Bedeutung. Gold auf Schwarz ist einer der wirkungsvollsten Kontraste in der visuellen Wahrnehmung. Der eingeritzte Halbkreis greift das ästhetische Prinzip japanischer Zengärten auf: maximale Wirkung durch minimale Mittel.",
-    img: "images/werke/schwarz/originalgemaelde-schwarz-studiovisus.jpeg",
-    imgRaum: "images/werke/schwarz/originalgemaelde-schwarz-mit-gold-in-einem-raum.jpeg",
+    img: "images/werke/schwarz/originalgemaelde-schwarz-studiovisus.webp",
+    imgRaum: "images/werke/schwarz/originalgemaelde-schwarz-mit-gold-in-einem-raum.webp",
     imgRatio: "1/1",
     related: ["fenster", "schneesturm", "sturm"]
   },
@@ -181,8 +181,8 @@ const werke = [
     ],
     neuroTitel: "Narrative Struktur und visuelle Führung",
     neuroText: "Die Fußabdrücke suggerieren eine Geschichte, ohne sie zu erzählen. Das Gehirn ergänzt aktiv und erlebt dieses Ergänzen als befriedigend. Gleichzeitig übernehmen die Abdrücke die Funktion einer natürlichen Blickführung: Das Auge folgt ihnen und landet im Zentrum. Die Kombination aus Bekanntem (Fußabdrücke) und Unerwartetem (leuchtender Farbkreis) erzeugt eine anziehende kognitive Spannung.",
-    img: "images/werke/schneewiese/originalgemaelde-schneewiese-studiovisus.jpeg",
-    imgRaum: "images/werke/schneewiese/originalgemaelde-schneewiese-im-raum-studiovisus.jpeg",
+    img: "images/werke/schneewiese/originalgemaelde-schneewiese-studiovisus.webp",
+    imgRaum: "images/werke/schneewiese/originalgemaelde-schneewiese-im-raum-studiovisus.webp",
     imgRatio: "1/1",
     related: ["boot", "sommerkleid", "flamingo"]
   },
@@ -210,7 +210,7 @@ const werke = [
     neuroTitel: "Emotionale Aktivierung durch Farbe",
     neuroText: "Dunkles, leuchtendes Rot aktiviert das autonome Nervensystem stärker als beruhigende Blau- oder Grüntöne. Für Räume, in denen Energie, Entscheidungskraft und Fokus gefragt sind, ist diese Aktivierung eine bewusst eingesetzte Qualität. Die goldenen Spritzer und weißen Linien erzeugen eine Richtungswahrnehmung im Bild und führen das Auge durch eine kontrollierte Bewegung.",
     img: "images/werke/sturm/originalgemaelde-sturm-studiovisus.webp",
-    imgRaum: "images/werke/sturm/originalgemaelde-sturm-im-raum-studiovisus.jpeg",
+    imgRaum: "images/werke/sturm/originalgemaelde-sturm-im-raum-studiovisus.webp",
     imgRatio: "10/7",
     related: ["fenster", "schwarz", "schneesturm"]
   },
@@ -238,7 +238,7 @@ const werke = [
     neuroTitel: "Biophile Farbwelt und fraktale Fluenz",
     neuroText: "Der olive-weiße Hintergrund greift eine naturnahe Farbwelt auf, die das Gehirn mit Vegetation und organischen Umgebungen assoziiert. Die Schuppenstruktur erzeugt ein sich wiederholendes natürliches Muster, das das Gehirn leicht und entspannt verarbeitet. Der abstrakte Charakter des Flamingos lässt Raum für individuelle Wahrnehmung, ohne das Gehirn zu fordern.",
     img: "images/werke/flamingo/originalgemaelde-flamingo-studiovisus.webp",
-    imgRaum: "images/werke/flamingo/originalgemaelde-flamingo-im-raum-studiovisus.jpeg",
+    imgRaum: "images/werke/flamingo/originalgemaelde-flamingo-im-raum-studiovisus.webp",
     imgRatio: "1/1",
     related: ["boot", "schneewiese", "sommerkleid"]
   },
@@ -267,7 +267,7 @@ const werke = [
     neuroTitel: "Wärmewahrnehmung und biophile Farbwelt",
     neuroText: "Warme Gold- und Ockerfarben aktivieren Assoziationen mit Licht, Wärme und Fülle. Das Gehirn verarbeitet diese Farbtöne als einladend und sicher. Olivgrün gehört zu den naturnahsten Farbtönen überhaupt und assoziiert das Gehirn mit Vegetation, Stabilität und Lebendigkeit. Die fließenden Übergänge erlauben eine leichte Verarbeitung, die als ästhetisches Wohlbefinden erlebt wird.",
     img: "images/werke/olive/originalgemaelde-olive-studiovisus.webp",
-    imgRaum: "images/werke/olive/originalgemaelde-olive-im-raum-studiovisus.jpeg",
+    imgRaum: "images/werke/olive/originalgemaelde-olive-im-raum-studiovisus.webp",
     imgRatio: "12/7",
     related: ["schwarz", "sommerkleid", "boot"]
   },
@@ -295,7 +295,7 @@ const werke = [
     neuroTitel: "Biophile Farbwelt und Wärme",
     neuroText: "Grün und Beige gehören zu den naturnahsten Farbtönen überhaupt. Sie aktivieren das Gehirn mit Assoziationen von Vegetation, Boden und Stabilität, drei Grundelemente von Sicherheitsgefühl in der menschlichen Wahrnehmung. Warme Farbtöne aktivieren zusätzlich Assoziationen mit Wärme, Schutz und sozialer Verbundenheit.",
     img: "images/werke/sommerkleid/originalgemaelde-sommerkleid-studiovisus.webp",
-    imgRaum: "images/werke/sommerkleid/originalgemaelde-sommerkleid-im-raum.jpeg",
+    imgRaum: "images/werke/sommerkleid/originalgemaelde-sommerkleid-im-raum.webp",
     imgRatio: "12/7",
     related: ["flamingo", "schneewiese", "boot"]
   }
@@ -323,7 +323,7 @@ const werke = [
     neuroTitel: "Biophile Farbwelt und Wärme",
     neuroText: "Mehrschichtigkeit und kognitive Tiefe: Das Werk bietet dem Auge verschiedene Verarbeitungsebenen. Das Gehirn kann zwischen naher und ferner Betrachtung wechseln und dabei jedes Mal Neues entdecken, ein Zustand, der als angenehm und bereichernd empfunden wird. Biophile Elemente: Koi-Fische, Wolken und Netzstrukturen greifen natürliche Bildwelten auf, die evolutionär mit Sicherheit und Lebendigkeit verknüpft sind. Bewegung in Stille: Die angedeutete Bewegung der Fische und des Wolkenwirbels erzeugt eine lebendige Dynamik, die gleichzeitig ruhig und fließend bleibt. Kein Schock, keine Anspannung, nur sanfte Bewegung.",
     img: "images/werke/himmelsnetz/originalgemaelde-himmelsnetz-studiovisus.webp",
-    imgRaum: "images/index/originalgemaelde-himmelsnetz-acryl-oel-therapiepraxis-studiovisus.jpeg",
+    imgRaum: "images/index/originalgemaelde-himmelsnetz-acryl-oel-therapiepraxis-studiovisus.webp",
     imgRatio: "10/7",             
     related: ["flamingo", "schwarz", "fenster"] 
   }
@@ -543,7 +543,9 @@ ${JSON.stringify(breadcrumbSchema, null, 2)}
 </script>
 <script type="application/ld+json">
 ${JSON.stringify(artworkSchema, null, 2)}
-</script><link rel="stylesheet" href="/css/fonts.css">
+</script><link rel="preload" href="/fonts/fraunces-v32-latin-300.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-tight-v7-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css">
 
 <link rel="stylesheet" href="/css/style.css">
 <link rel="preload" href="/css/cookie-consent.css" as="style" onload="this.onload=null;this.rel='stylesheet'">\n<noscript><link rel="stylesheet" href="/css/cookie-consent.css"></noscript>

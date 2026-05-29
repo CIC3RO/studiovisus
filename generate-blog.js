@@ -147,7 +147,12 @@ function generateOverview(livePosts) {
 <meta property="og:url" content="https://www.studiovisus.de/blog">
 <meta property="og:site_name" content="Studio Visus">
 <meta property="og:locale" content="de_DE">
-<meta property="og:image" content="https://www.studiovisus.de/images/index/originalgemaelde-fenster-acryl-struktur-studiovisus.jpg">
+<meta property="og:image" content="https://www.studiovisus.de/images/index/originalgemaelde-fenster-acryl-struktur-studiovisus.webp">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog zu Kunst, Raumwirkung, Neuroästhetik | Studio Visus">
+<meta name="twitter:description" content="Wie Wandbilder in Praxen, Kliniken und Hotels wirken. Fluid Art, Healing Architecture, Farbpsychologie. Beiträge aus dem Atelier Hamburg.">
+<meta name="twitter:image" content="https://www.studiovisus.de/images/index/originalgemaelde-fenster-acryl-struktur-studiovisus.webp">
 
 <link rel="canonical" href="https://www.studiovisus.de/blog">
 
@@ -156,7 +161,9 @@ ${JSON.stringify(blogSchema, null, 2)}
 </script>
 <script type="application/ld+json">
 ${JSON.stringify(breadcrumbSchema, null, 2)}
-</script><link rel="stylesheet" href="/css/fonts.css">
+</script><link rel="preload" href="/fonts/fraunces-v32-latin-300.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-tight-v7-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css">
 
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/blog.css">
@@ -377,7 +384,9 @@ ${JSON.stringify(articleSchema, null, 2)}
 </script>
 <script type="application/ld+json">
 ${JSON.stringify(breadcrumbSchema, null, 2)}
-</script><link rel="stylesheet" href="/css/fonts.css">
+</script><link rel="preload" href="/fonts/fraunces-v32-latin-300.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-tight-v7-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css">
 
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/blog.css">
@@ -549,6 +558,22 @@ function main() {
   const sitemapBlog = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${blogUrls}\n</urlset>\n`;
   fs.writeFileSync(path.join(here, 'sitemap-blog.xml'), sitemapBlog, 'utf-8');
   console.log(`sitemap-blog.xml — ${sorted.length} live URL(s)`);
+
+  // Haupt-sitemap.xml: Blog-Block zwischen <!-- BLOG:START --> und <!-- BLOG:END --> aktualisieren
+  const mainSitemapPath = path.join(here, 'sitemap.xml');
+  if (fs.existsSync(mainSitemapPath)) {
+    let sm = fs.readFileSync(mainSitemapPath, 'utf-8');
+    const blogLines = sorted.map((p, i) =>
+      `  <url><loc>https://www.studiovisus.de/blog/${p.slug}</loc><lastmod>${p.date}</lastmod><changefreq>yearly</changefreq><priority>${i === 0 ? '0.7' : '0.6'}</priority></url>`
+    ).join('\n');
+    const block = `<!-- BLOG:START -->\n${blogLines}\n  <!-- BLOG:END -->`;
+    const re = /<!-- BLOG:START -->[\s\S]*?<!-- BLOG:END -->/;
+    if (re.test(sm)) {
+      sm = sm.replace(re, block);
+      fs.writeFileSync(mainSitemapPath, sm, 'utf-8');
+      console.log(`sitemap.xml — Blog-Block aktualisiert (${sorted.length} live)`);
+    }
+  }
 
   console.log(`\nFertig: 1 Uebersicht + ${posts.length} Artikelseite(n). Heute = ${TODAY}.`);
   if (plannedPosts.length) {

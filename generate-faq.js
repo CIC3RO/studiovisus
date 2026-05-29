@@ -379,10 +379,12 @@ const html = `<!DOCTYPE html>
 <meta property="og:url" content="https://www.studiovisus.de/faq">
 <meta property="og:site_name" content="Studio Visus">
 <meta property="og:locale" content="de_DE">
+<meta property="og:image" content="https://www.studiovisus.de/images/index/originalgemaelde-fenster-acryl-struktur-studiovisus.webp">
 
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="FAQ | Studio Visus Hamburg">
 <meta name="twitter:description" content="Über ${totalQuestions} Antworten zu evidenzbasierter Kunst für Arztpraxen, Hotels und mehr.">
+<meta name="twitter:image" content="https://www.studiovisus.de/images/index/originalgemaelde-fenster-acryl-struktur-studiovisus.webp">
 
 <link rel="canonical" href="https://www.studiovisus.de/faq">
 
@@ -391,7 +393,9 @@ ${JSON.stringify(faqSchema, null, 2)}
 </script>
 <script type="application/ld+json">
 ${JSON.stringify(breadcrumbSchema, null, 2)}
-</script><link rel="stylesheet" href="/css/fonts.css">
+</script><link rel="preload" href="/fonts/fraunces-v32-latin-300.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-tight-v7-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css">
 
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/faq-page.css">

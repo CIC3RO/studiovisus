@@ -14,11 +14,11 @@ const path = require('path');
 
 // ===== WERKDATEN (für Empfehlungen) =====
 const alleWerke = [
-  { slug:"fenster", title:"Fenster", technik:"Acryl & Struktur", breite:140, hoehe:200, preis:"2.040 €", img:"images/werke/fenster/originalgemaelde-fesnter-studiovisus.jpg" },
+  { slug:"fenster", title:"Fenster", technik:"Acryl & Struktur", breite:140, hoehe:200, preis:"2.040 €", img:"images/werke/fenster/originalgemaelde-fesnter-studiovisus.webp" },
   { slug:"himmelsnetz", title:"Himmelsnetz", technik:"Acryl & Öl", breite:100, hoehe:70, preis:"1.020 €", img:"images/werke/himmelsnetz/originalgemaelde-himmelsnetz-studiovisus.webp" },
   { slug:"boot", title:"Boot", technik:"Fluid Art", breite:70, hoehe:100, preis:"1.020 €", img:"images/werke/boot/originalgemaelde-boot-studiovisus.webp" },
-  { slug:"schwarz", title:"Schwarz", technik:"Strukturmalerei", breite:100, hoehe:100, preis:"1.200 €", img:"images/werke/schwarz/originalgemaelde-schwarz-studiovisus.jpeg" },
-  { slug:"schneewiese", title:"Schneewiese", technik:"Acryl Pouring", breite:90, hoehe:90, preis:"1.080 €", img:"images/werke/schneewiese/originalgemaelde-schneewiese-studiovisus.jpeg" },
+  { slug:"schwarz", title:"Schwarz", technik:"Strukturmalerei", breite:100, hoehe:100, preis:"1.200 €", img:"images/werke/schwarz/originalgemaelde-schwarz-studiovisus.webp" },
+  { slug:"schneewiese", title:"Schneewiese", technik:"Acryl Pouring", breite:90, hoehe:90, preis:"1.080 €", img:"images/werke/schneewiese/originalgemaelde-schneewiese-studiovisus.webp" },
   { slug:"sturm", title:"Sturm", technik:"Mischtechnik", breite:100, hoehe:70, preis:"1.020 €", img:"images/werke/sturm/originalgemaelde-sturm-studiovisus.webp" },
   { slug:"olive", title:"Olive", technik:"Acryl & Struktur", breite:120, hoehe:70, preis:"1.140 €", img:"images/werke/olive/originalgemaelde-olive-studiovisus.webp" },
   { slug:"sommerkleid", title:"Sommerkleid", technik:"Acryl Pouring", breite:120, hoehe:70, preis:"1.140 €", img:"images/werke/sommerkleid/originalgemaelde-sommerkleid-studiovisus.webp" },
@@ -36,13 +36,13 @@ const pages = [
   // ============================================================
   {
     slug: "bilder-arztpraxis",
-    imgMain: "/images/index/originalgemaelde-fenster-acryl-struktur-arztpraxis-studiovisus.JPG",
+    imgMain: "/images/index/originalgemaelde-fenster-acryl-struktur-arztpraxis-studiovisus.webp",
     navLabel: "01 · Arztpraxis",
     title: "Bilder für Arztpraxen & Kliniken",
     metaTitle: "Bilder für Arztpraxen — Originalgemälde für Wartezimmer · Studio Visus",
     metaDesc: "Handgemalte Originalgemälde für Arztpraxen und Kliniken. Kunst, die Patienten im Wartezimmer beruhigt. Aus dem Atelier in Hamburg.",
     canonical: "https://www.studiovisus.de/bilder-arztpraxis",
-    ogImage: "https://www.studiovisus.de/images/index/originalgemaelde-himmelsnetz-acryl-oel-therapiepraxis-studiovisus.jpeg",
+    ogImage: "https://www.studiovisus.de/images/index/originalgemaelde-himmelsnetz-acryl-oel-therapiepraxis-studiovisus.webp",
     ogImageAlt: "Originalgemälde in einer Arztpraxis",
     heroEyebrow: "Kunst für Arztpraxen & Kliniken",
     h1: 'Bilder für die <em>Arztpraxis</em>.<br>Visuelle <span class="stroke">Ruhe</span> statt<br>steriler Wände.',
@@ -97,13 +97,13 @@ const pages = [
   // ============================================================
   {
     slug: "kunst-hotel",
-    imgMain: "/images/index/originalgemaelde-schwarz-acryl-struktur-hotel-studiovisus.jpeg",
+    imgMain: "/images/index/originalgemaelde-schwarz-acryl-struktur-hotel-studiovisus.webp",
     navLabel: "02 · Hotel & Foyer",
     title: "Kunst für Hotels & Foyers",
     metaTitle: "Kunst für Hotels & Foyers — Originalgemälde für den Empfang · Studio Visus",
     metaDesc: "Handgemalte Originalgemälde für Hotellobbys, Empfangsbereiche und Suiten. Kunst, die Gäste ankommen lässt. Aus dem Atelier in Hamburg.",
     canonical: "https://www.studiovisus.de/kunst-hotel",
-    ogImage: "https://www.studiovisus.de/images/index/originalgemaelde-himmelsnetz-acryl-oel-therapiepraxis-studiovisus.jpeg",
+    ogImage: "https://www.studiovisus.de/images/index/originalgemaelde-himmelsnetz-acryl-oel-therapiepraxis-studiovisus.webp",
     ogImageAlt: "Originalgemälde in einer Hotellobby",
     heroEyebrow: "Kunst für Hotels & Foyers",
     h1: 'Originalgemälde für <em>Hotels</em>.<br>Der erste Eindruck<br>als <span class="stroke">Wettbewerbsvorteil.</span>',
@@ -158,13 +158,13 @@ const pages = [
   // ============================================================
   {
     slug: "kunst-therapiepraxis",
-    imgMain: "/images/index/originalgemaelde-himmelsnetz-acryl-oel-therapiepraxis-studiovisus.jpeg",
+    imgMain: "/images/index/originalgemaelde-himmelsnetz-acryl-oel-therapiepraxis-studiovisus.webp",
     navLabel: "03 · Therapie",
     title: "Wandkunst für Therapiepraxen",
     metaTitle: "Kunst für Therapiepraxen — beruhigende Gemälde für den Therapieraum · Studio Visus",
     metaDesc: "Handgemalte Originalgemälde für Therapiepraxen und Beratungsräume. Kunst, die innere Offenheit fördert. Aus dem Atelier in Hamburg.",
     canonical: "https://www.studiovisus.de/kunst-therapiepraxis",
-    ogImage: "https://www.studiovisus.de/images/index/originalgemaelde-himmelsnetz-acryl-oel-therapiepraxis-studiovisus.jpeg",
+    ogImage: "https://www.studiovisus.de/images/index/originalgemaelde-himmelsnetz-acryl-oel-therapiepraxis-studiovisus.webp",
     ogImageAlt: "Originalgemälde in einer Therapiepraxis",
     heroEyebrow: "Kunst für Therapiepraxen",
     h1: 'Wandkunst für die <em>Therapie</em>.<br>Der Raum als <span class="stroke">therapeutisches</span><br>Instrument.',
@@ -219,13 +219,13 @@ const pages = [
   // ============================================================
   {
     slug: "kunst-buero",
-    imgMain: "/images/index/originalgemaelde-flamingo-acryl-struktur-buero-studiovisus.jpeg",
+    imgMain: "/images/index/originalgemaelde-flamingo-acryl-struktur-buero-studiovisus.webp",
     navLabel: "04 · Büro",
     title: "Kunstwerke für Büros & Meeting-Räume",
     metaTitle: "Kunst für Büros & Meeting-Räume — Originalgemälde für Unternehmen · Studio Visus",
     metaDesc: "Handgemalte Originalgemälde für Büros, Besprechungsräume und Empfangsbereiche. Kunst, die beruhigt und Qualität signalisiert. Aus dem Atelier in Hamburg.",
     canonical: "https://www.studiovisus.de/kunst-buero",
-    ogImage: "https://www.studiovisus.de/images/index/originalgemaelde-himmelsnetz-acryl-oel-therapiepraxis-studiovisus.jpeg",
+    ogImage: "https://www.studiovisus.de/images/index/originalgemaelde-himmelsnetz-acryl-oel-therapiepraxis-studiovisus.webp",
     ogImageAlt: "Originalgemälde in einem modernen Büro",
     heroEyebrow: "Kunst für Büros & Unternehmen",
     h1: 'Kunst für <em>Büros</em>.<br>Abgestimmt auf<br>Ihr <span class="stroke">Corporate Design.</span>',
@@ -415,6 +415,8 @@ ${JSON.stringify(breadcrumbSchema, null, 2)}
 ${JSON.stringify(faqSchema, null, 2)}
 </script>
 
+<link rel="preload" href="/fonts/fraunces-v32-latin-300.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-tight-v7-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/fonts.css">
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/landingpage.css">

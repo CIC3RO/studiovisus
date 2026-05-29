@@ -4,7 +4,7 @@
    
    Prinzip:
    - Technisch notwendige Cookies: immer aktiv (kein Opt-in nötig)
-   - Analyse-Cookies (GA): NUR nach explizitem Opt-in
+   - Analyse-Cookies (GA, Squarespace): NUR nach explizitem Opt-in
    - Entscheidung wird in Cookie gespeichert (1 Jahr)
    - Widerruf jederzeit über "Cookie-Einstellungen" im Footer
    ============================================ */
@@ -136,7 +136,7 @@
       <div class="cc-inner">
         <div class="cc-text">
           <h3>Cookie-<em>Einstellungen</em></h3>
-          <p>Diese Website verwendet technisch notwendige Cookies sowie optionale Analyse-Cookies (Google Analytics). Analyse-Cookies werden <strong>nur mit Ihrer Einwilligung</strong> gesetzt und helfen uns, die Website zu verbessern.</p>
+          <p>Diese Website verwendet technisch notwendige Cookies sowie optionale Analyse-Cookies (Google Analytics, Squarespace Analytics). Analyse-Cookies werden <strong>nur mit Ihrer Einwilligung</strong> gesetzt und helfen uns, die Website zu verbessern.</p>
 
           <div class="cc-categories">
             <div class="cc-cat">
@@ -168,7 +168,7 @@
             <div class="cc-detail-group">
               <h4>Analyse & Statistik</h4>
               <p>Google Analytics erfasst anonymisierte Nutzungsdaten, also welche Seiten besucht werden, wie lange, von wo. Die IP-Adresse wird anonymisiert. Diese Daten helfen uns, die Website zu verbessern.</p>
-              <div class="cookie-list">Cookies: _ga, _gid, _gat (Google Analytics, bis 14 Monate) ·· Datenübertragung in die USA auf Basis von EU-Standardvertragsklauseln und EU-US Data Privacy Framework</div>
+              <div class="cookie-list">Cookies: _ga, _gid, _gat (Google Analytics, bis 14 Monate) · Squarespace Analytics Cookies · Datenübertragung in die USA auf Basis von EU-Standardvertragsklauseln und EU-US Data Privacy Framework</div>
             </div>
             <p style="margin-top:12px"><a href="datenschutz.html">Vollst&auml;ndige Datenschutzerkl&auml;rung lesen &rarr;</a></p>
           </div>
