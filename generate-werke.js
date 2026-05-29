@@ -488,7 +488,7 @@ function generatePage(werk) {
   let relatedHtml = relatedWerke.map(r => `
           <a class="related-card reveal" href="/werke/${r.slug}">
             <div class="frame">
-              <img src="${r.img}" alt="${r.title}">
+              <img src="/${r.img}" alt="${r.title}">
             </div>
             <h3>${r.title}</h3>
             <div class="specs">${r.technik} · ${r.breite} × ${r.hoehe} cm</div>
@@ -608,20 +608,20 @@ ${JSON.stringify(artworkSchema, null, 2)}
   <div class="werk-gallery">
     <div class="werk-main-img" style="--img-ratio:${werk.imgRatio}">
       ${badgeHtml}
-      <img src="${werk.img}" alt="${werk.title}, ${werk.technik}, ${dimString}, ${werk.jahr}. Originalgemälde von Studio Visus.">
+      <img src="/${werk.img}" alt="${werk.title}, ${werk.technik}, ${dimString}, ${werk.jahr}. Originalgemälde von Studio Visus.">
     </div>
     <div class="werk-thumbs">
       <div class="werk-thumb active">
-        <img src="${werk.img}" alt="${werk.title}, Gesamtansicht">
+        <img src="/${werk.img}" alt="${werk.title}, Gesamtansicht">
       </div>
       ${werk.imgDetail
-        ? `<div class="werk-thumb"><img src="${werk.imgDetail}" alt="${werk.title}, Detailaufnahme"></div>`
+        ? `<div class="werk-thumb"><img src="/${werk.imgDetail}" alt="${werk.title}, Detailaufnahme"></div>`
         : ``}
       ${werk.imgRaum
-        ? `<div class="werk-thumb"><img src="${werk.imgRaum}" alt="${werk.title}, im Raum"></div>`
+        ? `<div class="werk-thumb"><img src="/${werk.imgRaum}" alt="${werk.title}, im Raum"></div>`
         : `<div class="werk-thumb thumb-placeholder">Im Raum</div>`}
       ${werk.imgRueckseite
-        ? `<div class="werk-thumb"><img src="${werk.imgRueckseite}" alt="${werk.title}, Rückseite"></div>`
+        ? `<div class="werk-thumb"><img src="/${werk.imgRueckseite}" alt="${werk.title}, Rückseite"></div>`
         : ``}
     </div>
   </div>

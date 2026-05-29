@@ -36,6 +36,7 @@ const pages = [
   // ============================================================
   {
     slug: "bilder-arztpraxis",
+    imgMain: "/images/index/originalgemaelde-fenster-acryl-struktur-arztpraxis-studiovisus.JPG",
     navLabel: "01 · Arztpraxis",
     title: "Bilder für Arztpraxen & Kliniken",
     metaTitle: "Bilder für Arztpraxen — Originalgemälde für Wartezimmer · Studio Visus",
@@ -96,6 +97,7 @@ const pages = [
   // ============================================================
   {
     slug: "kunst-hotel",
+    imgMain: "/images/index/originalgemaelde-schwarz-acryl-struktur-hotel-studiovisus.jpeg",
     navLabel: "02 · Hotel & Foyer",
     title: "Kunst für Hotels & Foyers",
     metaTitle: "Kunst für Hotels & Foyers — Originalgemälde für den Empfang · Studio Visus",
@@ -156,6 +158,7 @@ const pages = [
   // ============================================================
   {
     slug: "kunst-therapiepraxis",
+    imgMain: "/images/index/originalgemaelde-himmelsnetz-acryl-oel-therapiepraxis-studiovisus.jpeg",
     navLabel: "03 · Therapie",
     title: "Wandkunst für Therapiepraxen",
     metaTitle: "Kunst für Therapiepraxen — beruhigende Gemälde für den Therapieraum · Studio Visus",
@@ -216,6 +219,7 @@ const pages = [
   // ============================================================
   {
     slug: "kunst-buero",
+    imgMain: "/images/index/originalgemaelde-flamingo-acryl-struktur-buero-studiovisus.jpeg",
     navLabel: "04 · Büro",
     title: "Kunstwerke für Büros & Meeting-Räume",
     metaTitle: "Kunst für Büros & Meeting-Räume — Originalgemälde für Unternehmen · Studio Visus",
@@ -357,7 +361,7 @@ function generatePage(page) {
     return `
           <a class="lp-werk-card reveal" href="/werke/${w.slug}">
             <div class="frame">
-              <img decoding="async" ${loading} src="${w.img}" alt="${w.title} — ${w.technik}, ${w.breite} × ${w.hoehe} cm">
+              <img decoding="async" ${loading} src="/${w.img}" alt="${w.title} — ${w.technik}, ${w.breite} × ${w.hoehe} cm">
             </div>
             <h3>${w.title}</h3>
             <div class="specs">${w.technik} · ${w.breite} × ${w.hoehe} cm</div>
@@ -473,8 +477,8 @@ ${JSON.stringify(faqSchema, null, 2)}
     </div>
   </div>
   <div class="lp-hero-img">
-    <div class="img-main"><div class="bg" style="background:${page.imgGrad1}"></div></div>
-    <div class="img-float"><div class="bg" style="background:${page.imgGrad2}"></div></div>
+    <div class="img-main"><div class="bg" style="${page.imgMain ? `background:url('${page.imgMain}') center/cover` : `background:${page.imgGrad1}`}"></div></div>
+
     <div class="scribble" style="top:20px; right:-30px; z-index:3;">jedes Werk<br>ein Unikat ✦</div>
   </div>
 </section>
