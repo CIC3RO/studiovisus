@@ -14,15 +14,15 @@ const path = require('path');
 
 // ===== WERKDATEN (für Empfehlungen) =====
 const alleWerke = [
-  { slug:"fenster", title:"Fenster", technik:"Acryl & Struktur", breite:120, hoehe:160, preis:"2.480 €", img:"images/werke/fenster/originalgemaelde-fesnter-studiovisus.jpg" },
-  { slug:"himmelsnetz", title:"Himmelsnetz", technik:"Acryl & Öl", breite:140, hoehe:100, preis:"1.960 €", img:"images/werke/himmelsnetz/originalgemaelde-himmelsnetz-studiovisus.webp" },
-  { slug:"boot", title:"Boot", technik:"Fluid Art", breite:100, hoehe:100, preis:"1.420 €", img:"images/werke/boot/originalgemaelde-boot-studiovisus.webp" },
-  { slug:"schwarz", title:"Schwarz", technik:"Strukturmalerei", breite:80, hoehe:120, preis:"1.680 €", img:"images/werke/schwarz/originalgemaelde-schwarz-studiovisus.jpeg" },
-  { slug:"schneewiese", title:"Schneewiese", technik:"Acryl Pouring", breite:70, hoehe:90, preis:"980 €", img:"images/werke/schneewiese/originalgemaelde-schneewiese-studiovisus.jpeg" },
-  { slug:"sturm", title:"Sturm", technik:"Mischtechnik", breite:180, hoehe:120, preis:"3.240 €", img:"images/werke/sturm/originalgemaelde-sturm-studiovisus.webp" },
-  { slug:"olive", title:"Olive", technik:"Acryl & Struktur", breite:100, hoehe:100, preis:"1.380 €", img:"images/werke/olive/originalgemaelde-olive-studiovisus.webp" },
-  { slug:"sommerkleid", title:"Sommerkleid", technik:"Acryl Pouring", breite:90, hoehe:90, preis:"1.180 €", img:"images/werke/sommerkleid/originalgemaelde-sommerkleid-studiovisus.webp" },
-  { slug:"flamingo", title:"Flamingo", technik:"Fluid Art", breite:60, hoehe:80, preis:"780 €", img:"images/werke/flamingo/originalgemaelde-flamingo-studiovisus.webp" }
+  { slug:"fenster", title:"Fenster", technik:"Acryl & Struktur", breite:140, hoehe:200, preis:"2.040 €", img:"images/werke/fenster/originalgemaelde-fesnter-studiovisus.jpg" },
+  { slug:"himmelsnetz", title:"Himmelsnetz", technik:"Acryl & Öl", breite:100, hoehe:70, preis:"1.020 €", img:"images/werke/himmelsnetz/originalgemaelde-himmelsnetz-studiovisus.webp" },
+  { slug:"boot", title:"Boot", technik:"Fluid Art", breite:70, hoehe:100, preis:"1.020 €", img:"images/werke/boot/originalgemaelde-boot-studiovisus.webp" },
+  { slug:"schwarz", title:"Schwarz", technik:"Strukturmalerei", breite:100, hoehe:100, preis:"1.200 €", img:"images/werke/schwarz/originalgemaelde-schwarz-studiovisus.jpeg" },
+  { slug:"schneewiese", title:"Schneewiese", technik:"Acryl Pouring", breite:90, hoehe:90, preis:"1.080 €", img:"images/werke/schneewiese/originalgemaelde-schneewiese-studiovisus.jpeg" },
+  { slug:"sturm", title:"Sturm", technik:"Mischtechnik", breite:100, hoehe:70, preis:"1.020 €", img:"images/werke/sturm/originalgemaelde-sturm-studiovisus.webp" },
+  { slug:"olive", title:"Olive", technik:"Acryl & Struktur", breite:120, hoehe:70, preis:"1.140 €", img:"images/werke/olive/originalgemaelde-olive-studiovisus.webp" },
+  { slug:"sommerkleid", title:"Sommerkleid", technik:"Acryl Pouring", breite:120, hoehe:70, preis:"1.140 €", img:"images/werke/sommerkleid/originalgemaelde-sommerkleid-studiovisus.webp" },
+  { slug:"flamingo", title:"Flamingo", technik:"Fluid Art", breite:100, hoehe:100, preis:"1.200 €", img:"images/werke/flamingo/originalgemaelde-flamingo-studiovisus.webp" }
 ];
 
 function getWerke(slugs) {

@@ -115,7 +115,7 @@ const categories = [
       },
       {
         q: "Was kostet ein Originalgemälde für eine Arztpraxis?",
-        a: `<p>Grobe Orientierung: Kleinere Formate (ca. 60 x 80 cm) ab etwa 800 Euro. Mittlere Formate (ca. 120 x 90 cm) zwischen 1.500 und 3.500 Euro. Großformatige Werke (ab 150 x 120 cm) ab rund 3.500 Euro, nach oben offen.</p><p>Auftragsarbeiten werden individuell kalkuliert. Konkrete Preise gibt es immer erst nach Erstgespräch und Briefing.</p>`
+        a: `<p>Die Preise orientieren sich an der Größe nach der Formel (Höhe + Breite in cm) × 6. Konkret bedeutet das: Kleinere Formate (etwa 70 × 100 cm) liegen bei rund 1.020 Euro. Mittlere Formate (etwa 100 × 100 cm) bei 1.200 Euro. Großformate (etwa 140 × 200 cm) bei 2.040 Euro. Als Kleinunternehmer nach §19 UStG weise ich keine Umsatzsteuer aus, die genannten Preise sind Endpreise. Versand innerhalb Deutschlands ist enthalten.</p><p>Auftragsarbeiten werden individuell kalkuliert. Konkrete Preise gibt es immer erst nach Erstgespräch und Briefing.</p>`
       },
       {
         q: "Sind Originalgemälde steuerlich absetzbar?",
