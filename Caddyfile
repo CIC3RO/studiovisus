@@ -35,6 +35,20 @@ www.studiovisus.de, studiovisus.de {
 	# @qrBuero path /qr/buero
 	# redir @qrBuero /kunst-buero?utm_source=brief&utm_medium=qr&utm_campaign=bueros 302
 
+	# -------------------------------------------------------
+	# Analytics-Dashboard (Basic-Auth-geschuetzt)
+	# WICHTIG: Muss VOR den URL-Rewrites stehen, sonst greift
+	# @cleanUrl und macht /analytics -> /analytics.html -> 404
+	# -------------------------------------------------------
+	handle /analytics* {
+		basicauth {
+			janniclas PASTE_HASH_HERE
+		}
+		file_server {
+			index index.html
+		}
+	}
+
 	# 301: ohne www auf mit www
 	@noWww host studiovisus.de
 	redir @noWww https://www.studiovisus.de{uri} 301
