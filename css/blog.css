@@ -390,6 +390,19 @@
   border-color:var(--accent);
   flex-shrink:0;
 }
+.article-body .article-cta .btn-secondary{
+  border-color:rgba(243,237,226,.5);
+  color:var(--paper);
+  flex-shrink:0;
+}
+.article-body .article-cta .btn-secondary:hover{
+  background:rgba(243,237,226,.15);
+  border-color:rgba(243,237,226,.8);
+}
+/* Early CTA (direkt nach Lead, fuer QR-Besucher) */
+.article-body .article-cta-early{
+  margin:32px 0 48px;
+}
 
 /* Tags */
 .article-tags{
