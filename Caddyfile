@@ -42,7 +42,7 @@ www.studiovisus.de, studiovisus.de {
 	# -------------------------------------------------------
 	handle /analytics* {
 		basicauth {
-			janniclas PASTE_HASH_HERE
+			janniclas $2a$14$NAz01vl/xJamr/uvMnljm.Ky13n0w9Vp5lgWENI24C1bhnKAv/OlK
 		}
 		file_server {
 			index index.html
@@ -53,9 +53,10 @@ www.studiovisus.de, studiovisus.de {
 	@noWww host studiovisus.de
 	redir @noWww https://www.studiovisus.de{uri} 301
 
-	# Trailing-Slash entfernen, ausser fuer /
+	# Trailing-Slash entfernen, ausser fuer / und /analytics/
 	@trailingSlash {
 		path_regexp trailing ^(.+)/$
+		not path /analytics/ /analytics/*
 	}
 	redir @trailingSlash /{re.trailing.1} 301
 
@@ -78,7 +79,7 @@ www.studiovisus.de, studiovisus.de {
 	# 5. Restliche saubere URLs (eine Ebene, keine Datei-Endung) -> .html
 	@cleanUrl {
 		path_regexp clean ^/([a-z0-9-]+)$
-		not path_regexp ^/(images|css|js|favicon|robots|sitemap|llms|site)
+		not path_regexp ^/(images|css|js|favicon|robots|sitemap|llms|site|analytics)
 	}
 	rewrite @cleanUrl /{re.clean.1}.html
 
