@@ -1,4 +1,4 @@
-# Studio Visus — Website
+# Studio Visus Website
 
 Statische Website für Studio Visus (Jan-Niclas Bardenhagen), Künstleratelier in Hamburg-Lokstedt. Handgemalte Originalgemälde auf Basis von Neuroästhetik.
 

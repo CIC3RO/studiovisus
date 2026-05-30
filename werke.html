@@ -146,6 +146,8 @@
     <h2>Verfügbare Werke <span class="gallery-count">· 09 Unikate</span></h2>
     <div class="filters">
       <button class="active" data-filter="alle">Alle</button>
+      <button data-filter="evidenz">Evidenzbasierte Werke</button>
+      <button data-filter="frei">Freie Werke</button>
       <button data-filter="verfuegbar">Verfügbar</button>
       <button data-filter="grossformat">Großformat</button>
       <button data-filter="quadrat">Quadrat</button>
@@ -157,8 +159,9 @@
   <div class="grid">
 
     <!-- Werk 1: Fenster -->
-    <a class="work w-tall reveal" href="/werke/fenster" data-format="hochformat" data-available="true" data-large="true">
+    <a class="work w-tall reveal" href="/werke/fenster" data-format="hochformat" data-available="true" data-large="true" data-linie="evidenz">
       <div class="frame">
+        <span class="w-chip w-chip-evidenz">Evidenzbasiert</span>
         <span class="badge new">Diptychon</span>
         <img decoding="async" loading="eager" fetchpriority="high" alt="Fenster. Originalgemälde, Acryl auf Leinwand mit Impasto-Struktur, Diptychon 2 mal 70 × 100 cm"  src="/images/werke/fenster/originalgemaelde-fesnter-studiovisus.webp">
       </div>
@@ -174,8 +177,9 @@
     </a>
 
     <!-- Werk 2: Boot -->
-    <a class="work w-tall reveal" href="/werke/boot" data-format="hochformat" data-available="true" data-large="false" style="position:relative">
+    <a class="work w-tall reveal" href="/werke/boot" data-format="hochformat" data-available="true" data-large="false" style="position:relative" data-linie="frei">
       <div class="frame">
+        <span class="w-chip w-chip-frei">Frei</span>
         <img decoding="async" loading="lazy" alt="Boot. Originalgemälde, Acryl auf Leinwand mit Schuppenstruktur und japanisch inspirierten Wellen, 70 × 100 cm"  src="/images/werke/boot/originalgemaelde-boot-studiovisus.webp">
       </div>
       <div class="info">
@@ -191,8 +195,9 @@
     </a>
 
     <!-- Werk 3: Schwarz -->
-    <a class="work w-square reveal" href="/werke/schwarz" data-format="quadrat" data-available="true" data-large="false">
+    <a class="work w-square reveal" href="/werke/schwarz" data-format="quadrat" data-available="true" data-large="false" data-linie="frei">
       <div class="frame">
+        <span class="w-chip w-chip-frei">Frei</span>
         <img decoding="async" loading="lazy" alt="Schwarz. Originalgemälde, Acryl mit Sandstruktur und verborgenem Zengarten-Motiv, 100 × 100 cm"  src="/images/werke/schwarz/originalgemaelde-schwarz-studiovisus.webp">
       </div>
       <div class="info">
@@ -207,8 +212,9 @@
     </a>
 
     <!-- Werk 4: Schneewiese -->
-    <a class="work w-square reveal" href="/werke/schneewiese" data-format="quadrat" data-available="true" data-large="false">
+    <a class="work w-square reveal" href="/werke/schneewiese" data-format="quadrat" data-available="true" data-large="false" data-linie="evidenz">
       <div class="frame">
+        <span class="w-chip w-chip-evidenz">Evidenzbasiert</span>
         <img decoding="async" loading="lazy" alt="Schneewiese. Originalgemälde mit Fußabdrücken und gegossenem Farbkreis, 90 × 90 cm"  src="/images/werke/schneewiese/originalgemaelde-schneewiese-studiovisus.webp">
       </div>
       <div class="info">
@@ -223,8 +229,9 @@
     </a>
 
     <!-- Werk 5: Schneesturm -->
-    <a class="work w-portrait reveal" href="/werke/schneesturm" data-format="quadrat" data-available="true" data-large="false">
+    <a class="work w-portrait reveal" href="/werke/schneesturm" data-format="quadrat" data-available="true" data-large="false" data-linie="evidenz">
       <div class="frame">
+        <span class="w-chip w-chip-evidenz">Evidenzbasiert</span>
         <img decoding="async" loading="lazy" alt="Schneesturm. Originalgemälde in Weiß mit subtilen Schattierungen, 100 × 100 cm"  src="/images/werke/schneesturm/originalgemaelde-schneesturm-studiovisus.webp">
       </div>
       <div class="info">
@@ -258,8 +265,9 @@
   <div class="grid">
 
     <!-- Werk 6: Sturm -->
-    <a class="work w-wide reveal" href="/werke/sturm" data-format="querformat" data-available="true" data-large="false" style="position:relative">
+    <a class="work w-wide reveal" href="/werke/sturm" data-format="querformat" data-available="true" data-large="false" style="position:relative" data-linie="frei">
       <div class="frame">
+        <span class="w-chip w-chip-frei">Frei</span>
         <img decoding="async" loading="lazy" alt="Sturm. Originalgemälde in leuchtendem Dunkelrot mit Goldspritzern, 100 × 70 cm"  src="/images/werke/sturm/originalgemaelde-sturm-studiovisus.webp">
       </div>
       <div class="info">
@@ -275,8 +283,9 @@
     </a>
 
     <!-- Werk 7: Flamingo -->
-    <a class="work w-square reveal" href="/werke/flamingo" data-format="quadrat" data-available="true" data-large="false">
+    <a class="work w-square reveal" href="/werke/flamingo" data-format="quadrat" data-available="true" data-large="false" data-linie="evidenz">
       <div class="frame">
+        <span class="w-chip w-chip-evidenz">Evidenzbasiert</span>
         <img decoding="async" loading="lazy" alt="Flamingo. Originalgemälde mit abstraktem Flamingo und Schuppenstruktur, 100 × 100 cm"  src="/images/werke/flamingo/originalgemaelde-flamingo-studiovisus.webp">
       </div>
       <div class="info">
@@ -291,8 +300,9 @@
     </a>
 
     <!-- Werk 8: Olive (verkauft) -->
-    <a class="work w-wide reveal" href="/werke/olive" data-format="querformat" data-available="false" data-large="false">
+    <a class="work w-wide reveal" href="/werke/olive" data-format="querformat" data-available="false" data-large="false" data-linie="evidenz">
       <div class="frame">
+        <span class="w-chip w-chip-evidenz">Evidenzbasiert</span>
         <span class="badge sold">Verkauft</span>
         <img decoding="async" loading="lazy" alt="Olive. Originalgemälde in Gold und Olivtönen, Fluid Art, 120 × 70 cm"  src="/images/werke/olive/originalgemaelde-olive-studiovisus.webp">
       </div>
@@ -308,8 +318,9 @@
     </a>
 
     <!-- Werk 9: Sommerkleid -->
-    <a class="work w-square reveal" href="/werke/sommerkleid" data-format="querformat" data-available="true" data-large="false">
+    <a class="work w-square reveal" href="/werke/sommerkleid" data-format="querformat" data-available="true" data-large="false" data-linie="evidenz">
       <div class="frame">
+        <span class="w-chip w-chip-evidenz">Evidenzbasiert</span>
         <img decoding="async" loading="lazy" alt="Sommerkleid. Originalgemälde in Grün und Beige mit organischer Struktur, 120 × 70 cm"  src="/images/werke/sommerkleid/originalgemaelde-sommerkleid-studiovisus.webp">
       </div>
       <div class="info">
@@ -324,8 +335,9 @@
     </a>
 
     <!-- Werk 10: Himmelsnetz -->
-    <a class="work w-feature reveal" href="/werke/himmelsnetz" data-format="querformat" data-available="true" data-large="false">
+    <a class="work w-feature reveal" href="/werke/himmelsnetz" data-format="querformat" data-available="true" data-large="false" data-linie="evidenz">
       <div class="frame">
+        <span class="w-chip w-chip-evidenz">Evidenzbasiert</span>
         <img decoding="async" loading="lazy" alt="Himmelsnetz. Originalgemälde in Grau mit bunten Fischen in Acrly und Öl gemalt. 70 x 100 cm"  src="/images/werke/himmelsnetz/originalgemaelde-himmelsnetz-studiovisus.webp">
       </div>
       <div class="info">

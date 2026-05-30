@@ -11,6 +11,8 @@
 /** diesen Abschnitt einfügen für ein neues Werk
  * ,{
     slug: "werkname",           // URL: werk-werkname.html
+    linie: "evidenz",            // "evidenz" oder "frei"
+    warumBeruhigt: "",            // bei heilraum: warum dieses Werk beruhigt (1-2 Sätze, mit Quelle)
     title: "Werkname",
     technik: "Acryl auf Leinwand, mehrere Schichten",
     breite: 100,                // in cm
@@ -47,6 +49,8 @@ const path = require('path');
 const werke = [
   {
     slug: "fenster",
+    linie: "evidenz",
+    warumBeruhigt: "Die gedämpften Farben (Olivgrün auf cremefarbenem Grund) und der niedrige Kontrast entlasten das visuelle System (Elliot & Maier 2014). Die organische Impasto-Struktur entspricht der fraktalen Mittelkomplexität, die nach Taylor (2006) Stressreaktionen messbar senkt. Die ruhige Komposition ohne narrative Spannung erlaubt Kaplans »sanfte Faszination« — der Blick findet Halt, ohne gefordert zu werden.",
     title: "Fenster",
     technik: "Acryl auf Leinwand, mehrere Schichten, Impasto-Struktur",
     breite: 140,
@@ -76,6 +80,8 @@ const werke = [
   },
   {
     slug: "schneesturm",
+    linie: "evidenz",
+    warumBeruhigt: "Fast monochrom in Weiß und feinem Grau, sehr niedriger Kontrast, weiche Horizontlinie. Die Reduktion entspricht Kaplans Konzept der restorativen Umgebung: minimale kognitive Last, maximaler Erholungsraum. Die feinen Strukturspuren halten das Auge so leicht, dass es weder sucht noch flieht. Ein Werk, das den Raum öffnet, statt ihn zu füllen.",
     title: "Schneesturm",
     technik: "Acryl auf Leinwand, mehrere Schichten",
     breite: 100,
@@ -104,6 +110,7 @@ const werke = [
   },
   {
     slug: "boot",
+    linie: "frei",
     title: "Boot",
     technik: "Acryl auf Leinwand, mehrere Schichten",
     breite: 70,
@@ -132,6 +139,7 @@ const werke = [
   },
   {
     slug: "schwarz",
+    linie: "frei",
     title: "Schwarz",
     technik: "Acryl auf Leinwand, mehrere Schichten",
     breite: 100,
@@ -160,6 +168,8 @@ const werke = [
   },
   {
     slug: "schneewiese",
+    linie: "evidenz",
+    warumBeruhigt: "Der cremefarbene Grund mit den feinen, wiederkehrenden Spurmustern lädt zur sanften Mustererkennung ein — was Reber et al. (2004) als Verarbeitungsflüssigkeit beschreiben: leicht zu verarbeitende Bilder werden als angenehm erlebt. Der dunkle Punkt im Zentrum ist kein Störelement, sondern der Anker, an dem der Blick zur Ruhe kommt.",
     title: "Schneewiese",
     technik: "Acryl auf Leinwand, mehrere Schichten",
     breite: 90,
@@ -188,6 +198,7 @@ const werke = [
   },
   {
     slug: "sturm",
+    linie: "frei",
     title: "Sturm",
     technik: "Acryl auf Leinwand, mehrere Schichten",
     breite: 100,
@@ -216,6 +227,8 @@ const werke = [
   },
   {
     slug: "flamingo",
+    linie: "evidenz",
+    warumBeruhigt: "Der gedämpfte salbeifarbene Grund mit den feinen, regelmäßigen Pinselstrukturen ist klassische fraktale Mittelkomplexität (Taylor 2006) — die Form, die das Auge mühelos hält. Die Pouring-Übergänge in der Figur sind weich und fließend, keine harten Kanten, keine narrative Spannung. Die kühlen Töne im Vogel — Mint, sanftes Pink, Lavendel — sind nicht die aktivierenden warmen Sättigungen, die Elliot & Maier kritisch sehen. Figurativ, aber abstrakt und interpretationsfrei.",
     title: "Flamingo",
     technik: "Acryl auf Leinwand, mehrere Schichten",
     breite: 100,
@@ -244,6 +257,8 @@ const werke = [
   },
   {
     slug: "olive",
+    linie: "evidenz",
+    warumBeruhigt: "Die mintbeige Palette mit dezenten Goldakzenten entspricht dem biophilen Farbspektrum, das Grinde & Patil (2009) als wohlbefindensförderlich beschreiben. Die zurückhaltend dosierten Goldspuren geben dem Auge Anker, ohne zu reißen. Niedriger Kontrast, weiche Übergänge, organische Materialspuren — alle Marker für visuelle Erholung sind erfüllt.",
     title: "Olive",
     technik: "Acryl auf Leinwand, mehrere Schichten",
     breite: 120,
@@ -273,6 +288,8 @@ const werke = [
   },
   {
     slug: "sommerkleid",
+    linie: "evidenz",
+    warumBeruhigt: "Der helle, ungesättigte Gelbton ist warm ohne zu aktivieren — er erinnert an gefiltertes Sonnenlicht, einen biophilen Reiz nach Grinde & Patil (2009). Die verteilten grünen Tupfen erzeugen das, was Reber et al. (2004) als Verarbeitungsflüssigkeit beschreiben: ein wiederkehrendes Muster, das das Gehirn als angenehm und vertraut einstuft. Sommerlich, nicht hektisch.",
     title: "Sommerkleid",
     technik: "Acryl auf Leinwand, mehrere Schichten",
     breite: 120,
@@ -301,6 +318,8 @@ const werke = [
   }
   ,{
     slug: "himmelsnetz",           
+    linie: "evidenz",
+    warumBeruhigt: "Der ruhige graue Grund mit den fraktal-ähnlichen Wirbelstrukturen ist genau die Mittelkomplexität, die Taylor (2006) als optimal für Stressreduktion beschrieben hat. Die gedämpften Ocker- und Brauntöne wirken erdig statt aktivierend (Elliot & Maier). Die diagonal verlaufenden roten Linien führen das Auge sanft, ohne zu reißen — eine sanfte Faszination im Sinne Kaplans.",
     title: "Himmelsnetz",
     technik: "Acryl und Öl auf Leinwand, mehrere Schichten",
     breite: 100,                
@@ -631,6 +650,9 @@ ${JSON.stringify(artworkSchema, null, 2)}
   <!-- Info -->
   <div class="werk-info">
     <div class="werk-eyebrow">${werk.kategorie} · ${werk.jahr}</div>
+    <div class="werk-chip werk-chip-${werk.linie || 'evidenz'}">
+      ${werk.linie === 'frei' ? 'Frei' : 'Evidenzbasiert'}
+    </div>
     <h1>${werk.title}</h1>
     <p class="werk-subtitle">${werk.subtitle}</p>
 
@@ -672,6 +694,18 @@ ${beschreibungHtml}
       <h3>${werk.neuroTitel}</h3>
       <p>${werk.neuroText}</p>
     </div>
+
+    ${werk.linie === 'evidenz' && werk.warumBeruhigt ? `
+    <!-- Evidenzbasiert beruhigend -->
+    <div class="werk-evidenz">
+      <div class="werk-evidenz-head">
+        <span class="we-ico">✓</span>
+        <h3>Warum dieses Werk beruhigt</h3>
+      </div>
+      <p>${werk.warumBeruhigt}</p>
+      <div class="werk-evidenz-foot">Nach Forschung von Elliot &amp; Maier 2014, Kaplan 1995, Taylor 2006, Reber et al. 2004 und Grinde &amp; Patil 2009.</div>
+    </div>
+    ` : ''}
 
     <!-- Trust -->
     <div class="werk-trust">

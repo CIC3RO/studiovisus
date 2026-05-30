@@ -252,6 +252,87 @@
   color:var(--ink-soft);
 }
 
+/* Werk-Chip: zeigt Linie (Evidenzbasiert / Frei) */
+.werk-chip{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  font-family:'Inter Tight', sans-serif;
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  padding:7px 14px;
+  border-radius:999px;
+  margin-bottom:14px;
+  line-height:1;
+}
+.werk-chip::before{
+  content:"";
+  display:inline-block;
+  width:6px;
+  height:6px;
+  border-radius:50%;
+}
+.werk-chip-evidenz{
+  background:#e8efe5;
+  color:#3a5a4a;
+  border:1px solid rgba(110,138,106,.3);
+}
+.werk-chip-evidenz::before{ background:#6e8a6a; }
+.werk-chip-frei{
+  background:#f8f2eb;
+  color:#7a3f24;
+  border:1px solid rgba(168,72,42,.25);
+}
+.werk-chip-frei::before{ background:var(--accent); }
+
+/* Evidenzbasiert-Block (nur Werke der evidenzbasierten Linie) */
+.werk-evidenz{
+  background:#f1ede4;
+  border:1px solid #d8cfbe;
+  border-left:3px solid #6e8a6a;
+  padding:24px 28px;
+  margin-bottom:40px;
+}
+.werk-evidenz-head{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:12px;
+}
+.werk-evidenz .we-ico{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:24px;
+  height:24px;
+  border-radius:50%;
+  background:#6e8a6a;
+  color:#fff;
+  font-size:13px;
+  font-weight:600;
+  flex-shrink:0;
+}
+.werk-evidenz h3{
+  font-family:'Fraunces', serif;
+  font-size:18px;
+  font-weight:400;
+  margin:0;
+}
+.werk-evidenz p{
+  font-size:14px;
+  line-height:1.65;
+  color:var(--ink-soft);
+  margin-bottom:14px;
+}
+.werk-evidenz-foot{
+  font-size:11px;
+  letter-spacing:.04em;
+  color:#8a8175;
+  font-style:italic;
+}
+
 /* Versand & Garantie */
 .werk-trust{
   display:grid;

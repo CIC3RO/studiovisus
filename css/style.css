@@ -602,6 +602,47 @@ h1.hero-title .stroke{
 .work .badge.sold{background:var(--ink);color:var(--paper)}
 .work .badge.new{background:var(--accent);color:var(--paper)}
 
+/* Linien-Chip: zeigt evidenzbasiert oder frei (oben rechts, abgerundete Pill) */
+.work .w-chip{
+  position:absolute;
+  top:14px; right:14px;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:7px 14px;
+  font-family:'Inter Tight', sans-serif;
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  border-radius:999px;
+  z-index:3;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+  -webkit-backdrop-filter:blur(8px);
+  backdrop-filter:blur(8px);
+  white-space:nowrap;
+  line-height:1;
+}
+.work .w-chip::before{
+  content:"";
+  display:inline-block;
+  width:6px; height:6px;
+  border-radius:50%;
+  flex-shrink:0;
+}
+.work .w-chip-evidenz{
+  background:rgba(232,239,229,.95);
+  color:#3a5a4a;
+  border:1px solid rgba(110,138,106,.3);
+}
+.work .w-chip-evidenz::before{ background:#6e8a6a; }
+.work .w-chip-frei{
+  background:rgba(248,242,235,.95);
+  color:#7a3f24;
+  border:1px solid rgba(168,72,42,.25);
+}
+.work .w-chip-frei::before{ background:var(--accent); }
+
 .work .info{
   padding-top:18px;
   display:flex;

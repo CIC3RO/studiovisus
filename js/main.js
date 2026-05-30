@@ -148,6 +148,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function matches(work, filter) {
       switch (filter) {
         case 'alle':         return true;
+        case 'evidenz':      return work.dataset.linie === 'evidenz';
+        case 'frei':         return work.dataset.linie === 'frei';
         case 'verfuegbar':   return work.dataset.available === 'true';
         case 'grossformat':  return work.dataset.large === 'true';
         case 'quadrat':      return work.dataset.format === 'quadrat';
