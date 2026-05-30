@@ -6,6 +6,35 @@ www.studiovisus.de, studiovisus.de {
 	root * /var/www/studiovisus
 	encode zstd gzip
 
+	# -------------------------------------------------------
+	# JSON-Zugriffslog fuer Auswertung mit GoAccess
+	# Erzeugt /var/log/caddy/studiovisus.log (JSON-Format)
+	# -------------------------------------------------------
+	log {
+		output file /var/log/caddy/studiovisus.log {
+			roll_size 50mb
+			roll_keep 7
+		}
+		format json
+	}
+
+	# -------------------------------------------------------
+	# QR-Tracking-Weiterleitungen
+	# Schema: /qr/<kampagne> → Zielartikel mit UTM-Tags
+	# Neue Kampagne? Einfach einen weiteren Block kopieren.
+	# -------------------------------------------------------
+
+	# Brief an Therapiepraxen (Serienmailing, Briefkasten)
+	@qrPraxis path /qr/praxis
+	redir @qrPraxis /blog/praxisgestaltung-wartezimmer-atmosphaere?utm_source=brief&utm_medium=qr&utm_campaign=therapiepraxen 302
+
+	# Platzhalter fuer kuenftige Kampagnen:
+	# @qrHotel path /qr/hotel
+	# redir @qrHotel /kunst-hotel?utm_source=brief&utm_medium=qr&utm_campaign=hotels 302
+	#
+	# @qrBuero path /qr/buero
+	# redir @qrBuero /kunst-buero?utm_source=brief&utm_medium=qr&utm_campaign=bueros 302
+
 	# 301: ohne www auf mit www
 	@noWww host studiovisus.de
 	redir @noWww https://www.studiovisus.de{uri} 301
